@@ -6175,7 +6175,7 @@ char* get_pinyin_gbk3(unsigned int code)
         case 768: return "yan"; // 傿
         case 770: return "di"; // 僀
         case 772: return "xie"; // 僁
-        case 774: return "lu      "; // 僂
+        case 774: return "lu"; // 僂
         case 776: return "bei"; // 僃
         case 778: return "biao"; // 僄
         case 780: return "jin"; // 僅
@@ -11972,7 +11972,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 120: return "hao";    // 獆
         case 122: return "qiang";    // 獇
         case 124: return "yi";    // 獈
-        case 126: return "zhang";    // 张
+        case 126: return "";    // ?
         case 128: return "zhen";    // 獉
         case 130: return "cang";    // 獊
         case 132: return "gao";    // 獋
@@ -12069,7 +12069,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 314: return "shen";    // 珅
         case 316: return "yi";    // 珆
         case 318: return "ju";    // 珇
-        case 320: return "zhang";    // 张
+        case 320: return "";    // ?
         case 322: return "liu";    // 珋
         case 324: return "bi";    // 珌
         case 326: return "zhen";    // 珎
@@ -12166,7 +12166,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 508: return "wei";    // 瑋
         case 510: return "ruan";    // 瑌
         case 512: return "huan";    // 瑍
-        case 514: return "zhang";    // 张
+        case 514: return "";    // ?
         case 516: return "xie";    // 瑎
         case 518: return "chuan";    // 瑏
         case 520: return "jian";    // 瑐
@@ -12263,7 +12263,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 702: return "li";    // 瓅
         case 704: return "zhi";    // 瓆
         case 706: return "rou";    // 瓇
-        case 708: return "zhang";    // 张
+        case 708: return "";    // ?
         case 710: return "li";    // 瓈
         case 712: return "zan";    // 瓉
         case 714: return "qiong";    // 瓊
@@ -12287,30 +12287,30 @@ char* get_pinyin_gbk4(unsigned int code)
         case 750: return "bo";    // 瓟
         case 752: return "hu";    // 瓡
         case 754: return "li";    // 瓥
-        case 756: return "瓧     ";    // 瓧
+        case 756: return "shi";    // 瓧
         case 758: return "hong";    // 瓨
-        case 760: return "瓩     ";    // 瓩
+        case 760: return "qian";    // 瓩
         case 762: return "ban";    // 瓪
         case 764: return "pen";    // 瓫
         case 766: return "fang";    // 瓬
         case 768: return "dan";    // 瓭
-        case 770: return "瓰     ";    // 瓰
-        case 772: return "瓱     ";    // 瓱
+        case 770: return "fen";    // 瓰
+        case 772: return "mao";    // 瓱
         case 774: return "wa";    // 瓲
         case 776: return "hu";    // 瓳
         case 778: return "yi";    // 瓵
-        case 780: return "瓸     ";    // 瓸
+        case 780: return "bai";    // 瓸
         case 782: return "juan";    // 瓹
         case 784: return "chang";    // 瓺
         case 786: return "chi";    // 瓻
-        case 788: return "瓼     ";    // 瓼
+        case 788: return "li";    // 瓼
         case 790: return "dang";    // 瓽
         case 792: return "meng";    // 瓾
         case 794: return "zhui";    // 甀
         case 796: return "ping";    // 甁
         case 798: return "bian";    // 甂
         case 800: return "zhou";    // 甃
-        case 802: return "甅     ";    // 甅
+        case 802: return "li";    // 甅
         case 804: return "ci";    // 甆
         case 806: return "ying";    // 甇
         case 808: return "qi";    // 甈
@@ -12360,7 +12360,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 896: return "wa";    // 畖
         case 898: return "fu";    // 畗
         case 900: return "nan";    // 畘
-        case 902: return "zhang";    // 张
+        case 902: return "";    // ?
         case 904: return "mu";    // 畝
         case 906: return "mu";    // 畞
         case 908: return "ji";    // 畟
@@ -12457,7 +12457,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 1090: return "cu";    // 瘄
         case 1092: return "shen";    // 瘆
         case 1094: return "zhong";    // 瘇
-        case 1096: return "zhang";    // 张
+        case 1096: return "";    // ?
         case 1098: return "zhi";    // 瘈
         case 1100: return "yu";    // 瘉
         case 1102: return "feng";    // 瘋
@@ -12486,7 +12486,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 1148: return "se";    // 瘷
         case 1150: return "diao";    // 瘹
         case 1152: return "lou";    // 瘺
-        case 1154: return "lǘ      ";    // 瘻
+        case 1154: return "lu";    // 瘻
         case 1156: return "qin";    // 瘽
         case 1158: return "fu";    // 癁
         case 1160: return "liao";    // 療
@@ -12532,7 +12532,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 1240: return "luan";    // 癴
         case 1242: return "luan";    // 癵
         case 1244: return "bo";    // 癶
-        case 1246: return "癷";    // 癷
+        case 1246: return "bo";    // 癷
         case 1248: return "ba";    // 癹
         case 1250: return "fa";    // 発
         case 1252: return "fa";    // 發
@@ -12554,7 +12554,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 1284: return "qian";    // 皘
         case 1286: return "ai";    // 皚
         case 1288: return "po";    // 皛
-        case 1290: return "zhang";    // 张
+        case 1290: return "";    // ?
         case 1292: return "hao";    // 皜
         case 1294: return "huang";    // 皝
         case 1296: return "hao";    // 皞
@@ -12578,11 +12578,11 @@ char* get_pinyin_gbk4(unsigned int code)
         case 1332: return "que";    // 皵
         case 1334: return "zha";    // 皶
         case 1336: return "gu";    // 皷
-        case 1338: return "jun1      ";    // 皸
-        case 1340: return "jun1      ";    // 皹
+        case 1338: return "jun";    // 皸
+        case 1340: return "jun";    // 皹
         case 1342: return "zhou";    // 皺
         case 1344: return "zha";    // 皻
-        case 1346: return "皼     ";    // 皼
+        case 1346: return "gu";    // 皼
         case 1348: return "zhao";    // 皽
         case 1350: return "du";    // 皾
         case 1352: return "qi";    // 盀
@@ -12651,7 +12651,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 1478: return "chao";    // 眧
         case 1480: return "bing";    // 眪
         case 1482: return "pan";    // 眫
-        case 1484: return "zhang";    // 张
+        case 1484: return "";    // ?
         case 1486: return "long";    // 眬
         case 1488: return "tong";    // 眮
         case 1490: return "die";    // 眰
@@ -12728,7 +12728,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 1632: return "mo";    // 瞙
         case 1634: return "shun";    // 瞚
         case 1636: return "cong";    // 瞛
-        case 1638: return "lǘ      ";    // 瞜
+        case 1638: return "lu";    // 瞜
         case 1640: return "chi";    // 瞝
         case 1642: return "man";    // 瞞
         case 1644: return "gui";    // 瞡
@@ -12748,7 +12748,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 1672: return "ye";    // 瞸
         case 1674: return "ai";    // 瞹
         case 1676: return "hui";    // 瞺
-        case 1678: return "zhang";    // 张
+        case 1678: return "";    // ?
         case 1680: return "jian";    // 瞼
         case 1682: return "zhao";    // 瞾
         case 1684: return "mei";    // 矀
@@ -12845,7 +12845,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 1866: return "qing";    // 硘
         case 1868: return "wei";    // 硙
         case 1870: return "qiao";    // 硚
-        case 1872: return "zhang";    // 张
+        case 1872: return "";    // ?
         case 1874: return "ceok";    // 硛
         case 1876: return "keng";    // 硜
         case 1878: return "ke";    // 硞
@@ -12880,7 +12880,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 1936: return "zong";    // 碂
         case 1938: return "qing";    // 碃
         case 1940: return "lin";    // 碄
-        case 1942: return "jun1      ";    // 碅
+        case 1942: return "jun";    // 碅
         case 1944: return "bo";    // 碆
         case 1946: return "min";    // 碈
         case 1948: return "jian";    // 碊
@@ -12942,7 +12942,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 2060: return "kan";    // 磡
         case 2062: return "chuan";    // 磢
         case 2064: return "chen";    // 磣
-        case 2066: return "zhang";    // 张
+        case 2066: return "";    // ?
         case 2068: return "yin";    // 磤
         case 2070: return "lei";    // 磥
         case 2072: return "piao";    // 磦
@@ -13027,7 +13027,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 2230: return "beng";    // 祊
         case 2232: return "dui";    // 祋
         case 2234: return "zhong";    // 祌
-        case 2236: return "祍";    // 祍
+        case 2236: return "ren";    // 祍
         case 2238: return "yi";    // 祎
         case 2240: return "shi";    // 祏
         case 2242: return "you";    // 祐
@@ -13038,8 +13038,8 @@ char* get_pinyin_gbk4(unsigned int code)
         case 2252: return "suan";    // 祘
         case 2254: return "mei";    // 祙
         case 2256: return "chai";    // 祡
-        case 2258: return "lǚ      ";    // 祣
-        case 2260: return "zhang";    // 张
+        case 2258: return "lu";    // 祣
+        case 2260: return "";    // ?
         case 2262: return "yu";    // 祤
         case 2264: return "wu";    // 祦
         case 2266: return "zhu";    // 祩
@@ -13136,7 +13136,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 2448: return "nian";    // 秥
         case 2450: return "zuo";    // 秨
         case 2452: return "zhi";    // 秪
-        case 2454: return "zhang";    // 张
+        case 2454: return "";    // ?
         case 2456: return "ju";    // 秬
         case 2458: return "huo";    // 秮
         case 2460: return "tong";    // 秱
@@ -13175,7 +13175,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 2526: return "zu";    // 稡
         case 2528: return "yu";    // 稢
         case 2530: return "lue";    // 稤
-        case 2532: return "稥     ";    // 稥
+        case 2532: return "xiang";    // 稥
         case 2534: return "yi";    // 稦
         case 2536: return "qie";    // 稧
         case 2538: return "bian";    // 稨
@@ -13211,7 +13211,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 2598: return "ying";    // 穎
         case 2600: return "wen";    // 穏
         case 2602: return "qiu";    // 穐
-        case 2604: return "kweok";    // 穒
+        case 2604: return "kuei";    // 穒
         case 2606: return "yi";    // 穓
         case 2608: return "huang";    // 穔
         case 2610: return "qie";    // 穕
@@ -13222,7 +13222,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 2620: return "bo";    // 穛
         case 2622: return "tong";    // 穜
         case 2624: return "zui";    // 穝
-        case 2626: return "lǚ      ";    // 穞
+        case 2626: return "lu";    // 穞
         case 2628: return "sui";    // 穟
         case 2630: return "nong";    // 穠
         case 2632: return "se";    // 穡
@@ -13233,12 +13233,12 @@ char* get_pinyin_gbk4(unsigned int code)
         case 2642: return "pin";    // 穦
         case 2644: return "ji";    // 穧
         case 2646: return "tui";    // 穨
-        case 2648: return "zhang";    // 张
+        case 2648: return "";    // ?
         case 2650: return "wen";    // 穩
         case 2652: return "bie";    // 穪
         case 2654: return "hu";    // 穫
         case 2656: return "kuang";    // 穬
-        case 2658: return "lǚ      ";    // 穭
+        case 2658: return "lu";    // 穭
         case 2660: return "biao";    // 穮
         case 2662: return "se";    // 穯
         case 2664: return "jue";    // 穱
@@ -13330,7 +13330,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 2836: return "zhuan";    // 竱
         case 2838: return "ceng";    // 竲
         case 2840: return "deng";    // 竳
-        case 2842: return "zhang";    // 张
+        case 2842: return "";    // ?
         case 2844: return "cun";    // 竴
         case 2846: return "wai";    // 竵
         case 2848: return "jing";    // 競
@@ -13427,7 +13427,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 3030: return "dao";    // 箌
         case 3032: return "hu";    // 箎
         case 3034: return "zheng";    // 箏
-        case 3036: return "zhang";    // 张
+        case 3036: return "";    // ?
         case 3038: return "zha";    // 箑
         case 3040: return "zhou";    // 箒
         case 3042: return "lu";    // 箓
@@ -13452,7 +13452,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 3080: return "yi";    // 箷
         case 3082: return "yao";    // 箹
         case 3084: return "chun";    // 箺
-        case 3086: return "lǜ      ";    // 箻
+        case 3086: return "lu";    // 箻
         case 3088: return "wu";    // 箼
         case 3090: return "dong";    // 箽
         case 3092: return "xiao";    // 箾
@@ -13524,7 +13524,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 3224: return "liang";    // 簗
         case 3226: return "xiao";    // 簘
         case 3228: return "bo";    // 簙
-        case 3230: return "zhang";    // 张
+        case 3230: return "";    // ?
         case 3232: return "mi";    // 簚
         case 3234: return "shai";    // 簛
         case 3236: return "dang";    // 簜
@@ -13609,7 +13609,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 3394: return "shen";    // 籶
         case 3396: return "zhe";    // 籷
         case 3398: return "shen";    // 籸
-        case 3400: return "nǚ      ";    // 籹
+        case 3400: return "nu";    // 籹
         case 3402: return "he";    // 籺
         case 3404: return "ni";    // 籾
         case 3406: return "cun";    // 籿
@@ -13621,7 +13621,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 3418: return "wu";    // 粅
         case 3420: return "chao";    // 粆
         case 3422: return "kang";    // 粇
-        case 3424: return "zhang";    // 张
+        case 3424: return "";    // ?
         case 3426: return "rou";    // 粈
         case 3428: return "bi";    // 粊
         case 3430: return "cui";    // 粋
@@ -13718,7 +13718,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 3612: return "zi";    // 紎
         case 3614: return "tou";    // 紏
         case 3616: return "niu";    // 紐
-        case 3618: return "zhang";    // 张
+        case 3618: return "";    // ?
         case 3620: return "fou";    // 紑
         case 3622: return "ji";    // 紒
         case 3624: return "shu";    // 紓
@@ -13815,13 +13815,13 @@ char* get_pinyin_gbk4(unsigned int code)
         case 3806: return "xiang";    // 絴
         case 3808: return "gui";    // 絵
         case 3810: return "jue";    // 絶
-        case 3812: return "zhang";    // 张
+        case 3812: return "";    // ?
         case 3814: return "jian";    // 絸
         case 3816: return "juan";    // 絹
         case 3818: return "zhi";    // 絺
         case 3820: return "wen";    // 絻
         case 3822: return "zhen";    // 絼
-        case 3824: return "lǚ      ";    // 絽
+        case 3824: return "lu";    // 絽
         case 3826: return "cheng";    // 絾
         case 3828: return "qiu";    // 絿
         case 3830: return "shu";    // 綀
@@ -13856,7 +13856,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 3888: return "chen";    // 綝
         case 3890: return "duo";    // 綞
         case 3892: return "li";    // 綟
-        case 3894: return "lǜ      ";    // 綠
+        case 3894: return "lu";    // 綠
         case 3896: return "liang";    // 綡
         case 3898: return "chou";    // 綢
         case 3900: return "quan";    // 綣
@@ -13912,7 +13912,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 4000: return "xiang";    // 緗
         case 4002: return "jian";    // 緘
         case 4004: return "ke";    // 緙
-        case 4006: return "zhang";    // 张
+        case 4006: return "";    // ?
         case 4008: return "xian";    // 線
         case 4010: return "ruan";    // 緛
         case 4012: return "mian";    // 緜
@@ -14006,17 +14006,17 @@ char* get_pinyin_gbk4(unsigned int code)
         case 4188: return "qian";    // 縴
         case 4190: return "man";    // 縵
         case 4192: return "zhi";    // 縶
-        case 4194: return "lǚ      ";    // 縷
+        case 4194: return "lu";    // 縷
         case 4196: return "mo";    // 縸
         case 4198: return "piao";    // 縹
-        case 4200: return "zhang";    // 张
+        case 4200: return "";    // ?
         case 4202: return "lian";    // 縺
         case 4204: return "xuan";    // 縼
         case 4206: return "zong";    // 總
         case 4208: return "ji";    // 績
         case 4210: return "xian";    // 縿
         case 4212: return "cui";    // 繀
-        case 4214: return "lǜ      ";    // 繂
+        case 4214: return "lu";    // 繂
         case 4216: return "beng";    // 繃
         case 4218: return "yi";    // 繄
         case 4220: return "sao";    // 繅
@@ -14106,7 +14106,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 4388: return "lan";    // 纜
         case 4390: return "lei";    // 纝
         case 4392: return "lian";    // 纞
-        case 4394: return "zhang";    // 张
+        case 4394: return "";    // ?
         case 4396: return "hong";    // 纮
         case 4398: return "ren";    // 纴
         case 4400: return "zhu";    // 纻
@@ -14203,7 +14203,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 4582: return "yu";    // 羭
         case 4584: return "lang";    // 羮
         case 4586: return "yuan";    // 羱
-        case 4588: return "zhang";    // 张
+        case 4588: return "";    // ?
         case 4590: return "fan";    // 羳
         case 4592: return "shan";    // 羴
         case 4594: return "fen";    // 羵
@@ -14286,7 +14286,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 4748: return "dan";    // 耼
         case 4750: return "hong";    // 耾
         case 4752: return "zhi";    // 聀
-        case 4754: return "聁";    // 聁
+        case 4754: return "pan";    // 聁
         case 4756: return "zhen";    // 聄
         case 4758: return "che";    // 聅
         case 4760: return "zheng";    // 聇
@@ -14300,7 +14300,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 4776: return "hao";    // 聕
         case 4778: return "sheng";    // 聖
         case 4780: return "lie";    // 聗
-        case 4782: return "zhang";    // 张
+        case 4782: return "";    // ?
         case 4784: return "jing";    // 聙
         case 4786: return "bi";    // 聛
         case 4788: return "di";    // 聜
@@ -14310,7 +14310,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 4796: return "ping";    // 聠
         case 4798: return "cong";    // 聡
         case 4800: return "ding";    // 聢
-        case 4802: return "聣     ";    // 聣
+        case 4802: return "ni";    // 聣
         case 4804: return "ting";    // 聤
         case 4806: return "ju";    // 聥
         case 4808: return "cong";    // 聦
@@ -14397,7 +14397,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 4970: return "xian";    // 脇
         case 4972: return "mai";    // 脈
         case 4974: return "xie";    // 脋
-        case 4976: return "zhang";    // 张
+        case 4976: return "";    // ?
         case 4978: return "nin";    // 脌
         case 4980: return "wan";    // 脕
         case 4982: return "wen";    // 脗
@@ -14478,7 +14478,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 5132: return "ji";    // 膌
         case 5134: return "pi";    // 膍
         case 5136: return "xie";    // 膎
-        case 5138: return "lǚ      ";    // 膐
+        case 5138: return "lu";    // 膐
         case 5140: return "ou";    // 膒
         case 5142: return "chang";    // 膓
         case 5144: return "biao";    // 膔
@@ -14494,7 +14494,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 5164: return "lou";    // 膢
         case 5166: return "xue";    // 膤
         case 5168: return "cen";    // 膥
-        case 5170: return "zhang";    // 张
+        case 5170: return "";    // ?
         case 5172: return "tong";    // 膧
         case 5174: return "ni";    // 膩
         case 5176: return "liao";    // 膫
@@ -14591,14 +14591,14 @@ char* get_pinyin_gbk4(unsigned int code)
         case 5358: return "hong";    // 舼
         case 5360: return "pang";    // 舽
         case 5362: return "kua";    // 舿
-        case 5364: return "zhang";    // 张
+        case 5364: return "";    // ?
         case 5366: return "fu";    // 艀
         case 5368: return "zao";    // 艁
         case 5370: return "feng";    // 艂
         case 5372: return "li";    // 艃
         case 5374: return "yu";    // 艅
         case 5376: return "lang";    // 艆
-        case 5378: return "艈     ";    // 艈
+        case 5378: return "yu";    // 艈
         case 5380: return "bo";    // 艊
         case 5382: return "nian";    // 艌
         case 5384: return "ju";    // 艍
@@ -14688,7 +14688,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 5552: return "die";    // 苵
         case 5554: return "nie";    // 苶
         case 5556: return "hu";    // 苸
-        case 5558: return "zhang";    // 张
+        case 5558: return "";    // ?
         case 5560: return "mei";    // 苺
         case 5562: return "sheng";    // 苼
         case 5564: return "gu";    // 苽
@@ -14699,7 +14699,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 5574: return "zhi";    // 茋
         case 5576: return "ji";    // 茍
         case 5578: return "cong";    // 茐
-        case 5580: return "茒     ";    // 茒
+        case 5580: return "yuan";    // 茒
         case 5582: return "xue";    // 茓
         case 5584: return "luo";    // 茖
         case 5586: return "li";    // 茘
@@ -14771,7 +14771,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 5718: return "xing";    // 莕
         case 5720: return "jing";    // 莖
         case 5722: return "che";    // 莗
-        case 5724: return "jun1      ";    // 莙
+        case 5724: return "jun";    // 莙
         case 5726: return "yan";    // 莚
         case 5728: return "cuo";    // 莝
         case 5730: return "han";    // 莟
@@ -14785,7 +14785,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 5746: return "wan";    // 莬
         case 5748: return "jie";    // 莭
         case 5750: return "nan";    // 莮
-        case 5752: return "zhang";    // 张
+        case 5752: return "";    // ?
         case 5754: return "mu";    // 莯
         case 5756: return "tu";    // 莵
         case 5758: return "neus";    // 莻
@@ -14882,12 +14882,12 @@ char* get_pinyin_gbk4(unsigned int code)
         case 5940: return "rou";    // 葇
         case 5942: return "xi";    // 葈
         case 5944: return "ye";    // 葉
-        case 5946: return "zhang";    // 张
+        case 5946: return "";    // ?
         case 5948: return "an";    // 葊
         case 5950: return "qu";    // 葋
         case 5952: return "jian";    // 葌
         case 5954: return "fu";    // 葍
-        case 5956: return "lǜ      ";    // 葎
+        case 5956: return "lu";    // 葎
         case 5958: return "jian";    // 葏
         case 5960: return "pen";    // 葐
         case 5962: return "hong";    // 葒
@@ -14925,7 +14925,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 6026: return "guan";    // 蒄
         case 6028: return "ran";    // 蒅
         case 6030: return "xue";    // 蒆
-        case 6032: return "蒊     ";    // 蒊
+        case 6032: return "hua";    // 蒊
         case 6034: return "wei";    // 蒍
         case 6036: return "you";    // 蒏
         case 6038: return "sou";    // 蒐
@@ -14979,13 +14979,13 @@ char* get_pinyin_gbk4(unsigned int code)
         case 6134: return "yao";    // 蓔
         case 6136: return "gui";    // 蓕
         case 6138: return "zong";    // 蓗
-        case 6140: return "zhang";    // 张
+        case 6140: return "";    // ?
         case 6142: return "gun";    // 蓘
         case 6144: return "zuo";    // 蓙
         case 6146: return "tiao";    // 蓚
         case 6148: return "ce";    // 蓛
         case 6150: return "pei";    // 蓜
-        case 6152: return "蓞     ";    // 蓞
+        case 6152: return "dan";    // 蓞
         case 6154: return "shen";    // 蓡
         case 6156: return "lang";    // 蓢
         case 6158: return "ling";    // 蓤
@@ -15076,7 +15076,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 6328: return "yun";    // 蕓
         case 6330: return "bao";    // 蕔
         case 6332: return "you";    // 蕕
-        case 6334: return "zhang";    // 张
+        case 6334: return "";    // ?
         case 6336: return "lu";    // 蕗
         case 6338: return "yao";    // 蕘
         case 6340: return "e";    // 蕚
@@ -15173,11 +15173,11 @@ char* get_pinyin_gbk4(unsigned int code)
         case 6522: return "jin";    // 藎
         case 6524: return "qiong";    // 藑
         case 6526: return "qie";    // 藒
-        case 6528: return "zhang";    // 张
-        case 6530: return "藔     ";    // 藔
+        case 6528: return "";    // ?
+        case 6530: return "liao";    // 藔
         case 6532: return "qian";    // 藖
         case 6534: return "su";    // 藗
-        case 6536: return "lǘ      ";    // 藘
+        case 6536: return "lu";    // 藘
         case 6538: return "yi";    // 藙
         case 6540: return "xu";    // 藚
         case 6542: return "xie";    // 藛
@@ -15270,7 +15270,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 6716: return "huai";    // 蘾
         case 6718: return "luo";    // 蘿
         case 6720: return "ji";    // 虀
-        case 6722: return "zhang";    // 张
+        case 6722: return "";    // ?
         case 6724: return "kui";    // 虁
         case 6726: return "lu";    // 虂
         case 6728: return "jian";    // 虃
@@ -15307,7 +15307,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 6790: return "dao";    // 虭
         case 6792: return "qiu";    // 虯
         case 6794: return "ding";    // 虰
-        case 6796: return "虲     ";    // 虲
+        case 6796: return "xia";    // 虲
         case 6798: return "jue";    // 虳
         case 6800: return "zhe";    // 虴
         case 6802: return "ye";    // 虵
@@ -15323,7 +15323,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 6822: return "wen";    // 蚉
         case 6824: return "yue";    // 蚎
         case 6826: return "yue";    // 蚏
-        case 6828: return "jun1      ";    // 蚐
+        case 6828: return "jun";    // 蚐
         case 6830: return "qi";    // 蚑
         case 6832: return "tong";    // 蚒
         case 6834: return "qi";    // 蚔
@@ -15367,7 +15367,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 6910: return "fu";    // 蛗
         case 6912: return "lie";    // 蛚
         case 6914: return "yi";    // 蛜
-        case 6916: return "zhang";    // 张
+        case 6916: return "";    // ?
         case 6918: return "xian";    // 蛝
         case 6920: return "li";    // 蛠
         case 6922: return "yi";    // 蛡
@@ -15432,7 +15432,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 7040: return "wang";    // 蝄
         case 7042: return "can";    // 蝅
         case 7044: return "mi";    // 蝆
-        case 7046: return "蝊     ";    // 蝊
+        case 7046: return "ding";    // 蝊
         case 7048: return "la";    // 蝋
         case 7050: return "ji";    // 蝍
         case 7052: return "ting";    // 蝏
@@ -15464,7 +15464,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 7104: return "la";    // 蝲
         case 7106: return "dai";    // 蝳
         case 7108: return "qiu";    // 蝵
-        case 7110: return "zhang";    // 张
+        case 7110: return "";    // ?
         case 7112: return "li";    // 蝷
         case 7114: return "wo";    // 蝸
         case 7116: return "ao";    // 蝹
@@ -15561,7 +15561,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 7298: return "cheng";    // 蟶
         case 7300: return "dang";    // 蟷
         case 7302: return "li";    // 蟸
-        case 7304: return "zhang";    // 张
+        case 7304: return "";    // ?
         case 7306: return "dan";    // 蟺
         case 7308: return "yi";    // 蟻
         case 7310: return "jing";    // 蟼
@@ -15621,7 +15621,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 7418: return "zhu";    // 蠾
         case 7420: return "zhuo";    // 蠿
         case 7422: return "huang";    // 衁
-        case 7424: return "nǜ      ";    // 衂
+        case 7424: return "nu";    // 衂
         case 7426: return "pei";    // 衃
         case 7428: return "zhong";    // 衆
         case 7430: return "mai";    // 衇
@@ -15658,10 +15658,10 @@ char* get_pinyin_gbk4(unsigned int code)
         case 7492: return "jie";    // 衸
         case 7494: return "ti";    // 衹
         case 7496: return "xie";    // 衺
-        case 7498: return "zhang";    // 张
+        case 7498: return "";    // ?
         case 7500: return "ran";    // 衻
         case 7502: return "zhi";    // 衼
-        case 7504: return "jun1      ";    // 袀
+        case 7504: return "jun";    // 袀
         case 7506: return "chai";    // 袃
         case 7508: return "yi";    // 袆
         case 7510: return "ran";    // 袇
@@ -15695,7 +15695,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 7566: return "yu";    // 袬
         case 7568: return "mi";    // 袮
         case 7570: return "bo";    // 袯
-        case 7572: return "袰     ";    // 袰
+        case 7572: return "bo";    // 袰
         case 7574: return "nuo";    // 袲
         case 7576: return "qi";    // 袳
         case 7578: return "ku";    // 袴
@@ -15755,7 +15755,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 7686: return "ti";    // 褆
         case 7688: return "fu";    // 複
         case 7690: return "chong";    // 褈
-        case 7692: return "zhang";    // 张
+        case 7692: return "";    // ?
         case 7694: return "xie";    // 褉
         case 7696: return "die";    // 褋
         case 7698: return "kun";    // 褌
@@ -15789,7 +15789,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 7754: return "lian";    // 褳
         case 7756: return "li";    // 褵
         case 7758: return "shi";    // 褷
-        case 7760: return "lǚ      ";    // 褸
+        case 7760: return "lu";    // 褸
         case 7762: return "yi";    // 褹
         case 7764: return "die";    // 褺
         case 7766: return "xie";    // 褻
@@ -15852,7 +15852,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 7880: return "shi";    // 襹
         case 7882: return "jian";    // 襺
         case 7884: return "yi";    // 襼
-        case 7886: return "zhang";    // 张
+        case 7886: return "";    // ?
         case 7888: return "lan";    // 襽
         case 7890: return "ya";    // 襾
         case 7892: return "xi";    // 覀
@@ -15884,7 +15884,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 7944: return "lian";    // 覝
         case 7946: return "yao";    // 覞
         case 7948: return "zhi";    // 覟
-        case 7950: return "jun1      ";    // 覠
+        case 7950: return "jun";    // 覠
         case 7952: return "xi";    // 覡
         case 7954: return "shan";    // 覢
         case 7956: return "wei";    // 覣
@@ -15949,7 +15949,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 8074: return "chu";    // 觸
         case 8076: return "wei";    // 觹
         case 8078: return "yi";    // 觺
-        case 8080: return "zhang";    // 张
+        case 8080: return "";    // ?
         case 8082: return "li";    // 觻
         case 8084: return "jue";    // 觼
         case 8086: return "wei";    // 觽
@@ -16046,7 +16046,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 8268: return "tao";    // 詜
         case 8270: return "zhu";    // 詝
         case 8272: return "ci";    // 詞
-        case 8274: return "zhang";    // 张
+        case 8274: return "";    // ?
         case 8276: return "zhe";    // 詟
         case 8278: return "yong";    // 詠
         case 8280: return "xu";    // 詡
@@ -16143,7 +16143,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 8462: return "bei";    // 諀
         case 8464: return "zhuo";    // 諁
         case 8466: return "chan";    // 諂
-        case 8468: return "zhang";    // 张
+        case 8468: return "";    // ?
         case 8470: return "chen";    // 諃
         case 8472: return "zhun";    // 諄
         case 8474: return "ji";    // 諅
@@ -16240,7 +16240,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 8656: return "yao";    // 謡
         case 8658: return "zhi";    // 謢
         case 8660: return "yu";    // 謣
-        case 8662: return "zhang";    // 张
+        case 8662: return "";    // ?
         case 8664: return "biao";    // 謤
         case 8666: return "cong";    // 謥
         case 8668: return "li";    // 謧
@@ -16337,7 +16337,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 8850: return "lei";    // 讄
         case 8852: return "shen";    // 讅
         case 8854: return "wei";    // 讆
-        case 8856: return "zhang";    // 张
+        case 8856: return "";    // ?
         case 8858: return "chan";    // 讇
         case 8860: return "li";    // 讈
         case 8862: return "yi";    // 讉
@@ -16434,7 +16434,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 9044: return "si";    // 貄
         case 9046: return "huan";    // 貆
         case 9048: return "ken";    // 貇
-        case 9050: return "zhang";    // 张
+        case 9050: return "";    // ?
         case 9052: return "mo";    // 貈
         case 9054: return "an";    // 貋
         case 9056: return "mai";    // 貍
@@ -16531,7 +16531,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 9238: return "zhi";    // 質
         case 9240: return "ji";    // 賫
         case 9242: return "zhang";    // 賬
-        case 9244: return "zhang";    // 张
+        case 9244: return "";    // ?
         case 9246: return "du";    // 賭
         case 9248: return "jin";    // 賮
         case 9250: return "min";    // 賯
@@ -16575,7 +16575,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 9326: return "du";    // 贕
         case 9328: return "shu";    // 贖
         case 9330: return "yan";    // 贗
-        case 9332: return "贘     ";    // 贘
+        case 9332: return "shang";    // 贘
         case 9334: return "xuan";    // 贙
         case 9336: return "long";    // 贚
         case 9338: return "gan";    // 贛
@@ -16628,7 +16628,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 9432: return "qi";    // 趞
         case 9434: return "chao";    // 趠
         case 9436: return "wei";    // 趡
-        case 9438: return "zhang";    // 张
+        case 9438: return "";    // ?
         case 9440: return "lu";    // 趢
         case 9442: return "dang";    // 趤
         case 9444: return "qiu";    // 趥
@@ -16725,7 +16725,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 9626: return "tuo";    // 踻
         case 9628: return "tang";    // 踼
         case 9630: return "bi";    // 踾
-        case 9632: return "zhang";    // 张
+        case 9632: return "";    // ?
         case 9634: return "zu";    // 踿
         case 9636: return "nuo";    // 蹃
         case 9638: return "zha";    // 蹅
@@ -16815,14 +16815,14 @@ char* get_pinyin_gbk4(unsigned int code)
         case 9806: return "ji";    // 躸
         case 9808: return "ju";    // 躹
         case 9810: return "kong";    // 躻
-        case 9812: return "躼";    // 躼
+        case 9812: return "lao";    // 躼
         case 9814: return "yan";    // 躽
         case 9816: return "mei";    // 躾
         case 9818: return "kang";    // 躿
         case 9820: return "qu";    // 軀
         case 9822: return "lou";    // 軁
         case 9824: return "lao";    // 軂
-        case 9826: return "zhang";    // 张
+        case 9826: return "";    // ?
         case 9828: return "tuo";    // 軃
         case 9830: return "zhi";    // 軄
         case 9832: return "yan";    // 軅
@@ -16833,7 +16833,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 9842: return "che";    // 車
         case 9844: return "zha";    // 軋
         case 9846: return "gui";    // 軌
-        case 9848: return "jun1      ";    // 軍
+        case 9848: return "jun";    // 軍
         case 9850: return "yue";    // 軏
         case 9852: return "xian";    // 軐
         case 9854: return "dai";    // 軑
@@ -16919,7 +16919,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 10014: return "kan";    // 輡
         case 10016: return "yi";    // 輢
         case 10018: return "peng";    // 輣
-        case 10020: return "zhang";    // 张
+        case 10020: return "";    // ?
         case 10022: return "qian";    // 輤
         case 10024: return "gun";    // 輥
         case 10026: return "nian";    // 輦
@@ -16998,7 +16998,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 10172: return "yi";    // 辥
         case 10174: return "ban";    // 辦
         case 10176: return "bian";    // 辧
-        case 10178: return "辪";    // 辪
+        case 10178: return "xue";    // 辪
         case 10180: return "ban";    // 辬
         case 10182: return "ci";    // 辭
         case 10184: return "bian";    // 辮
@@ -17016,7 +17016,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 10208: return "gan";    // 迀
         case 10210: return "yu";    // 迃
         case 10212: return "tuo";    // 迆
-        case 10214: return "zhang";    // 张
+        case 10214: return "";    // ?
         case 10216: return "qi";    // 迉
         case 10218: return "zha";    // 迊
         case 10220: return "wang";    // 迋
@@ -17113,7 +17113,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 10402: return "liao";    // 遼
         case 10404: return "shi";    // 遾
         case 10406: return "mai";    // 邁
-        case 10408: return "zhang";    // 张
+        case 10408: return "";    // ?
         case 10410: return "hai";    // 還
         case 10412: return "zhan";    // 邅
         case 10414: return "teng";    // 邆
@@ -17159,7 +17159,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 10494: return "yan";    // 郔
         case 10496: return "cheng";    // 郕
         case 10498: return "dou";    // 郖
-        case 10500: return "lǚ      ";    // 郘
+        case 10500: return "lu";    // 郘
         case 10502: return "fu";    // 郙
         case 10504: return "wu";    // 郚
         case 10506: return "lang";    // 郞
@@ -17210,7 +17210,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 10596: return "mao";    // 鄚
         case 10598: return "chao";    // 鄛
         case 10600: return "fu";    // 鄜
-        case 10602: return "zhang";    // 张
+        case 10602: return "";    // ?
         case 10604: return "liao";    // 鄝
         case 10606: return "zhuan";    // 鄟
         case 10608: return "hu";    // 鄠
@@ -17307,7 +17307,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 10790: return "niang";    // 醸
         case 10792: return "ru";    // 醹
         case 10794: return "shou";    // 醻
-        case 10796: return "zhang";    // 张
+        case 10796: return "";    // ?
         case 10798: return "yan";    // 醼
         case 10800: return "ling";    // 醽
         case 10802: return "mi";    // 醾
@@ -17360,7 +17360,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 10896: return "yi";    // 釶
         case 10898: return "tu";    // 釷
         case 10900: return "xi";    // 釸
-        case 10902: return "nǚ      ";    // 釹
+        case 10902: return "nu";    // 釹
         case 10904: return "qian";    // 釺
         case 10906: return "qiu";    // 釻
         case 10908: return "jian";    // 釼
@@ -17397,20 +17397,20 @@ char* get_pinyin_gbk4(unsigned int code)
         case 10970: return "guo";    // 鈛
         case 10972: return "hong";    // 鈜
         case 10974: return "yin";    // 鈝
-        case 10976: return "jun1      ";    // 鈞
+        case 10976: return "jun";    // 鈞
         case 10978: return "diao";    // 鈟
         case 10980: return "yi";    // 鈠
         case 10982: return "zhong";    // 鈡
         case 10984: return "xi";    // 鈢
         case 10986: return "gai";    // 鈣
         case 10988: return "ri";    // 鈤
-        case 10990: return "zhang";    // 张
+        case 10990: return "";    // ?
         case 10992: return "huo";    // 鈥
         case 10994: return "tai";    // 鈦
         case 10996: return "kang";    // 鈧
         case 10998: return "yuan";    // 鈨
         case 11000: return "lu";    // 鈩
-        case 11002: return "ngag";    // 鈪
+        case 11002: return "e";    // 鈪
         case 11004: return "wen";    // 鈫
         case 11006: return "duo";    // 鈬
         case 11008: return "zi";    // 鈭
@@ -17496,12 +17496,12 @@ char* get_pinyin_gbk4(unsigned int code)
         case 11168: return "mao";    // 鉾
         case 11170: return "ha";    // 鉿
         case 11172: return "yin";    // 銀
-        case 11174: return "jun1      ";    // 銁
+        case 11174: return "jun";    // 銁
         case 11176: return "zhou";    // 銂
         case 11178: return "chong";    // 銃
         case 11180: return "jiong";    // 銄
         case 11182: return "tong";    // 銅
-        case 11184: return "zhang";    // 张
+        case 11184: return "";    // ?
         case 11186: return "mo";    // 銆
         case 11188: return "lei";    // 銇
         case 11190: return "ji";    // 銈
@@ -17525,7 +17525,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 11226: return "tian";    // 銛
         case 11228: return "xian";    // 銜
         case 11230: return "xiu";    // 銝
-        case 11232: return "jun1      ";    // 銞
+        case 11232: return "jun";    // 銞
         case 11234: return "cha";    // 銟
         case 11236: return "lao";    // 銠
         case 11238: return "ji";    // 銡
@@ -17542,7 +17542,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 11260: return "kao";    // 銬
         case 11262: return "jian";    // 銭
         case 11264: return "si";    // 銯
-        case 11266: return "ngai";    // 銰
+        case 11266: return "ai";    // 銰
         case 11268: return "diao";    // 銱
         case 11270: return "han";    // 銲
         case 11272: return "rui";    // 銳
@@ -17559,7 +17559,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 11294: return "gong";    // 銾
         case 11296: return "yong";    // 銿
         case 11298: return "dou";    // 鋀
-        case 11300: return "lǚ      ";    // 鋁
+        case 11300: return "lu";    // 鋁
         case 11302: return "mei";    // 鋂
         case 11304: return "lang";    // 鋃
         case 11306: return "wan";    // 鋄
@@ -17598,7 +17598,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 11372: return "ju";    // 鋦
         case 11374: return "xian";    // 鋧
         case 11376: return "e";    // 鋨
-        case 11378: return "zhang";    // 张
+        case 11378: return "";    // ?
         case 11380: return "mang";    // 鋩
         case 11382: return "pu";    // 鋪
         case 11384: return "li";    // 鋫
@@ -17687,7 +17687,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 11550: return "hu";    // 錿
         case 11552: return "de";    // 鍀
         case 11554: return "xian";    // 鍁
-        case 11556: return "鍂";    // 鍂
+        case 11556: return "pian";    // 鍂
         case 11558: return "huo";    // 鍃
         case 11560: return "liang";    // 鍄
         case 11562: return "fa";    // 鍅
@@ -17695,7 +17695,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 11566: return "kai";    // 鍇
         case 11568: return "yang";    // 鍈
         case 11570: return "di";    // 鍉
-        case 11572: return "zhang";    // 张
+        case 11572: return "";    // ?
         case 11574: return "lian";    // 鍊
         case 11576: return "guo";    // 鍋
         case 11578: return "xian";    // 鍌
@@ -17707,7 +17707,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 11590: return "rou";    // 鍒
         case 11592: return "ji";    // 鍓
         case 11594: return "e";    // 鍔
-        case 11596: return "jun1      ";    // 鍕
+        case 11596: return "jun";    // 鍕
         case 11598: return "zhen";    // 鍖
         case 11600: return "ti";    // 鍗
         case 11602: return "zha";    // 鍘
@@ -17792,7 +17792,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 11760: return "shi";    // 鎩
         case 11762: return "sou";    // 鎪
         case 11764: return "wan";    // 鎫
-        case 11766: return "zhang";    // 张
+        case 11766: return "";    // ?
         case 11768: return "gao";    // 鎬
         case 11770: return "zhen";    // 鎭
         case 11772: return "zhen";    // 鎮
@@ -17809,7 +17809,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 11794: return "song";    // 鎹
         case 11796: return "zu";    // 鎺
         case 11798: return "suo";    // 鎻
-        case 11800: return "鎼     ";    // 鎼
+        case 11800: return "xia";    // 鎼
         case 11802: return "feng";    // 鎽
         case 11804: return "wen";    // 鎾
         case 11806: return "na";    // 鎿
@@ -17889,7 +17889,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 11954: return "tang";    // 鐋
         case 11956: return "xiang";    // 鐌
         case 11958: return "yu";    // 鐍
-        case 11960: return "zhang";    // 张
+        case 11960: return "";    // ?
         case 11962: return "jiao";    // 鐎
         case 11964: return "zun";    // 鐏
         case 11966: return "liao";    // 鐐
@@ -17910,7 +17910,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 11996: return "ti";    // 鐟
         case 11998: return "pu";    // 鐠
         case 12000: return "die";    // 鐡
-        case 12002: return "鐢     ";    // 鐢
+        case 12002: return "fan";    // 鐢
         case 12004: return "zhang";    // 鐣
         case 12006: return "ding";    // 鐤
         case 12008: return "shan";    // 鐥
@@ -17973,7 +17973,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 12122: return "du";    // 鑟
         case 12124: return "shuo";    // 鑠
         case 12126: return "chuo";    // 鑡
-        case 12128: return "lǜ      ";    // 鑢
+        case 12128: return "lu";    // 鑢
         case 12130: return "biao";    // 鑣
         case 12132: return "bao";    // 鑤
         case 12134: return "lu";    // 鑥
@@ -17986,7 +17986,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 12148: return "lan";    // 鑭
         case 12150: return "bo";    // 鑮
         case 12152: return "jian";    // 鑯
-        case 12154: return "zhang";    // 张
+        case 12154: return "";    // ?
         case 12156: return "yao";    // 鑰
         case 12158: return "chan";    // 鑱
         case 12160: return "xiang";    // 鑲
@@ -18083,10 +18083,10 @@ char* get_pinyin_gbk4(unsigned int code)
         case 12342: return "gui";    // 閨
         case 12344: return "min";    // 閩
         case 12346: return "seo";    // 閪
-        case 12348: return "zhang";    // 张
+        case 12348: return "";    // ?
         case 12350: return "kun";    // 閫
         case 12352: return "lang";    // 閬
-        case 12354: return "lǘ      ";    // 閭
+        case 12354: return "lu";    // 閭
         case 12356: return "ting";    // 閮
         case 12358: return "sha";    // 閯
         case 12360: return "ju";    // 閰
@@ -18120,7 +18120,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 12416: return "lan";    // 闌
         case 12418: return "du";    // 闍
         case 12420: return "quan";    // 闎
-        case 12422: return "phdeng";    // 闏
+        case 12422: return "pai";    // 闏
         case 12424: return "tian";    // 闐
         case 12426: return "nie";    // 闑
         case 12428: return "ta";    // 闒
@@ -18144,7 +18144,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 12464: return "huan";    // 闤
         case 12466: return "ta";    // 闥
         case 12468: return "wen";    // 闦
-        case 12470: return "闧     ";    // 闧
+        case 12470: return "meng";    // 闧
         case 12472: return "bi";    // 闬
         case 12474: return "kai";    // 闿
         case 12476: return "du";    // 阇
@@ -18180,7 +18180,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 12536: return "yu";    // 陓
         case 12538: return "jun";    // 陖
         case 12540: return "qiao";    // 陗
-        case 12542: return "zhang";    // 张
+        case 12542: return "";    // ?
         case 12544: return "jing";    // 陘
         case 12546: return "chun";    // 陙
         case 12548: return "wu";    // 陚
@@ -18277,7 +18277,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 12730: return "ji";    // 雦
         case 12732: return "ji";    // 雧
         case 12734: return "na";    // 雫
-        case 12736: return "zhang";    // 张
+        case 12736: return "";    // ?
         case 12738: return "fou";    // 雬
         case 12740: return "xi";    // 雭
         case 12742: return "mu";    // 雮
@@ -18331,7 +18331,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 12838: return "pang";    // 霶
         case 12840: return "yang";    // 霷
         case 12842: return "wei";    // 霺
-        case 12844: return "霻     ";    // 霻
+        case 12844: return "feng";    // 霻
         case 12846: return "xi";    // 霼
         case 12848: return "ji";    // 霽
         case 12850: return "mao";    // 霿
@@ -18374,7 +18374,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 12924: return "du";    // 靯
         case 12926: return "wu";    // 靰
         case 12928: return "ren";    // 靱
-        case 12930: return "zhang";    // 张
+        case 12930: return "";    // ?
         case 12932: return "qin";    // 靲
         case 12934: return "niu";    // 靵
         case 12936: return "yin";    // 靷
@@ -18471,7 +18471,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 13118: return "wei";    // 韡
         case 13120: return "hui";    // 韢
         case 13122: return "du";    // 韣
-        case 13124: return "zhang";    // 张
+        case 13124: return "";    // ?
         case 13126: return "wa";    // 韤
         case 13128: return "du";    // 韥
         case 13130: return "fu";    // 韨
@@ -18568,7 +18568,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 13312: return "sai";    // 顋
         case 13314: return "ti";    // 題
         case 13316: return "e";    // 額
-        case 13318: return "zhang";    // 张
+        case 13318: return "";    // ?
         case 13320: return "e";    // 顎
         case 13322: return "yan";    // 顏
         case 13324: return "wen";    // 顐
@@ -18665,7 +18665,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 13506: return "ji";    // 飢
         case 13508: return "ding";    // 飣
         case 13510: return "si";    // 飤
-        case 13512: return "zhang";    // 张
+        case 13512: return "";    // ?
         case 13514: return "tuo";    // 飥
         case 13516: return "gan";    // 飦
         case 13518: return "tun";    // 飩
@@ -18762,7 +18762,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 13700: return "yu";    // 饇
         case 13702: return "xiu";    // 饈
         case 13704: return "jin";    // 饉
-        case 13706: return "zhang";    // 张
+        case 13706: return "";    // ?
         case 13708: return "san";    // 饊
         case 13710: return "kui";    // 饋
         case 13712: return "zhuan";    // 饌
@@ -18833,7 +18833,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 13842: return "wen";    // 馼
         case 13844: return "zhi";    // 馽
         case 13846: return "dan";    // 馾
-        case 13848: return "lǘ      ";    // 馿
+        case 13848: return "lu";    // 馿
         case 13850: return "you";    // 駀
         case 13852: return "bo";    // 駁
         case 13854: return "bao";    // 駂
@@ -18859,7 +18859,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 13894: return "ling";    // 駖
         case 13896: return "zhen";    // 駗
         case 13898: return "tai";    // 駘
-        case 13900: return "zhang";    // 张
+        case 13900: return "";    // ?
         case 13902: return "fu";    // 駙
         case 13904: return "yang";    // 駚
         case 13906: return "shi";    // 駛
@@ -18956,7 +18956,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 14088: return "zhu";    // 騶
         case 14090: return "sao";    // 騷
         case 14092: return "shan";    // 騸
-        case 14094: return "zhang";    // 张
+        case 14094: return "";    // ?
         case 14096: return "qi";    // 騹
         case 14098: return "zhi";    // 騺
         case 14100: return "shuang";    // 騻
@@ -18998,7 +18998,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 14172: return "zhou";    // 驟
         case 14174: return "yan";    // 驠
         case 14176: return "long";    // 驡
-        case 14178: return "lǘ      ";    // 驢
+        case 14178: return "lu";    // 驢
         case 14180: return "teng";    // 驣
         case 14182: return "xiang";    // 驤
         case 14184: return "ji";    // 驥
@@ -19053,7 +19053,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 14282: return "qiao";    // 髚
         case 14284: return "kao";    // 髛
         case 14286: return "qiao";    // 髜
-        case 14288: return "zhang";    // 张
+        case 14288: return "";    // ?
         case 14290: return "lao";    // 髝
         case 14292: return "sao";    // 髞
         case 14294: return "kun";    // 髠
@@ -19150,7 +19150,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 14476: return "yan";    // 魘
         case 14478: return "zhan";    // 魙
         case 14480: return "yu";    // 魚
-        case 14482: return "zhang";    // 张
+        case 14482: return "";    // ?
         case 14484: return "dao";    // 魛
         case 14486: return "ren";    // 魜
         case 14488: return "ji";    // 魝
@@ -19242,12 +19242,12 @@ char* get_pinyin_gbk4(unsigned int code)
         case 14660: return "kao";    // 鮳
         case 14662: return "xiu";    // 鮴
         case 14664: return "duo";    // 鮵
-        case 14666: return "jun1      ";    // 鮶
+        case 14666: return "jun";    // 鮶
         case 14668: return "ti";    // 鮷
         case 14670: return "mian";    // 鮸
         case 14672: return "shao";    // 鮹
         case 14674: return "zha";    // 鮺
-        case 14676: return "zhang";    // 张
+        case 14676: return "";    // ?
         case 14678: return "suo";    // 鮻
         case 14680: return "qin";    // 鮼
         case 14682: return "yu";    // 鮽
@@ -19344,7 +19344,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 14864: return "shi";    // 鰘
         case 14866: return "ruo";    // 鰙
         case 14868: return "xuan";    // 鰚
-        case 14870: return "zhang";    // 张
+        case 14870: return "";    // ?
         case 14872: return "wen";    // 鰛
         case 14874: return "jian";    // 鰜
         case 14876: return "hao";    // 鰝
@@ -19441,7 +19441,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 15058: return "lu";    // 鱸
         case 15060: return "guan";    // 鱹
         case 15062: return "li";    // 鱺
-        case 15064: return "zhang";    // 张
+        case 15064: return "";    // ?
         case 15066: return "xian";    // 鱻
         case 15068: return "dao";    // 鱽
         case 15070: return "ji";    // 鱾
@@ -19458,7 +19458,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 15092: return "hou";    // 鲘
         case 15094: return "kuai";    // 鲙
         case 15096: return "zha";    // 鲝
-        case 15098: return "jun1      ";    // 鲪
+        case 15098: return "jun";    // 鲪
         case 15100: return "yong";    // 鲬
         case 15102: return "qi";    // 鲯
         case 15104: return "shen";    // 鲹
@@ -19538,7 +19538,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 15252: return "chi";    // 鴟
         case 15254: return "dan";    // 鴠
         case 15256: return "ju";    // 鴡
-        case 15258: return "zhang";    // 张
+        case 15258: return "";    // ?
         case 15260: return "yao";    // 鴢
         case 15262: return "gu";    // 鴣
         case 15264: return "zhong";    // 鴤
@@ -19635,7 +19635,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 15446: return "sheng";    // 鵿
         case 15448: return "qi";    // 鶀
         case 15450: return "jing";    // 鶁
-        case 15452: return "zhang";    // 张
+        case 15452: return "";    // ?
         case 15454: return "yi";    // 鶂
         case 15456: return "yi";    // 鶃
         case 15458: return "qing";    // 鶄
@@ -19651,7 +19651,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 15478: return "zun";    // 鶎
         case 15480: return "ji";    // 鶏
         case 15482: return "shu";    // 鶐
-        case 15484: return "鶑     ";    // 鶑
+        case 15484: return "ying";    // 鶑
         case 15486: return "chi";    // 鶒
         case 15488: return "miao";    // 鶓
         case 15490: return "rou";    // 鶔
@@ -19726,13 +19726,13 @@ char* get_pinyin_gbk4(unsigned int code)
         case 15628: return "zhi";    // 鷙
         case 15630: return "liu";    // 鷚
         case 15632: return "yong";    // 鷛
-        case 15634: return "lǘ      ";    // 鷜
+        case 15634: return "lu";    // 鷜
         case 15636: return "bi";    // 鷝
         case 15638: return "shuang";    // 鷞
         case 15640: return "zhuo";    // 鷟
         case 15642: return "yu";    // 鷠
         case 15644: return "wu";    // 鷡
-        case 15646: return "zhang";    // 张
+        case 15646: return "";    // ?
         case 15648: return "jue";    // 鷢
         case 15650: return "yin";    // 鷣
         case 15652: return "tan";    // 鷤
@@ -19829,7 +19829,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 15834: return "jian";    // 鹼
         case 15836: return "yan";    // 鹽
         case 15838: return "you";    // 麀
-        case 15840: return "zhang";    // 张
+        case 15840: return "";    // ?
         case 15842: return "cu";    // 麁
         case 15844: return "biao";    // 麃
         case 15846: return "cu";    // 麄
@@ -19840,11 +19840,11 @@ char* get_pinyin_gbk4(unsigned int code)
         case 15856: return "yu";    // 麌
         case 15858: return "liu";    // 麍
         case 15860: return "chen";    // 麎
-        case 15862: return "jun1      ";    // 麏
+        case 15862: return "jun";    // 麏
         case 15864: return "lin";    // 麐
         case 15866: return "ni";    // 麑
         case 15868: return "jiu";    // 麔
-        case 15870: return "jun1      ";    // 麕
+        case 15870: return "jun";    // 麕
         case 15872: return "jing";    // 麖
         case 15874: return "li";    // 麗
         case 15876: return "xiang";    // 麘
@@ -19926,7 +19926,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 16028: return "wa";    // 鼃
         case 16030: return "zhu";    // 鼄
         case 16032: return "zhi";    // 鼅
-        case 16034: return "zhang";    // 张
+        case 16034: return "";    // ?
         case 16036: return "meng";    // 鼆
         case 16038: return "ao";    // 鼇
         case 16040: return "bie";    // 鼈
@@ -20023,7 +20023,7 @@ char* get_pinyin_gbk4(unsigned int code)
         case 16222: return "e";    // 齶
         case 16224: return "wo";    // 齷
         case 16226: return "yi";    // 齸
-        case 16228: return "zhang";    // 张
+        case 16228: return "";    // ?
         case 16230: return "ci";    // 齹
         case 16232: return "zou";    // 齺
         case 16234: return "dian";    // 齻
@@ -20052,110 +20052,110 @@ char* get_pinyin_gbk4(unsigned int code)
         case 16280: return "jue";    // 龣
         case 16282: return "xie";    // 龤
         case 16284: return "yue";    // 龥
-        case 16286: return "郎     ";    // 郎
-        case 16288: return "凉     ";    // 凉
-        case 16290: return "秊     ";    // 秊
-        case 16292: return "裏     ";    // 裏
-        case 16294: return "隣     ";    // 隣
-        case 16296: return "兀     ";    // 兀
-        case 16298: return "嗀     ";    // 嗀
-        case 16300: return "﨎     ";    // 﨎
-        case 16302: return "﨏     ";    // 﨏
-        case 16304: return "﨑     ";    // 﨑
-        case 16306: return "﨓     ";    // 﨓
-        case 16308: return "﨔     ";    // 﨔
-        case 16310: return "礼     ";    // 礼
-        case 16312: return "﨟     ";    // 﨟
-        case 16314: return "蘒     ";    // 蘒
-        case 16316: return "﨡     ";    // 﨡
-        case 16318: return "﨣     ";    // 﨣
-        case 16320: return "﨤     ";    // 﨤
-        case 16322: return "﨧     ";    // 﨧
-        case 16324: return "﨨     ";    // 﨨
-        case 16326: return "﨩     ";    // 﨩
-        case 16328: return "⺁     ";    // ⺁
-        case 16330: return "     ";    // 
-        case 16332: return "     ";    // 
-        case 16334: return "     ";    // 
-        case 16336: return "⺄     ";    // ⺄
-        case 16338: return "㑳     ";    // 㑳
-        case 16340: return "㑇     ";    // 㑇
-        case 16342: return "⺈     ";    // ⺈
-        case 16344: return "⺋     ";    // ⺋
-        case 16346: return "     ";    // 
-        case 16348: return "㖞     ";    // 㖞
-        case 16350: return "㘚     ";    // 㘚
-        case 16352: return "㘎     ";    // 㘎
-        case 16354: return "⺌     ";    // ⺌
-        case 16356: return "⺗     ";    // ⺗
-        case 16358: return "㥮     ";    // 㥮
-        case 16360: return "㤘     ";    // 㤘
-        case 16362: return "";    // 
-        case 16364: return "㧏";    // 㧏
-        case 16366: return "㧟";    // 㧟
-        case 16368: return "㩳";    // 㩳
-        case 16370: return "㧐";    // 㧐
-        case 16372: return "";    // 
-        case 16374: return "";    // 
-        case 16376: return "㭎";    // 㭎
-        case 16378: return "㱮";    // 㱮
-        case 16380: return "㳠";    // 㳠
-        case 16382: return "⺧";    // ⺧
-        case 16384: return "";    // 
-        case 16386: return "";    // 
-        case 16388: return "⺪";    // ⺪
-        case 16390: return "䁖";    // 䁖
-        case 16392: return "䅟";    // 䅟
-        case 16394: return "⺮";    // ⺮
-        case 16396: return "䌷";    // 䌷
-        case 16398: return "⺳";    // ⺳
-        case 16400: return "⺶";    // ⺶
-        case 16402: return "⺷";    // ⺷
-        case 16404: return "";    // 
-        case 16406: return "䎱";    // 䎱
-        case 16408: return "䎬";    // 䎬
-        case 16410: return "⺻";    // ⺻
-        case 16412: return "䏝";    // 䏝
-        case 16414: return "䓖     ";    // 䓖
-        case 16416: return "䙡     ";    // 䙡
-        case 16418: return "䙌     ";    // 䙌
-        case 16420: return "     ";    // 
-        case 16422: return "zhang";    // 张
-        case 16424: return "䜣     ";    // 䜣
-        case 16426: return "䜩     ";    // 䜩
-        case 16428: return "䝼     ";    // 䝼
-        case 16430: return "䞍     ";    // 䞍
-        case 16432: return "⻊     ";    // ⻊
-        case 16434: return "䥇     ";    // 䥇
-        case 16436: return "䥺     ";    // 䥺
-        case 16438: return "䥽     ";    // 䥽
-        case 16440: return "䦂     ";    // 䦂
-        case 16442: return "䦃     ";    // 䦃
-        case 16444: return "䦅     ";    // 䦅
-        case 16446: return "䦆     ";    // 䦆
-        case 16448: return "䦟     ";    // 䦟
-        case 16450: return "䦛     ";    // 䦛
-        case 16452: return "䦷     ";    // 䦷
-        case 16454: return "䦶     ";    // 䦶
-        case 16456: return "     ";    // 
-        case 16458: return "     ";    // 
-        case 16460: return "䲣     ";    // 䲣
-        case 16462: return "䲟     ";    // 䲟
-        case 16464: return "䲠     ";    // 䲠
-        case 16466: return "䲡     ";    // 䲡
-        case 16468: return "䱷     ";    // 䱷
-        case 16470: return "䲢     ";    // 䲢
-        case 16472: return "䴓     ";    // 䴓
-        case 16474: return "䴔     ";    // 䴔
-        case 16476: return "䴕     ";    // 䴕
-        case 16478: return "䴖     ";    // 䴖
-        case 16480: return "䴗     ";    // 䴗
-        case 16482: return "䴘     ";    // 䴘
-        case 16484: return "䴙     ";    // 䴙
-        case 16486: return "䶮     ";    // 䶮
-        case 16488: return "     ";    // 
+        case 16286: return "lang";    // 郎
+        case 16288: return "liang";    // 凉
+        case 16290: return "nian";    // 秊
+        case 16292: return "li";    // 裏
+        case 16294: return "lin";    // 隣
+        case 16296: return "wu";    // 兀
+        case 16298: return "hu";    // 嗀
+        case 16300: return "shuang";    // 﨎
+        case 16302: return "xu";    // 﨏
+        case 16304: return "qi";    // 﨑
+        case 16306: return "fu";    // 﨓
+        case 16308: return "ju";    // 﨔
+        case 16310: return "li";    // 礼
+        case 16312: return "ke";    // 﨟
+        case 16314: return "qiu";    // 蘒
+        case 16316: return "sheng";    // 﨡
+        case 16318: return "suo";    // 﨣
+        case 16320: return "ji";    // 﨤
+        case 16322: return "xiao";    // 﨧
+        case 16324: return "xing";    // 﨨
+        case 16326: return "dao";    // 﨩
+        case 16328: return "";    // ⺁
+        case 16330: return "";    // 
+        case 16332: return "";    // 
+        case 16334: return "";    // 
+        case 16336: return "";    // ⺄
+        case 16338: return "";    // 㑳
+        case 16340: return "";    // 㑇
+        case 16342: return "";    // ⺈
+        case 16344: return "";    // ⺋
+        case 16346: return "";    // 
+        case 16348: return "";    // 㖞
+        case 16350: return "";    // 㘚
+        case 16352: return "";    // 㘎
+        case 16354: return "";    // ⺌
+        case 16356: return "";    // ⺗
+        case 16358: return "";    // 㥮
+        case 16360: return "";    // 㤘
+        case 16362: return "";    // 
+        case 16364: return "";    // 㧏
+        case 16366: return "";    // 㧟
+        case 16368: return "";    // 㩳
+        case 16370: return "";    // 㧐
+        case 16372: return "";    // 
+        case 16374: return "";    // 
+        case 16376: return "";    // 㭎
+        case 16378: return "";    // 㱮
+        case 16380: return "";    // 㳠
+        case 16382: return "";    // ⺧
+        case 16384: return "";    // 
+        case 16386: return "";    // 
+        case 16388: return "";    // ⺪
+        case 16390: return "";    // 䁖
+        case 16392: return "";    // 䅟
+        case 16394: return "";    // ⺮
+        case 16396: return "";    // 䌷
+        case 16398: return "";    // ⺳
+        case 16400: return "";    // ⺶
+        case 16402: return "";    // ⺷
+        case 16404: return "";    // 
+        case 16406: return "";    // 䎱
+        case 16408: return "";    // 䎬
+        case 16410: return "";    // ⺻
+        case 16412: return "";    // 䏝
+        case 16414: return "";    // 䓖
+        case 16416: return "";    // 䙡
+        case 16418: return "";    // 䙌
+        case 16420: return "";    // 
+        case 16422: return "";    // ?
+        case 16424: return "";    // 䜣
+        case 16426: return "";    // 䜩
+        case 16428: return "";    // 䝼
+        case 16430: return "";    // 䞍
+        case 16432: return "";    // ⻊
+        case 16434: return "";    // 䥇
+        case 16436: return "";    // 䥺
+        case 16438: return "";    // 䥽
+        case 16440: return "";    // 䦂
+        case 16442: return "";    // 䦃
+        case 16444: return "";    // 䦅
+        case 16446: return "";    // 䦆
+        case 16448: return "";    // 䦟
+        case 16450: return "";    // 䦛
+        case 16452: return "";    // 䦷
+        case 16454: return "";    // 䦶
+        case 16456: return "";    // 
+        case 16458: return "";    // 
+        case 16460: return "";    // 䲣
+        case 16462: return "";    // 䲟
+        case 16464: return "";    // 䲠
+        case 16466: return "";    // 䲡
+        case 16468: return "";    // 䱷
+        case 16470: return "";    // 䲢
+        case 16472: return "";    // 䴓
+        case 16474: return "";    // 䴔
+        case 16476: return "";    // 䴕
+        case 16478: return "";    // 䴖
+        case 16480: return "";    // 䴗
+        case 16482: return "";    // 䴘
+        case 16484: return "";    // 䴙
+        case 16486: return "";    // 䶮
+        case 16488: return "";    // 
     }
-    
+
     return NULL;
 }
 
@@ -20408,13 +20408,13 @@ int main(int argc,char **argv)
 
             if (NULL == pinyin)
             {
-                printf("code:%u 0x%02x%02x=%c%c pinyin=NULL\n", code, i, j, i, j);
+                printf("GBK/2 code:%u 0x%02x%02x=%c%c pinyin=NULL\n", code, i, j, i, j);
                 continue;
             }
 
             if (0 != get_sm_ym(pinyin, &sm, &ym))
             {
-                printf("code:%u 0x%02x%02x=%c%c get_sm_ym error\n", code, i, j, i, j);
+                printf("GBK/2 code:%u 0x%02x%02x=%c%c get_sm_ym error\n", code, i, j, i, j);
                 continue;
             }
 
@@ -20429,19 +20429,19 @@ int main(int argc,char **argv)
     {
         for (unsigned char j = 0x40; j <= 0xfe; j++)
         {
-            buff_pos = ((i - 0x81) * (0xfe - 0x40 + 1) + (j - 0x40)) * 2;
+            code = ((i - 0x81) * (0xfe - 0x40 + 1) + (j - 0x40)) * 2;
 
-            pinyin = get_pinyin_gbk3(buff_pos);
+            pinyin = get_pinyin_gbk3(code);
 
             if (NULL == pinyin)
             {
-                printf("GBK/3 pos:%d 0x:%02x%02x=%c%c pinyin=NULL\n", buff_pos, i, j, i, j);
+                printf("GBK/3 code:%u 0x:%02x%02x=%c%c pinyin=NULL\n", code, i, j, i, j);
                 continue;
             }
 
             if (0 != get_sm_ym(pinyin, &sm, &ym))
             {
-                printf("GBK/3 pos:%d 0x:%02x%02x=%c%c get_sm_ym error\n", buff_pos, i, j, i, j);
+                printf("GBK/3 code:%u 0x:%02x%02x=%c%c get_sm_ym error\n", code, i, j, i, j);
                 continue;
             }
 
@@ -20456,20 +20456,19 @@ int main(int argc,char **argv)
     {
         for (unsigned char j = 0x40; j <= 0xa0; j++)
         {
-            buff_pos = ((i - 0xaa) * (0xa0 - 0x40 + 1) + (j - 0x40)) * 2;
+            code = ((i - 0xaa) * (0xa0 - 0x40 + 1) + (j - 0x40)) * 2;
 
             pinyin = get_pinyin_gbk4(code);
 
             if (NULL == pinyin)
             {
-                printf("        case %d: return \"     \";    // %c%c\n", buff_pos, i, j);
-                //printf("GBK/4 pos:%d 0x:%02x%02x=%c%c pinyin=NULL\n", buff_pos, i, j, i, j);
+                printf("GBK/4 code:%u 0x:%02x%02x=%c%c pinyin=NULL\n", code, i, j, i, j);
                 continue;
             }
 
             if (0 != get_sm_ym(pinyin, &sm, &ym))
             {
-                printf("GBK/4 pos:%d 0x:%02x%02x=%c%c get_sm_ym error\n", buff_pos, i, j, i, j);
+                printf("GBK/4 code:%u 0x:%02x%02x=%c%c get_sm_ym error\n", code, i, j, i, j);
                 continue;
             }
 
