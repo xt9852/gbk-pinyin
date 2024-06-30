@@ -1,3 +1,12 @@
+/**
+ *\file     main.c
+ *\note     GB2312
+ *\author   xt
+ *\version  1.0.0
+ *\date     2022.03.16
+ *\brief    Éú³ÉÆ´ÒôÊý¾Ý
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <tchar.h>
@@ -5,5783 +14,6977 @@
 
 char* get_pinyin_gbk2(unsigned int code)
 {
-    char *str = NULL;
-
     switch(code)
 	{
-    case 1738: str="bi";     break;//±Æ
-    case 2053: str="cou";    break;//´Õ
-    case 2101: str="dai";    break;//µ¡
-    case 2301: str="er";     break;//·¡
-    case 2433: str="ga";     break;//¸Á
-    case 2434: str="ga";     break;//¸Â
-    case 4808: str="xie";    break;//Ð¨
-    case 5602: str="ji";     break;//Ø¢
-    case 5613: str="gun";    break;//Ø­
-    case 5615: str="xie";    break;//Ø¯
-    case 5628: str="zhu";    break;//Ø¼
-    case 5636: str="se";     break;//ØÄ
-    case 5646: str="fang";   break;//ØÎ
-    case 5654: str="dao";    break;//ØÖ
-    case 5661: str="la";     break;//ØÝ
-    case 5673: str="ren";    break;//Øé
-    case 5676: str="le";     break;//Øì
-    case 5691: str="ka";     break;//Øû
-    case 5719: str="li";     break;//Ù³
-    case 5721: str="li";     break;//Ùµ
-    case 5772: str="bao";    break;//Ùè
-    case 5779: str="tou";    break;//Ùï
-    case 5790: str="lei";    break;//Ùú
-    case 5791: str="bing";   break;//Ùû
-    case 5802: str="mi";     break;//Ú¢
-    case 5805: str="yan";    break;//Ú¥
-    case 5819: str="lei";    break;//Ú³
-    case 5864: str="jie";    break;//Úà
-    case 5866: str="fu";     break;//Úâ
-    case 5910: str="li";     break;//Ûª
-    case 5940: str="yin";    break;//ÛÈ
-    case 5941: str="kan";    break;//ÛÉ
-    case 5962: str="li";     break;//ÛÞ
-    case 5986: str="guo";    break;//Ûö
-    case 6008: str="leng";   break;//Ü¨
-    case 6014: str="liang";  break;//Ü®
-    case 6019: str="ao";     break;//Ü³
-    case 6034: str="li";     break;//ÜÂ
-    case 6082: str="fu";     break;//Üò
-    case 6116: str="li";     break;//Ý°
-    case 6125: str="lang";   break;//Ý¹
-    case 6177: str="bei";    break;//Ýí
-    case 6181: str="li";     break;//Ýñ
-    case 6185: str="lang";   break;//Ýõ
-    case 6192: str="lian";   break;//Ýü
-    case 6228: str="li";     break;//Þ¼
-    case 6235: str="gong";   break;//ÞÃ
-    case 6238: str="lian";   break;//ÞÆ
-    case 6248: str="shou";   break;//ÞÐ
-    case 6323: str="le";     break;//ß·
-    case 6331: str="li";     break;//ß¿
-    case 6375: str="lao";    break;//ßë
-    case 6405: str="lang";   break;//à¥
-    case 6406: str="li";     break;//à¦
-    case 6412: str="li";     break;//à¬
-    case 6447: str="le";     break;//àÏ
-    case 6477: str="wei";    break;//àí
-    case 6480: str="lun";    break;//àð
-    case 6516: str="lan";    break;//á°
-    case 6532: str="lao";    break;//áÀ
-    case 6533: str="lai";    break;//áÁ
-    case 6560: str="chi";    break;//áÜ
-    case 6566: str="lai";    break;//áâ
-    case 6574: str="shan";   break;//áê
-    case 6575: str="quan";   break;//áë
-    case 6591: str="li";     break;//áû
-    case 6626: str="zhong";  break;//âº
-    case 6627: str="shi";    break;//â»
-    case 6628: str="tang";   break;//â¼
-    case 6664: str="xin";    break;//âà
-    case 6674: str="chang";  break;//âê
-    case 6706: str="li";     break;//ã¦
-    case 6707: str="kun";    break;//ã§
-    case 6714: str="chang";  break;//ã®
-    case 6722: str="leng";   break;//ã¶
-    case 6745: str="kun";    break;//ãÍ
-    case 6747: str="lang";   break;//ãÏ
-    case 6760: str="zhuang"; break;//ãÜ
-    case 6763: str="san";    break;//ãß
-    case 6778: str="le";     break;//ãî
-    case 6783: str="yang";   break;//ãó
-    case 6821: str="lai";    break;//äµ
-    case 6864: str="li";     break;//äà
-    case 6877: str="lan";    break;//äí
-    case 6882: str="lian";   break;//äò
-    case 6894: str="lai";    break;//äþ
-    case 6902: str="li";     break;//å¢
-    case 6905: str="lian";   break;//å¥
-    case 6917: str="ba";     break;//å±
-    case 6918: str="bao";    break;//å²
-    case 6919: str="gui";    break;//å³
-    case 6933: str="zou";    break;//åÁ
-    case 6946: str="li";     break;//åÎ
-    case 6969: str="la";     break;//åå
-    case 6970: str="xun";    break;//åæ
-    case 6988: str="chu";    break;//åø
-    case 7001: str="jin";    break;//æ¡
-    case 7018: str="li";     break;//æ²
-    case 7043: str="li";     break;//æË
-    case 7048: str="lei";    break;//æÐ
-    case 7074: str="li";     break;//æê
-    case 7089: str="jiao";   break;//æù
-    case 7103: str="shu";    break;//ç£
-    case 7142: str="li";     break;//çÊ
-    case 7148: str="lei";    break;//çÐ
-    case 7161: str="chuan";  break;//çÝ
-    case 7186: str="lian";   break;//çö
-    case 7191: str="kun";    break;//çû
-    case 7232: str="li";     break;//èÀ
-    case 7261: str="li";     break;//èÝ
-    case 7265: str="lao";    break;//èá
-    case 7303: str="liang";  break;//é£
-    case 7312: str="lian";   break;//é¬
-    case 7313: str="lan";    break;//é­
-    case 7359: str="lei";    break;//éÛ
-    case 7371: str="lian";   break;//éç
-    case 7386: str="li";     break;//éö
-    case 7423: str="po";     break;//ê·
-    case 7425: str="la";     break;//ê¹
-    case 7467: str="lai";    break;//êã
-    case 7522: str="fan";    break;//ë¶
-    case 7601: str="lian";   break;//ì¡
-    case 7615: str="shu";    break;//ì¯
-    case 7621: str="lan";    break;//ìµ
-    case 7665: str="si";     break;//ìá
-    case 7669: str="li";     break;//ìå
-    case 7674: str="shi";    break;//ìê
-    case 7717: str="yu";     break;//í±
-    case 7734: str="li";     break;//íÂ
-    case 7739: str="la";     break;//íÇ
-    case 7789: str="lai";    break;//íù
-    case 7826: str="li";     break;//îº
-    case 7829: str="lan";    break;//î½
-    case 7830: str="li";     break;//î¾
-    case 7836: str="jin";    break;//îÄ
-    case 7878: str="lao";    break;//îî
-    case 7904: str="se";     break;//ï¤
-    case 7909: str="lao";    break;//ï©
-    case 7910: str="lai";    break;//ïª
-    case 7914: str="li";     break;//ï®
-    case 7922: str="lang";   break;//ï¶
-    case 7931: str="kun";    break;//ï¿
-    case 7971: str="lan";    break;//ïç
-    case 7992: str="lang";   break;//ïü
-    case 8003: str="se";     break;//ð£
-    case 8031: str="li";     break;//ð¿
-    case 8058: str="bing";   break;//ðÚ
-    case 8061: str="li";     break;//ðÝ
-    case 8063: str="li";     break;//ðß
-    case 8076: str="lao";    break;//ðì
-    case 8088: str="la";     break;//ðø
-    case 8114: str="lai";    break;//ñ®
-    case 8134: str="yi";     break;//ñÂ
-    case 8145: str="lian";   break;//ñÍ
-    case 8147: str="lian";   break;//ñÏ
-    case 8160: str="lan";    break;//ñÜ
-    case 8171: str="lei";    break;//ñç
-    case 8176: str="lao";    break;//ñì
-    case 8189: str="kui";    break;//ñù
-    case 8214: str="hu";     break;//ò®
-    case 8235: str="li";     break;//òÃ
-    case 8250: str="kuo";    break;//òÒ
-    case 8259: str="li";     break;//òÛ
-    case 8275: str="lang";   break;//òë
-    case 8281: str="kui";    break;//òñ
-    case 8325: str="lian";   break;//ó¹
-    case 8327: str="li";     break;//ó»
-    case 8350: str="li";     break;//óÒ
-    case 8381: str="kui";    break;//óñ
-    case 8386: str="li";     break;//óö
-    case 8405: str="lai";    break;//ô¥
-    case 8447: str="li";     break;//ôÏ
-    case 8473: str="jiao";   break;//ôé
-    case 8510: str="lei";    break;//õª
-    case 8511: str="kun";    break;//õ«
-    case 8518: str="lao";    break;//õ²
-    case 8523: str="li";     break;//õ·
-    case 8540: str="luo";    break;//õÈ
-    case 8545: str="kui";    break;//õÍ
-    case 8552: str="liang";  break;//õÔ
-    case 8553: str="ji";     break;//õÕ
-    case 8608: str="li";     break;//ö¨
-    case 8666: str="li";     break;//öâ
-    case 8667: str="lian";   break;//öã
-    case 8679: str="kun";    break;//öï
-    case 8706: str="le";     break;//÷¦
-    case 8715: str="li";     break;//÷¯
-    case 8750: str="tao";    break;//÷Ò
-    case 8753: str="kun";    break;//÷Õ
-    case 8783: str="li";     break;//÷ó
-	case 6325:
-	case 6436:
-	case 7571:
-	case 7925:
-		str="a";
-		break;
-	case 6263:
-	case 6440:
-	case 7040:
-	case 7208:
-	case 7451:
-	case 7733:
-	case 7945:
-	case 8616:
-		str="ai";
-		break;
-	case 5847:
-	case 5991:
-	case 6278:
-	case 6577:
-	case 6654:
-	case 7281:
-	case 7907:
-	case 8038:
-	case 8786:
-		str="an";
-		break;
-		str="ang";
-		break;
-	case 5974:
-	case 6254:
-	case 6427:
-	case 6514:
-	case 6658:
-	case 6959:
-	case 7033:
-	case 7081:
-	case 7365:
-	case 8190:
-	case 8292:
-	case 8643:
-	case 8701:
-	case 8773:
-		str="ao";
-		break;
-	case 6056:
-	case 6135:
-	case 6517:
-	case 7857:
-	case 8446:
-	case 8649:
-	case 8741:
-		str="ba";
-		break;
-	case 6267:
-	case 6334:
-	case 7494:
-		str="bai";
-		break;
-	case 5870:
-	case 5964:
-	case 7851:
-	case 8103:
-	case 8113:
-	case 8418:
-		str="ban";
-		break;
-	case 6182:
-	case 6826:
-		str="bang";
-		break;
-	case 6165:
-	case 7063:
-	case 7650:
-	case 8017:
-	case 8157:
-	case 8532:
-	case 8621:
-		str="bao";
-		break;
-	case 5635:
-	case 5873:
-	case 5893:
-	case 5993:
-	case 6141:
-	case 6703:
-	case 7753:
-	case 8039:
-	case 8156:
-	case 8645:
-	case 8725:
-		str="bei";
-		break;
-	case 5946:
-	case 5948:
-	case 7458:
-	case 7928:
-		str="ben";
-		break;
-	case 6452:
-	case 7420:
-		str="beng";
-		break;
-	case 5616:
-	case 5734:
-	case 6074:
-	case 6109:
-	case 6221:
-	case 6333:
-	case 6357:
-	case 6589:
-	case 6656:
-	case 6725:
-	case 6868:
-	case 6908:
-	case 6986:
-	case 6994:
-	case 7030:
-	case 7052:
-	case 7221:
-	case 7815:
-	case 7873:
-	case 7985:
-	case 8152:
-	case 8357:
-	case 8375:
-	case 8387:
-	case 8416:
-	case 8437:
-	case 8547:
-	case 8734:
-		str="bi";
-		break;
-	case 5650:
-	case 5945:
-	case 6048:
-	case 6677:
-	case 6774:
-	case 7134:
-	case 7614:
-	case 7652:
-	case 7730:
-	case 7760:
-	case 8125:
-	case 8159:
-	case 8289:
-	case 8354:
-	case 8693:
-		str="bian";
-		break;
-	case 7027:
-	case 7084:
-	case 7609:
-	case 7613:
-	case 7958:
-	case 7980:
-	case 8106:
-	case 8149:
-	case 8707:
-	case 8752:
-		str="biao";
-		break;
-	case 8531:
-		str="bie";
-		break;
-	case 5747:
-	case 6557:
-	case 7145:
-	case 7167:
-	case 7336:
-	case 7375:
-	case 7587:
-	case 7957:
-	case 8738:
-	case 8762:
-		str="bin";
-		break;
-	case 5787:
-	case 5891:
-	case 6280:
-		str="bing";
-		break;
-	case 5781:
-	case 6403:
-	case 6636:
-	case 7362:
-	case 7502:
-	case 7771:
-	case 7864:
-	case 8030:
-	case 8404:
-	case 8543:
-	case 8559:
-		str="bo";
-		break;
-	case 6318:
-	case 6945:
-	case 7419:
-	case 7446:
-	case 7848:
-	case 7863:
-	case 8519:
-		str="bu";
-		break;
-	case 6474:
-	case 7769:
-		str="ca";
-		break;
-		str="cai";
-		break;
-	case 6978:
-	case 7078:
-	case 7218:
-	case 8451:
-	case 8785:
-		str="can";
-		break;
-	case 5687:
-		str="cang";
-		break;
-	case 6448:
-	case 6878:
-	case 8309:
-	case 8429:
-		str="cao";
-		break;
-	case 6692:
-		str="ce";
-		break;
-	case 6515:
-	case 6825:
-		str="cen";
-		break;
-	case 6465:
-		str="ceng";
-		break;
-	case 6639:
-	case 6766:
-	case 7017:
-	case 7230:
-	case 7311:
-	case 7322:
-	case 7363:
-	case 7942:
-	case 7979:
-	case 8135:
-		str="cha";
-		break;
-	case 5713:
-	case 7846:
-	case 8091:
-	case 8218:
-		str="chai";
-		break;
-	case 5770:
-	case 5838:
-	case 6159:
-	case 6667:
-	case 6893:
-	case 6904:
-	case 6981:
-	case 7031:
-	case 7086:
-	case 7472:
-	case 7688:
-	case 7966:
-	case 8324:
-	case 8580:
-		str="chan";
-		break;
-	case 5686:
-	case 5943:
-	case 6041:
-	case 6137:
-	case 6660:
-	case 6568:
-	case 6749:
-	case 7029:
-	case 7047:
-	case 7438:
-	case 7509:
-	case 8680:
-		str="chang";
-		break;
-	case 6687:
-	case 7443:
-	case 8173:
-		str="chao";
-		break;
-	case 5969:
-	case 7726:
-		str="che";
-		break;
-	case 5840:
-	case 5863:
-	case 6251:
-	case 6433:
-	case 6923:
-	case 7201:
-	case 7320:
-	case 7755:
-	case 8619:
-		str="chen";
-		break;
-	case 5609:
-	case 5984:
-	case 7239:
-	case 7263:
-	case 7583:
-	case 7810:
-	case 7881:
-	case 7905:
-	case 8146:
-	case 8241:
-	case 8508:
-		str="cheng";
-		break;
-	case 5749:
-	case 6015:
-	case 6061:
-	case 6319:
-	case 6374:
-	case 6420:
-	case 6445:
-	case 6633:
-	case 7042:
-	case 7523:
-	case 7787:
-	case 8023:
-	case 8101:
-	case 8161:
-	case 8231:
-	case 8304:
-	case 8355:
-	case 8388:
-	case 8489:
-	case 8556:
-	case 8746:
-		str="chi";
-		break;
-	case 6091:
-	case 6671:
-	case 6731:
-	case 8409:
-	case 8430:
-		str="chong";
-		break;
-	case 5717:
-	case 6492:
-	case 6716:
-	case 8112:
-	case 8637:
-		str="chou";
-		break;
-	case 5601:
-	case 5927:
-	case 6680:
-	case 6732:
-	case 7109:
-	case 7238:
-	case 7290:
-	case 7343:
-	case 8150:
-	case 8260:
-	case 8573:
-	case 8777:
-		str="chu";
-		break;
-	case 6285:
-	case 6408:
-	case 7590:
-	case 8563:
-		str="chuai";
-		break;
-	case 6622:
-	case 6955:
-	case 7516:
-	case 7843:
-	case 8413:
-		str="chuan";
-		break;
-	case 6675:
-		str="chuang";
-		break;
-	case 5879:
-	case 7302:
-	case 7319:
-		str="chui";
-		break;
-	case 6127:
-	case 8040:
-	case 8277:
-		str="chun";
-		break;
-	case 7401:
-	case 8554:
-	case 8626:
-		str="chuo";
-		break;
-    case 6358:
-    case 8043:
-    case 7684:
-    case 8457:
-		str="ci";
-		break;
-	case 6075:
-		str="zi";
-		break;
-	case 6042:
-	case 6840:
-	case 7085:
-	case 7193:
-	case 7214:
-	case 7240:
-		str="cong";
-		break;
-	case 7308:
-	case 7403:
-	case 7577:
-		str="cou";
-		break;
-	case 6180:
-	case 6562:
-	case 6607:
-	case 7367:
-	case 8501:
-	case 8530:
-	case 8577:
-		str="cu";
-		break;
-	case 5764:
-	case 6305:
-	case 7664:
-	case 7973:
-		str="cuan";
-		break;
-	case 6718:
-	case 6145:
-	case 6393:
-	case 7213:
-	case 7333:
-	case 7505:
-	case 8631:
-		str="cui";
-		break;
-	case 6666:
-	case 8169:
-		str="cun";
-		break;
-	case 5640:
-	case 6547:
-	case 7566:
-	case 7917:
-	case 7983:
-	case 8078:
-	case 8526:
-	case 8567:
-		str="cuo";
-		break;
-	case 6239:
-	case 6353:
-	case 6410:
-	case 6682:
-	case 7007:
-	case 8155:
-	case 8346:
-	case 8716:
-	case 8718:
-		str="da";
-		break;
-	case 6004:
-	case 6316:
-	case 6523:
-	case 6942:
-	case 7110:
-	case 7173:
-	case 8776:
-		str="dai";
-		break;
-	case 5757:
-	case 6144:
-	case 6402:
-	case 7373:
-	case 7470:
-	case 7781:
-	case 8067:
-	case 8087:
-	case 8185:
-	case 8376:
-		str="dan";
-		break;
-	case 5852:
-	case 5942:
-	case 6148:
-	case 6920:
-	case 7724:
-	case 7885:
-	case 8141:
-		str="dang";
-		break;
-	case 6322:
-	case 6665:
-	case 7514:
-	case 8478:
-		str="dao";
-		break;
-	case 7929:
-		str="de";
-		break;
-	case 6466:
-	case 6556:
-	case 7413:
-	case 7767:
-	case 7975:
-	case 8403:
-		str="deng";
-		break;
-	case 5621:
-	case 5765:
-	case 5814:
-	case 5848:
-	case 5901:
-	case 5970:
-	case 6122:
-	case 6454:
-	case 7023:
-	case 7116:
-	case 7260:
-	case 7306:
-	case 7475:
-	case 7738:
-	case 7758:
-	case 7791:
-	case 7965:
-	case 8438:
-	case 8730:
-		str="di";
-		break;
-	case 6439:
-		str="dia";
-		break;
-	case 5871:
-	case 5967:
-	case 6559:
-	case 7172:
-	case 7868:
-	case 8116:
-	case 8118:
-	case 8401:
-	case 8558:
-		str="dian";
-		break;
-	case 7886:
-	case 8585:
-	case 8684:
-		str="diao";
-		break;
-	case 5976:
-	case 6006:
-	case 6273:
-	case 6409:
-	case 7526:
-	case 8012:
-	case 8183:
-	case 8562:
-	case 8688:
-		str="die";
-		break;
-	case 5674:
-	case 6404:
-	case 7164:
-	case 7575:
-	case 7754:
-	case 7814:
-	case 8059:
-	case 8184:
-	case 8490:
-		str="ding";
-		break;
-	case 7891:
-		str="diu";
-		break;
-	case 5977:
-	case 6343:
-	case 6520:
-	case 6528:
-	case 7517:
-	case 7543:
-	case 7556:
-	case 7747:
-	case 8020:
-		str="dong";
-		break;
-	case 6190:
-	case 8128:
-	case 8229:
-	case 8391:
-		str="dou";
-		break;
-	case 6022:
-	case 6429:
-	case 6834:
-	case 7292:
-	case 7525:
-	case 8328:
-	case 8338:
-	case 8739:
-	case 8782:
-		str="du";
-		break;
-	case 7318:
-	case 7649:
-	case 8393:
-		str="duan";
-		break;
-	case 7701:
-	case 7713:
-	case 7752:
-		str="dui";
-		break;
-	case 6771:
-	case 7632:
-	case 7727:
-	case 7766:
-	case 7779:
-	case 7970:
-	case 8527:
-		str="dun";
-		break;
-	case 6345:
-	case 6365:
-	case 6785:
-	case 7122:
-	case 7876:
-	case 8154:
-	case 8566:
-		str="duo";
-		break;
-	case 5612:
-	case 5832:
-	case 5844:
-	case 5949:
-	case 6035:
-	case 6113:
-	case 6164:
-	case 6332:
-	case 6721:
-	case 6977:
-	case 7025:
-	case 7378:
-	case 7581:
-	case 7916:
-	case 7941:
-	case 8042:
-	case 8206:
-	case 8689:
-		str="e";
-		break;
-	case 6176:
-	case 6284:
-		str="en";
-		break;
-	case 5706:
-	case 6939:
-	case 7177:
-	case 7879:
-	case 8025:
-	case 8660:
-		str="er";
-		break;
-	case 5950:
-	case 7732:
-		str="fa";
-		break;
-	case 6212:
-	case 6232:
-	case 6506:
-	case 7283:
-	case 7660:
-	case 7818:
-	case 8576:
-		str="fan";
-		break;
-	case 5890:
-	case 7242:
-	case 7853:
-	case 8419:
-	case 8648:
-		str="fang";
-		break;
-	case 6032:
-	case 6584:
-	case 6713:
-	case 6839:
-	case 6990:
-	case 7119:
-	case 7328:
-	case 7572:
-	case 7619:
-	case 7673:
-	case 7948:
-	case 8082:
-	case 8267:
-	case 8385:
-	case 8468:
-	case 8613:
-	case 8678:
-		str="fei";
-		break;
-	case 5739:
-	case 6915:
-	case 7291:
-	case 8687:
-	case 8787:
-		str="fen";
-		break;
-	case 5726:
-	case 5926:
-	case 6155:
-	case 6384:
-	case 6767:
-	case 7731:
-		str="feng";
-		break;
-		str="fo";
-		break;
-	case 8330:
-		str="fou";
-		break;
-	case 5775:
-	case 5776:
-	case 5914:
-	case 6029:
-	case 6062:
-	case 6119:
-	case 6142:
-	case 6252:
-	case 6327:
-	case 6505:
-	case 6686:
-	case 6870:
-	case 6985:
-	case 7058:
-	case 7066:
-	case 7106:
-	case 7108:
-	case 7285:
-	case 7471:
-	case 7680:
-	case 7741:
-	case 7774:
-	case 7775:
-	case 7823:
-	case 7991:
-	case 8005:
-	case 8222:
-	case 8261:
-	case 8280:
-	case 8283:
-	case 8479:
-	case 8535:
-	case 8538:
-	case 8654:
-	case 8691:
-		str="fu";
-		break;
-	case 6246:
-	case 7056:
-	case 7057:
-	case 7424:
-	case 7837:
-		str="ga";
-		break;
-	case 5604:
-	case 5875:
-	case 5982:
-	case 7414:
-	case 7464:
-		str="gai";
-		break;
-	case 5965:
-	case 6053:
-	case 6247:
-	case 6306:
-	case 6779:
-	case 6838:
-	case 6887:
-	case 7104:
-	case 7347:
-	case 7426:
-	case 7723:
-	case 8065:
-	case 8491:
-		str="gan";
-		break;
-	case 7716:
-	case 7824:
-	case 8364:
-		str="gang";
-		break;
-	case 5626:
-	case 5830:
-	case 5912:
-	case 6227:
-	case 7141:
-	case 7332:
-	case 7334:
-	case 7429:
-	case 7915:
-		str="gao";
-		break;
-	case 5610:
-	case 5678:
-	case 5933:
-	case 5957:
-	case 6010:
-	case 6435:
-	case 7092:
-	case 7501:
-	case 7585:
-	case 7749:
-	case 7951:
-	case 8143:
-	case 8220:
-	case 8420:
-	case 8732:
-		str="ge";
-		break;
-		str="gei";
-		break;
-	case 5608:
-	case 6102:
-	case 6371:
-	case 8462:
-		str="gen";
-		break;
-	case 6376:
-	case 6657:
-	case 7114:
-	case 8665:
-		str="geng";
-		break;
-	case 7178:
-	case 7537:
-	case 8228:
-	case 8601:
-		str="gong";
-		break;
-	case 5694:
-	case 5824:
-	case 6524:
-	case 6960:
-	case 7037:
-	case 7135:
-	case 7259:
-	case 7477:
-	case 7616:
-	case 8349:
-	case 8384:
-	case 8724:
-		str="gou";
-		break;
-	case 5637:
-	case 5812:
-	case 6152:
-	case 6536:
-	case 6773:
-	case 7284:
-	case 7379:
-	case 7484:
-	case 7486:
-	case 7591:
-	case 7617:
-	case 7813:
-	case 7825:
-	case 7860:
-	case 7932:
-	case 8019:
-	case 8083:
-	case 8233:
-	case 8494:
-	case 8593:
-	case 8681:
-	case 8729:
-		str="gu";
-		break;
-	case 5652:
-	case 5820:
-	case 6341:
-	case 7273:
-	case 7550:
-	case 8027:
-		str="gua";
-		break;
-		str="guai";
-		break;
-	case 5736:
-	case 6124:
-	case 6272:
-	case 6842:
-	case 7834:
-	case 8057:
-	case 8170:
-	case 8704:
-		str="guan";
-		break;
-	case 6359:
-	case 6578:
-	case 7270:
-	case 7555:
-		str="guang";
-		break;
-	case 5648:
-	case 5659:
-	case 6649:
-	case 7003:
-	case 7277:
-	case 7433:
-	case 7448:
-	case 8007:
-	case 8394:
-	case 8657:
-	case 8712:
-		str="gui";
-		break;
-	case 5782:
-	case 7121:
-	case 7762:
-	case 8671:
-		str="gun";
-		break;
-	case 5769:
-	case 6266:
-	case 6335:
-	case 6494:
-	case 6538:
-	case 6603:
-	case 7304:
-	case 7529:
-	case 8188:
-	case 8268:
-	case 8269:
-		str="guo";
-		break;
-	case 7894:
-		str="ha";
-		break;
-	case 6443:
-	case 7560:
-	case 8516:
-		str="hai";
-		break;
-	case 5885:
-	case 6153:
-	case 6294:
-	case 6759:
-	case 6911:
-	case 7447:
-	case 7642:
-	case 8192:
-	case 8205:
-	case 8232:
-	case 8793:
-		str="han";
-		break;
-	case 6776:
-	case 7112:
-	case 8194:
-		str="hang";
-		break;
-	case 6179:
-	case 6222:
-	case 6438:
-	case 6467:
-	case 6909:
-	case 6916:
-	case 7427:
-	case 8009:
-	case 8211:
-	case 8226:
-		str="hao";
-		break;
-	case 5813:
-	case 5932:
-	case 5954:
-	case 6432:
-	case 6756:
-	case 7434:
-	case 7833:
-	case 8202:
-	case 8234:
-	case 8471:
-		str="he";
-		break;
-		str="hei";
-		break;
-		str="hen";
-		break;
-	case 6231:
-	case 7181:
-	case 7276:
-		str="heng";
-		break;
-	case 5768:
-	case 5774:
-	case 5807:
-	case 6106:
-	case 6214:
-	case 6216:
-	case 6740:
-	case 6792:
-		str="hong";
-		break;
-	case 6009:
-	case 6565:
-	case 6943:
-	case 8090:
-	case 8383:
-	case 8455:
-	case 8655:
-	case 8731:
-		str="hou";
-		break;
-	case 5792:
-	case 6392:
-	case 6481:
-	case 6518:
-	case 6609:
-	case 6679:
-	case 6717:
-	case 6816:
-	case 6879:
-	case 7190:
-	case 7346:
-	case 7385:
-	case 7618:
-	case 7635:
-	case 7646:
-	case 7670:
-	case 7672:
-	case 7679:
-	case 8013:
-	case 8032:
-	case 8041:
-	case 8055:
-	case 8343:
-	case 8513:
-	case 8590:
-		str="hu";
-		break;
-	case 7072:
-	case 7275:
-	case 7725:
-	case 7892:
-		str="hua";
-		break;
-	case 8555:
-		str="huai";
-		break;
-	case 5928:
-	case 6140:
-	case 6307:
-	case 6487:
-	case 6621:
-	case 6801:
-	case 6829:
-	case 6881:
-	case 6930:
-	case 6953:
-	case 7157:
-	case 7944:
-	case 8673:
-	case 8763:
-		str="huan";
-		break;
-	case 5882:
-	case 6569:
-	case 6850:
-	case 6874:
-	case 6956:
-	case 7211:
-	case 7533:
-	case 8105:
-	case 8308:
-	case 8382:
-	case 8692:
-		str="huang";
-		break;
-	case 5822:
-	case 6078:
-	case 6086:
-	case 6205:
-	case 6352:
-	case 6360:
-	case 6425:
-	case 6736:
-	case 6807:
-	case 6811:
-	case 6971:
-	case 7132:
-	case 7185:
-	case 7445:
-	case 7703:
-	case 8219:
-	case 8319:
-	case 8766:
-		str="hui";
-		break;
-	case 5827:
-	case 6638:
-	case 6752:
-	case 6867:
-		str="hun";
-		break;
-	case 5669:
-	case 6229:
-	case 6311:
-	case 6475:
-	case 6623:
-	case 7856:
-	case 7933:
-	case 7976:
-	case 8175:
-	case 8322:
-		str="huo";
-		break;
-	case 5629:
-	case 5632:
-	case 5662:
-	case 5705:
-	case 5742:
-	case 5952:
-	case 6024:
-	case 6033:
-	case 6193:
-	case 6210:
-	case 6265:
-	case 6320:
-	case 6350:
-	case 6383:
-	case 6507:
-	case 6553:
-	case 6809:
-	case 6976:
-	case 7087:
-	case 7160:
-	case 7165:
-	case 7314:
-	case 7374:
-	case 7410:
-	case 7411:
-	case 7469:
-	case 7473:
-	case 7487:
-	case 7620:
-	case 7722:
-	case 7831:
-	case 7990:
-	case 8002:
-	case 8104:
-	case 8217:
-	case 8337:
-	case 8339:
-	case 8463:
-	case 8550:
-	case 8611:
-	case 8661:
-	case 8674:
-	case 8757:
-	case 8768:
-		str="ji";
-		break;
-	case 5704:
-	case 5903:
-	case 6171:
-	case 6521:
-	case 6804:
-	case 6940:
-	case 7176:
-	case 7409:
-	case 7546:
-	case 7702:
-	case 7882:
-	case 7956:
-	case 8072:
-	case 8142:
-	case 8244:
-	case 8353:
-	case 8434:
-	case 8542:
-		str="jia";
-		break;
-	case 5752:
-	case 5841:
-	case 5857:
-	case 6149:
-	case 6183:
-	case 6286:
-	case 6853:
-	case 6931:
-	case 6932:
-	case 7144:
-	case 7237:
-	case 7305:
-	case 7407:
-	case 7415:
-	case 7480:
-	case 7489:
-	case 7506:
-	case 7576:
-	case 7790:
-	case 7921:
-	case 8047:
-	case 8148:
-	case 8340:
-	case 8469:
-	case 8534:
-	case 8561:
-	case 8668:
-	case 8721:
-		str="jian";
-		break;
-	case 6092:
-	case 6814:
-	case 7113:
-	case 7154:
-	case 7481:
-	case 7768:
-	case 8180:
-	case 8461:
-	case 8488:
-		str="jiang";
-		break;
-	case 5714:
-	case 5753:
-	case 6020:
-	case 6090:
-	case 6256:
-	case 6461:
-	case 6572:
-	case 7015:
-	case 7524:
-	case 8008:
-	case 8052:
-	case 8252:
-	case 8520:
-	case 8551:
-	case 8662:
-		str="jiao";
-		break;
-	case 5806:
-	case 5821:
-	case 6255:
-	case 6414:
-	case 7028:
-	case 7061:
-	case 7278:
-	case 7757:
-	case 8060:
-	case 8201:
-	case 8227:
-	case 8441:
-	case 8658:
-	case 8726:
-		str="jie";
-		break;
-	case 5865:
-	case 6103:
-	case 6132:
-	case 6468:
-	case 6643:
-	case 6659:
-	case 7138:
-	case 7210:
-	case 7340:
-	case 7465:
-	case 7478:
-	case 8138:
-		str="jin";
-		break;
-	case 5751:
-	case 5869:
-	case 6128:
-	case 6616:
-	case 6729:
-	case 6794:
-	case 6941:
-	case 6982:
-	case 7026:
-	case 7534:
-	case 7554:
-	case 7570:
-	case 7626:
-		str="jiang";
-		break;
-	case 6936:
-	case 7671:
-		str="jiong";
-		break;
-	case 5754:
-	case 6417:
-	case 6746:
-	case 7249:
-	case 7274:
-	case 8015:
-	case 8053:
-	case 8481:
-	case 8761:
-		str="jiu";
-		break;
-	case 5738:
-	case 5810:
-	case 6036:
-	case 6058:
-	case 6076:
-	case 6268:
-	case 6965:
-	case 6980:
-	case 7202:
-	case 7307:
-	case 7316:
-	case 7323:
-	case 7357:
-	case 7381:
-	case 7488:
-	case 7611:
-	case 7850:
-	case 7924:
-	case 8022:
-	case 8132:
-	case 8153:
-	case 8482:
-	case 8522:
-	case 8565:
-	case 8620:
-	case 8634:
-	case 8722:
-		str="ju";
-		break;
-	case 5918:
-	case 6590:
-	case 6824:
-	case 7280:
-	case 7835:
-	case 7935:
-	case 7952:
-	case 8633:
-		str="juan";
-		break;
-	case 5642:
-	case 5667:
-	case 5860:
-	case 5939:
-	case 6207:
-	case 6421:
-	case 6457:
-	case 6469:
-	case 6540:
-	case 6617:
-	case 7062:
-	case 7169:
-	case 7286:
-	case 7351:
-	case 7663:
-	case 7967:
-	case 8574:
-	case 8591:
-		str="jue";
-		break;
-	case 6260:
-	case 8168:
-	case 8362:
-	case 8769:
-		str="jun";
-		break;
-	case 5671:
-	case 6339:
-	case 7544:
-		str="ka";
-		break;
-	case 5660:
-	case 5978:
-	case 6160:
-	case 6673:
-	case 6693:
-	case 7888:
-	case 7920:
-	case 7939:
-		str="kai";
-		break;
-	case 5709:
-	case 6108:
-	case 7412:
-	case 7772:
-	case 7811:
-		str="kan";
-		break;
-	case 5688:
-	case 6742:
-	case 7854:
-		str="kang";
-		break;
-	case 6974:
-	case 7264:
-	case 7491:
-	case 7877:
-		str="kao";
-		break;
-	case 6430:
-	case 6519:
-	case 6701:
-	case 6859:
-	case 7076:
-	case 7128:
-	case 7170:
-	case 7380:
-	case 7520:
-	case 7807:
-	case 7861:
-	case 7930:
-	case 7993:
-	case 8066:
-	case 8129:
-	case 8204:
-	case 8282:
-	case 8733:
-		str="ke";
-		break;
-	case 8144:
-		str="ken";
-		break;
-	case 7912:
-		str="keng";
-		break;
-	case 5737:
-	case 6539:
-	case 8377:
-		str="kong";
-		break;
-	case 6050:
-	case 6202:
-	case 6321:
-	case 7778:
-	case 8356:
-		str="kou";
-		break;
-	case 5658:
-	case 6005:
-	case 6423:
-	case 7111:
-	case 8728:
-		str="ku";
-		break;
-	case 5708:
-		str="kua";
-		break;
-	case 5665:
-	case 5906:
-	case 6364:
-	case 6586:
-	case 7558:
-		str="kuai";
-		break;
-	case 8737:
-		str="kuan";
-		break;
-	case 5818:
-	case 5831:
-	case 5887:
-	case 5959:
-	case 6237:
-	case 6349:
-	case 7094:
-	case 7460:
-		str="kuang";
-		break;
-	case 5624:
-	case 5649:
-	case 5771:
-	case 6162:
-	case 6281:
-	case 6413:
-	case 6416:
-	case 6720:
-	case 6951:
-	case 7450:
-	case 7805:
-	case 8606:
-	case 8743:
-		str="kui";
-		break;
-	case 6204:
-	case 6245:
-	case 6458:
-	case 6618:
-	case 6928:
-	case 7152:
-	case 7841:
-	case 8051:
-		str="liao";
-		break;
-	case 5793:
-	case 5988:
-	case 6270:
-	case 6354:
-	case 6803:
-	case 8483:
-	case 8581:
-	case 8764:
-		str="lie";
-		break;
-	case 6194:
-	case 6388:
-	case 6555:
-	case 6662:
-	case 6733:
-	case 6964:
-	case 7361:
-	case 7405:
-	case 7602:
-	case 7812:
-	case 8452:
-	case 8579:
-	case 8775:
-		str="lin";
-		break;
-	case 5925:
-	case 6063:
-	case 6342:
-	case 6482:
-	case 6786:
-	case 7117:
-	case 7258:
-	case 7289:
-	case 7418:
-	case 8186:
-	case 8240:
-	case 8465:
-	case 8676:
-		str="ling";
-		break;
-	case 6815:
-	case 6962:
-	case 7082:
-	case 7124:
-	case 7628:
-	case 7654:
-	case 7919:
-	case 7954:
-	case 8050:
-	case 8644:
-		str="liu";
-		break;
-	case 5966:
-	case 6055:
-	case 6781:
-	case 7171:
-	case 7248:
-	case 7542:
-	case 7735:
-	case 8110:
-		str="long";
-		break;
-	case 5745:
-	case 6168:
-	case 6422:
-	case 6548:
-	case 7946:
-	case 8092:
-	case 8179:
-	case 8287:
-	case 8735:
-		str="lou";
-		break;
-	case 6744:
-	case 7321:
-	case 7586:
-	case 7918:
-	case 7989:
-	case 8158:
-		str="lu";
-		break;
-	case 5968:
-	case 6303:
-	case 6464:
-	case 6782:
-	case 6843:
-	case 6885:
-	case 6954:
-	case 7220:
-	case 7251:
-	case 7354:
-	case 7391:
-	case 7404:
-	case 7510:
-	case 7545:
-	case 7969:
-	case 8021:
-	case 8056:
-	case 8392:
-	case 8421:
-	case 8652:
-		str="lu";
-		break;
-	case 5785:
-	case 7014:
-	case 7279:
-	case 8029:
-	case 8639:
-		str="luan";
-		break;
-		str="l¨µe";
-		break;
-		str="lun";
-		break;
-	case 5732:
-	case 5789:
-	case 6093:
-	case 6259:
-	case 6291:
-	case 6604:
-	case 6788:
-	case 6880:
-	case 7183:
-	case 7301:
-	case 7565:
-	case 7961:
-	case 8107:
-	case 8635:
-		str="luo";
-		break;
-	case 6328:
-		str="mu";
-		break;
-	case 6373:
-	case 6579:
-	case 7054:
-	case 7231:
-	case 8301:
-		str="ma";
-		break;
-	case 5929:
-	case 6104:
-	case 8618:
-		str="mai";
-		break;
-	case 6012:
-	case 6503:
-	case 7147:
-	case 7655:
-	case 7960:
-	case 8209:
-	case 8293:
-	case 8709:
-	case 8720:
-		str="man";
-		break;
-	case 5888:
-	case 6861:
-	case 7743:
-	case 8294:
-		str="mang";
-		break;
-	case 5783:
-	case 6066:
-	case 6525:
-	case 6787:
-	case 7203:
-	case 7436:
-	case 7483:
-	case 7503:
-	case 7624:
-	case 7714:
-	case 7806:
-	case 8317:
-	case 8754:
-		str="mao";
-		break;
-	case 6114:
-	case 6550:
-	case 6613:
-	case 6828:
-	case 6856:
-	case 7325:
-	case 7949:
-	case 8044:
-	case 8139:
-	case 8740:
-		str="mei";
-		break;
-	case 6249:
-	case 7643:
-	case 7715:
-	case 7845:
-		str="men";
-		break;
-	case 5934:
-	case 6189:
-	case 6211:
-	case 6734:
-	case 7592:
-	case 7770:
-	case 8221:
-	case 8276:
-	case 8323:
-	case 8427:
-	case 8431:
-		str="meng";
-		break;
-	case 5634:
-	case 5855:
-	case 6234:
-	case 6368:
-	case 6455:
-	case 6608:
-	case 6772:
-	case 6921:
-	case 6984:
-	case 7563:
-	case 7682:
-	case 8445:
-	case 8767:
-	case 8771:
-		str="mi";
-		break;
-	case 6770:
-	case 6837:
-	case 6847:
-	case 7579:
-	case 7777:
-		str="mian";
-		break;
-	case 6387:
-	case 6967:
-	case 7131:
-	case 7149:
-	case 7234:
-	case 7721:
-	case 7780:
-	case 8037:
-		str="miao";
-		break;
-	case 5631:
-	case 6367:
-	case 8326:
-	case 8390:
-		str="mie";
-		break;
-	case 6069:
-	case 6526:
-	case 6741:
-	case 6793:
-	case 7137:
-	case 7168:
-	case 7175:
-	case 7710:
-	case 8710:
-	case 8628:
-		str="min";
-		break;
-	case 5804:
-	case 6088:
-	case 6873:
-	case 7452:
-	case 7808:
-	case 8504:
-		str="ming";
-		break;
-		str="miu";
-		break;
-	case 5851:
-	case 6052:
-	case 6175:
-	case 6641:
-	case 7038:
-	case 7366:
-	case 7950:
-	case 7987:
-	case 8102:
-	case 8182:
-	case 8586:
-	case 8588:
-	case 8765:
-		str="mo";
-		break;
-	case 5716:
-	case 6372:
-	case 7788:
-	case 8254:
-	case 8290:
-	case 8642:
-		str="mou";
-		break;
-	case 5679:
-	case 5973:
-	case 6057:
-	case 6769:
-	case 7504:
-	case 7866:
-		str="mu";
-		break;
-	case 6437:
-		str="en";
-		break;
-	case 6264:
-	case 7539:
-	case 7953:
-	case 8136:
-		str="na";
-		break;
-	case 5630:
-	case 6021:
-	case 6133:
-	case 7245:
-		str="nai";
-		break;
-	case 6411:
-	case 6478:
-	case 6479:
-	case 7310:
-	case 7578:
-	case 8279:
-	case 8486:
-		str="nan";
-		break;
-	case 6313:
-	case 6476:
-	case 6646:
-	case 7457:
-		str="nang";
-		break;
-	case 5611:
-	case 5981:
-	case 6346:
-	case 6614:
-	case 7207:
-	case 7748:
-	case 7883:
-	case 8245:
-		str="nao";
-		break;
-	case 5811:
-		str="ne";
-		break;
-		str="nei";
-		break;
-	case 7705:
-		str="nen";
-		break;
-		str="neng";
-		break;
-	case 5703:
-	case 5972:
-	case 6605:
-	case 6685:
-	case 7439:
-	case 7627:
-	case 7711:
-	case 7794:
-	case 7874:
-	case 8682:
-		str="ni";
-		break;
-	case 5605:
-	case 5994:
-	case 7393:
-	case 8004:
-	case 8651:
-	case 8683:
-		str="nian";
-		break;
-		str="niang";
-		break;
-	case 6064:
-	case 7053:
-	case 7569:
-	case 8433:
-		str="niao";
-		break;
-	case 5877:
-	case 6233:
-	case 6431:
-	case 8208:
-	case 8411:
-	case 8570:
-		str="nie";
-		break;
-		str="nin";
-		break;
-	case 5690:
-	case 6344:
-	case 6924:
-	case 8187:
-		str="ning";
-		break;
-	case 6580:
-	case 6678:
-	case 7004:
-		str="niu";
-		break;
-	case 5715:
-	case 6370:
-		str="nong";
-		break;
-	case 8181:
-		str="nou";
-		break;
-	case 6983:
-	case 7032:
-	case 7059:
-	case 7069:
-		str="nu";
-		break;
-	case 7704:
-	case 7847:
-	case 8412:
-		str="nu";
-		break;
-		str="nuan";
-		break;
-		str="nue";
-		break;
-	case 5748:
-	case 6289:
-	case 6386:
-	case 7927:
-		str="nuo";
-		break;
-	case 6424:
-	case 6462:
-		str="o";
-		break;
-	case 5809:
-	case 6670:
-	case 7417:
-	case 8178:
-		str="ou";
-		break;
-	case 6166:
-	case 7243:
-	case 8365:
-		str="pa";
-		break;
-	case 5729:
-	case 6169:
-	case 6363:
-		str="pai";
-		break;
-	case 6761:
-	case 6790:
-	case 8140:
-	case 8165:
-	case 8320:
-	case 8571:
-		str="pan";
-		break;
-	case 6561:
-	case 6872:
-	case 6944:
-	case 8306:
-		str="pang";
-		break;
-	case 6243:
-	case 6583:
-	case 6650:
-	case 7567:
-	case 8069:
-		str="pao";
-		break;
-	case 6446:
-	case 6490:
-	case 7623:
-	case 7934:
-	case 8512:
-	case 8612:
-		str="pei";
-		break;
-	case 6852:
-		str="pen";
-		break;
-	case 6001:
-	case 6456:
-	case 6681:
-	case 8318:
-		str="peng";
-		break;
-	case 5607:
-	case 5682:
-	case 5880:
-	case 5892:
-	case 5915:
-	case 5960:
-	case 6017:
-	case 6037:
-	case 6308:
-	case 6472:
-	case 6647:
-	case 6836:
-	case 7039:
-	case 7102:
-	case 7233:
-	case 7422:
-	case 7802:
-	case 7828:
-	case 7875:
-	case 8117:
-	case 8166:
-	case 8223:
-	case 8271:
-	case 8589:
-		str="pi";
-		break;
-	case 5850:
-	case 7073:
-	case 7490:
-	case 7561:
-	case 8470:
-	case 8568:
-		str="pian";
-		break;
-	case 5666:
-	case 6449:
-	case 7046:
-	case 7146:
-	case 7372:
-	case 7809:
-	case 8310:
-		str="piao";
-		break;
-	case 6054:
-	case 7513:
-		str="pie";
-		break;
-	case 7041:
-	case 6253:
-	case 7016:
-	case 7315:
-	case 7482:
-	case 8213:
-		str="pin";
-		break;
-	case 5723:
-	case 7019:
-	case 7250:
-	case 8650:
-		str="ping";
-		break;
-	case 5647:
-	case 5922:
-	case 7174:
-	case 7839:
-	case 7862:
-	case 8011:
-	case 8345:
-		str="po";
-		break;
-	case 5786:
-	case 6269:
-		str="pou";
-		break;
-	case 5773:
-	case 6459:
-	case 6863:
-	case 6907:
-	case 7217:
-	case 7511:
-	case 7968:
-	case 7972:
-	case 8575:
-		str="pu";
-		break;
-	case 5633:
-	case 5725:
-	case 5963:
-	case 6027:
-	case 6046:
-	case 6089:
-	case 6129:
-	case 6134:
-	case 6161:
-	case 6213:
-	case 6366:
-	case 6450:
-	case 6508:
-	case 6510:
-	case 6764:
-	case 6831:
-	case 7075:
-	case 7118:
-	case 7187:
-	case 7189:
-	case 7229:
-	case 7271:
-	case 7342:
-	case 7440:
-	case 7605:
-	case 7687:
-	case 7712:
-	case 7751:
-	case 8193:
-	case 8251:
-	case 8264:
-	case 8475:
-	case 8476:
-	case 8572:
-	case 8702:
-	case 8772:
-		str="qi";
-		break;
-	case 6154:
-	case 8736:
-		str="qia";
-		break;
-	case 5727:
-	case 5761:
-	case 5868:
-	case 6023:
-	case 6045:
-	case 6071:
-	case 6271:
-	case 6509:
-	case 6705:
-	case 6727:
-	case 6925:
-	case 6926:
-	case 6929:
-	case 7155:
-	case 7293:
-	case 7541:
-	case 7709:
-	case 7852:
-	case 8215:
-	case 8373:
-		str="qian";
-		break;
-	case 6762:
-	case 7045:
-	case 7341:
-	case 7408:
-	case 7633:
-	case 7926:
-	case 7947:
-	case 7974:
-	case 8163:
-	case 8262:
-	case 8439:
-	case 8536:
-		str="qiang";
-		break;
-	case 5668:
-	case 5829:
-	case 5859:
-	case 6081:
-	case 6529:
-	case 6724:
-	case 6730:
-	case 7352:
-	case 7745:
-	case 8546:
-	case 8719:
-		str="qiao";
-		break;
-	case 5907:
-	case 6711:
-	case 7010:
-	case 7492:
-	case 7938:
-	case 8370:
-		str="qie";
-		break;
-	case 6043:
-	case 6276:
-	case 6336:
-	case 6426:
-	case 6463:
-	case 6858:
-	case 7353:
-	case 7923:
-	case 8291:
-	case 8432:
-		str="qin";
-		break;
-	case 6060:
-	case 6485:
-	case 7349:
-	case 7764:
-	case 8263:
-	case 8332:
-	case 8368:
-	case 8605:
-	case 8675:
-	case 8784:
-		str="qing";
-		break;
-	case 5886:
-	case 6068:
-	case 8123:
-	case 8243:
-	case 8344:
-	case 8528:
-	case 8638:
-		str="qiong";
-		break;
-	case 5720:
-	case 5947:
-	case 6576:
-	case 6848:
-	case 6947:
-	case 6957:
-	case 7317:
-	case 7468:
-	case 8216:
-	case 8239:
-	case 8288:
-	case 8435:
-	case 8460:
-	case 8690:
-	case 8792:
-		str="qiu";
-		break;
-	case 5816:
-	case 5930:
-	case 6201:
-	case 6230:
-	case 6511:
-	case 6573:
-	case 6754:
-	case 7219:
-	case 7479:
-	case 7512:
-	case 7552:
-	case 7678:
-	case 7765:
-	case 8119:
-	case 8248:
-	case 8329:
-	case 8480:
-	case 8636:
-	case 8781:
-		str="qu";
-		break;
-	case 5825:
-	case 6085:
-	case 6710:
-	case 7125:
-	case 7390:
-	case 7816:
-	case 7893:
-	case 8273:
-	case 8360:
-	case 8760:
-		str="quan";
-		break;
-	case 6755:
-	case 6758:
-	case 7708:
-		str="que";
-		break;
-	case 6950:
-		str="qun";
-		break;
-	case 6059:
-	case 8237:
-	case 8755:
-		str="ran";
-		break;
-	case 7692:
-	case 8006:
-		str="rang";
-		break;
-	case 6073:
-	case 7012:
-	case 7267:
-		str="rao";
-		break;
-		str="re";
-		break;
-	case 5680:
-	case 6083:
-	case 6156:
-	case 6631:
-	case 7377:
-	case 7994:
-	case 8137:
-		str="ren";
-		break;
-		str="reng";
-		break;
-		str="ri";
-		break;
-	case 6541:
-	case 6585:
-	case 7337:
-	case 7532:
-	case 8278:
-		str="rong";
-		break;
-	case 8459:
-	case 8569:
-	case 8723:
-		str="rou";
-		break;
-	case 6174:
-	case 6224:
-	case 6473:
-	case 6818:
-	case 6865:
-	case 6906:
-	case 7140:
-	case 7908:
-	case 8164:
-	case 8212:
-		str="ru";
-		break;
-	case 7535:
-		str="ruan";
-		break;
-	case 6039:
-	case 6208:
-	case 7236:
-	case 7803:
-	case 8224:
-		str="rui";
-		break;
-		str="run";
-		break;
-	case 5728:
-	case 8372:
-		str="ruo";
-		break;
-	case 5606:
-	case 5677:
-	case 7493:
-	case 7559:
-	case 7610:
-		str="sa";
-		break;
-	case 6471:
-		str="sai";
-		break;
-	case 6644:
-	case 7507:
-	case 8454:
-		str="san";
-		break;
-	case 6290:
-	case 7763:
-	case 8210:
-		str="sang";
-		break;
-	case 6003:
-	case 7150:
-	case 7156:
-	case 7593:
-	case 8094:
-	case 8694:
-		str="sao";
-		break;
-		str="se";
-		break;
-		str="sen";
-		break;
-		str="seng";
-		break;
-	case 6394:
-	case 7606:
-	case 7901:
-	case 8080:
-	case 8436:
-	case 8614:
-	case 8672:
-		str="sha";
-		break;
-	case 8507:
-		str="shai";
-		break;
-	case 5663:
-	case 5808:
-	case 5923:
-	case 5979:
-	case 6047:
-	case 6890:
-	case 7009:
-	case 7051:
-	case 7083:
-	case 7594:
-	case 7844:
-	case 8062:
-	case 8321:
-	case 8414:
-	case 8539:
-	case 8713:
-		str="shan";
-		break;
-	case 5980:
-	case 7120:
-	case 7368:
-	case 7656:
-	case 8592:
-		str="shang";
-		break;
-	case 5931:
-	case 6070:
-	case 6891:
-	case 7228:
-	case 8366:
-	case 8425:
-		str="shao";
-		break;
-	case 5639:
-	case 5760:
-	case 6606:
-	case 6860:
-	case 7608:
-	case 7820:
-	case 8774:
-		str="she";
-		break;
-	case 5837:
-	case 6123:
-	case 6351:
-	case 6841:
-	case 7309:
-	case 7547:
-	case 7982:
-	case 8255:
-		str="shen";
-		break;
-	case 6551:
-	case 7441:
-	case 7782:
-	case 8347:
-		str="sheng";
-		break;
-	case 5854:
-	case 5985:
-	case 6110:
-	case 6173:
-	case 6317:
-	case 7388:
-	case 7459:
-	case 7634:
-	case 7870:
-	case 8307:
-	case 8334:
-	case 8363:
-	case 8525:
-	case 8669:
-	case 8685:
-		str="shi";
-		break;
-	case 6587:
-	case 7123:
-	case 8428:
-		str="shou";
-		break;
-	case 5731:
-	case 5951:
-	case 6136:
-	case 6283:
-	case 6780:
-	case 6888:
-	case 7013:
-	case 7508:
-	case 7582:
-	case 7988:
-		str="shu";
-		break;
-	case 6407:
-		str="shua";
-		break;
-	case 8316:
-		str="shuai";
-		break;
-	case 6737:
-	case 6844:
-		str="shuan";
-		break;
-	case 7055:
-		str="shuang";
-		break;
-		str="shui";
-		break;
-		str="shun";
-		break;
-	case 6184:
-	case 6287:
-	case 6989:
-	case 7335:
-	case 7869:
-		str="shuo";
-		break;
-	case 5643:
-	case 5778:
-	case 5944:
-	case 6348:
-	case 6765:
-	case 6784:
-	case 6889:
-	case 7006:
-	case 7065:
-	case 7133:
-	case 7675:
-	case 7940:
-	case 8024:
-	case 8174:
-	case 8247:
-	case 8351:
-		str="si";
-		break;
-	case 5801:
-	case 6131:
-	case 6534:
-	case 6552:
-	case 6676:
-	case 6704:
-	case 6833:
-	case 8121:
-		str="song";
-		break;
-	case 5937:
-	case 6220:
-	case 6418:
-	case 6453:
-	case 6640:
-	case 6849:
-	case 7612:
-	case 7804:
-	case 7943:
-	case 8284:
-		str="sou";
-		break;
-	case 5777:
-	case 5853:
-	case 6188:
-	case 6428:
-	case 6726:
-	case 6819:
-	case 8389:
-	case 8602:
-	case 8653:
-		str="su";
-		break;
-	case 6601:
-		str="suan";
-		break;
-	case 5839:
-	case 6120:
-	case 6901:
-	case 6968:
-	case 7661:
-	case 7785:
-	case 7801:
-		str="sui";
-		break;
-	case 6105:
-	case 6588:
-	case 6624:
-	case 7330:
-	case 8632:
-		str="sun";
-		break;
-	case 6379:
-	case 6434:
-	case 6442:
-	case 7022:
-	case 7288:
-	case 7792:
-	case 8440:
-		str="suo";
-		break;
-	case 6743:
-	case 6866:
-	case 6961:
-	case 7329:
-	case 7719:
-	case 7872:
-	case 8533:
-	case 8703:
-		str="ta";
-		break;
-	case 5902:
-	case 6223:
-	case 6330:
-	case 7070:
-	case 7536:
-	case 7638:
-	case 7849:
-	case 8544:
-	case 8656:
-		str="tai";
-		break;
-	case 5916:
-	case 6903:
-	case 7428:
-	case 7694:
-	case 7867:
-	case 7936:
-	case 8191:
-		str="tan";
-		break;
-	case 5746:
-	case 6491:
-	case 6871:
-	case 7209:
-	case 7344:
-	case 7906:
-	case 7959:
-	case 8177:
-	case 8305:
-	case 8311:
-	case 8442:
-	case 8517:
-		str="tang";
-		break;
-	case 5627:
-	case 6391:
-	case 6812:
-	case 7226:
-	case 7666:
-		str="tao";
-		break;
-		str="1845 ²Í";
-		break;
-	case 6315:
-	case 7693:
-	case 7911:
-		str="te";
-		break;
-	case 7588:
-		str="teng";
-		break;
-	case 5735:
-	case 6709:
-	case 6949:
-	case 7130:
-	case 8035:
-	case 8151:
-	case 8514:
-		str="ti";
-		break;
-	case 6261:
-	case 6735:
-	case 6757:
-	case 7369:
-	case 7817:
-		str="tian";
-		break;
-	case 5712:
-	case 7686:
-	case 8127:
-	case 8272:
-	case 8352:
-	case 8448:
-	case 8622:
-	case 8670:
-	case 8756:
-		str="tiao";
-		break;
-	case 6138:
-	case 8749:
-		str="tie";
-		break;
-	case 6080:
-	case 6167:
-	case 7035:
-	case 7272:
-	case 7890:
-	case 8249:
-	case 8610:
-		str="ting";
-		break;
-	case 5701:
-	case 5758:
-	case 6077:
-	case 6444:
-	case 6690:
-	case 6892:
-	case 7737:
-		str="tong";
-		break;
-	case 7855:
-	case 7822:
-	case 8727:
-		str="tou";
-		break;
-	case 6002:
-	case 6117:
-	case 6143:
-	case 7842:
-	case 8509:
-		str="tu";
-		break;
-	case 6250:
-	case 6972:
-		str="tuan";
-		break;
-	case 7653:
-		str="tui";
-		break;
-	case 5759:
-	case 6629:
-	case 7453:
-	case 7564:
-		str="tun";
-		break;
-	case 5617:
-	case 5702:
-	case 5971:
-	case 6653:
-	case 6791:
-	case 7256:
-	case 7262:
-	case 7350:
-	case 7740:
-	case 8374:
-	case 8502:
-	case 8541:
-	case 8630:
-		str="tuo";
-		break;
-	case 5684:
-	case 7020:
-	case 7580:
-		str="wa";
-		break;
-		str="wai";
-		break;
-	case 5664:
-	case 6025:
-	case 6150:
-	case 7093:
-	case 7126:
-	case 7194:
-	case 7568:
-	case 7821:
-	case 8274:
-		str="wan";
-		break;
-	case 5672:
-	case 6244:
-	case 6715:
-	case 7394:
-	case 8745:
-		str="wang";
-		break;
-	case 5743:
-	case 5835:
-	case 5881:
-	case 5883:
-	case 6158:
-	case 6217:
-	case 6488:
-	case 6501:
-	case 6543:
-	case 6545:
-	case 6611:
-	case 6612:
-	case 6739:
-	case 6777:
-	case 6802:
-	case 6822:
-	case 6952:
-	case 7024:
-	case 7166:
-	case 7224:
-	case 7406:
-	case 7631:
-	case 7648:
-	case 8084:
-	case 8426:
-	case 8659:
-		str="wei";
-		break;
-	case 5656:
-	case 6751:
-	case 6775:
-	case 7223:
-	case 8609:
-		str="wen";
-		break;
-	case 6178:
-	case 6219:
-		str="weng";
-		break;
-	case 5733:
-	case 6111:
-	case 6502:
-	case 6855:
-	case 7531:
-	case 7750:
-	case 8627:
-		str="wo";
-		break;
-	case 5603:
-	case 5685:
-	case 5867:
-	case 5889:
-	case 5956:
-	case 6044:
-	case 6377:
-	case 6648:
-	case 6668:
-	case 6672:
-	case 6820:
-	case 6927:
-	case 6935:
-	case 6992:
-	case 7036:
-	case 7080:
-	case 7227:
-	case 7485:
-	case 7641:
-	case 8036:
-	case 8045:
-	case 8077:
-	case 8258:
-	case 8640:
-	case 8789:
-		str="wu";
-		break;
-	case 5750:
-	case 5766:
-	case 5884:
-	case 5913:
-	case 6130:
-	case 6163:
-	case 6191:
-	case 6241:
-	case 6381:
-	case 6567:
-	case 6630:
-	case 6750:
-	case 6827:
-	case 6832:
-	case 6979:
-	case 7050:
-	case 7184:
-	case 7356:
-	case 7456:
-	case 7474:
-	case 7604:
-	case 7668:
-	case 7689:
-	case 7691:
-	case 8010:
-	case 8122:
-	case 8265:
-	case 8303:
-	case 8312:
-	case 8410:
-	case 8424:
-	case 8443:
-	case 8449:
-	case 8466:
-	case 8521:
-	case 8791:
-		str="xi";
-		break;
-	case 6340:
-	case 6582:
-	case 6958:
-	case 7206:
-	case 7252:
-	case 7744:
-	case 8093:
-	case 8333:
-	case 8779:
-		str="xia";
-		break;
-	case 5794:
-	case 5823:
-	case 6040:
-	case 6118:
-	case 6226:
-	case 6513:
-	case 6593:
-	case 6963:
-	case 7021:
-	case 7515:
-	case 7662:
-	case 7676:
-	case 8034:
-	case 8079:
-	case 8225:
-	case 8358:
-	case 8444:
-	case 8503:
-	case 8548:
-	case 8549:
-	case 8617:
-		str="xian";
-		break;
-	case 6028:
-	case 6157:
-	case 6635:
-	case 6652:
-	case 7088:
-	case 7129:
-	case 8313:
-	case 8663:
-	case 8747:
-		str="xiang";
-		break;
-	case 6356:
-	case 6537:
-	case 6876:
-	case 6948:
-	case 7071:
-	case 7115:
-	case 7241:
-	case 7253:
-	case 8257:
-	case 8367:
-	case 8379:
-	case 8744:
-		str="xiao";
-		break;
-	case 5741:
-	case 5784:
-	case 5936:
-	case 5938:
-	case 6215:
-	case 6302:
-	case 6619:
-	case 6661:
-	case 6845:
-	case 6912:
-	case 6966:
-	case 7105:
-	case 7151:
-	case 7331:
-	case 7339:
-	case 8583:
-		str="xie";
-		break;
-	case 5622:
-	case 6016:
-	case 7431:
-	case 7607:
-	case 8646:
-		str="xin";
-		break;
-	case 5874:
-	case 6084:
-	case 6309:
-	case 6712:
-	case 7742:
-		str="xing";
-		break;
-	case 6026:
-		str="xiong";
-		break;
-	case 6361:
-	case 6522:
-	case 6642:
-	case 6651:
-	case 6869:
-	case 8028:
-	case 8587:
-	case 8759:
-		str="xiu";
-		break;
-	case 5828:
-	case 5935:
-	case 5955:
-	case 6203:
-	case 6810:
-	case 6851:
-	case 7179:
-	case 7282:
-	case 7667:
-	case 7776:
-	case 8167:
-	case 8458:
-	case 8515:
-		str="xu";
-		break;
-	case 5756:
-	case 5846:
-	case 6170:
-	case 6279:
-	case 6789:
-	case 6854:
-	case 6886:
-	case 7215:
-	case 7324:
-	case 7449:
-	case 7637:
-	case 7651:
-	case 7759:
-	case 7871:
-	case 7964:
-	case 8071:
-		str="xuan";
-		break;
-	case 5842:
-	case 7720:
-	case 8529:
-	case 8708:
-		str="xue";
-		break;
-	case 5767:
-	case 5908:
-	case 5987:
-	case 6087:
-	case 6101:
-	case 6206:
-	case 6225:
-	case 6530:
-	case 6563:
-	case 6620:
-	case 6694:
-	case 6813:
-	case 6817:
-	case 7454:
-	case 8131:
-	case 8524:
-	case 8664:
-		str="xun";
-		break;
-	case 5683:
-	case 5975:
-	case 6275:
-	case 6512:
-	case 6934:
-	case 7011:
-	case 7180:
-	case 7266:
-	case 7518:
-	case 7728:
-	case 7793:
-	case 8073:
-		str="ya";
-		break;
-	case 5641:
-	case 5645:
-	case 5718:
-	case 5740:
-	case 5780:
-	case 5861:
-	case 5917:
-	case 5919:
-	case 6030:
-	case 6146:
-	case 6535:
-	case 6691:
-	case 6738:
-	case 6753:
-	case 6846:
-	case 6857:
-	case 6991:
-	case 7044:
-	case 7192:
-	case 7360:
-	case 7444:
-	case 7557:
-	case 7645:
-	case 7827:
-	case 8359:
-	case 8506:
-	case 8742:
-	case 8748:
-	case 8790:
-		str="yan";
-		break;
-	case 6564:
-	case 6683:
-	case 7630:
-	case 7640:
-	case 7706:
-	case 8253:
-	case 8717:
-		str="yang";
-		break;
-	case 5618:
-	case 5619:
-	case 6326:
-	case 6542:
-	case 6570:
-	case 7159:
-	case 7182:
-	case 7235:
-	case 7387:
-	case 7455:
-	case 7540:
-	case 7902:
-	case 8046:
-	case 8126:
-	case 8477:
-	case 8705:
-		str="yao";
-		break;
-	case 5644:
-	case 5843:
-	case 5894:
-	case 6262:
-	case 7442:
-	case 7639:
-	case 7884:
-		str="ye";
-		break;
-	case 5655:
-	case 5657:
-	case 5670:
-	case 5693:
-	case 5711:
-	case 5817:
-	case 5961:
-	case 5992:
-	case 6018:
-	case 6051:
-	case 6072:
-	case 6218:
-	case 6236:
-	case 6240:
-	case 6258:
-	case 6314:
-	case 6329:
-	case 6355:
-	case 6362:
-	case 6441:
-	case 6470:
-	case 6527:
-	case 6558:
-	case 6602:
-	case 6634:
-	case 6688:
-	case 6689:
-	case 6708:
-	case 6884:
-	case 6938:
-	case 7068:
-	case 7143:
-	case 7376:
-	case 7383:
-	case 7461:
-	case 7629:
-	case 7658:
-	case 7784:
-	case 7838:
-	case 7955:
-	case 7978:
-	case 8074:
-	case 8089:
-	case 8115:
-	case 8120:
-	case 8270:
-	case 8415:
-	case 8464:
-	case 8472:
-	case 8493:
-	case 8780:
-		str="yi";
-		break;
-	case 5623:
-	case 5920:
-	case 5983:
-	case 6007:
-	case 6065:
-	case 6337:
-	case 6419:
-	case 6594:
-	case 6625:
-	case 6806:
-	case 7519:
-	case 7887:
-	case 8111:
-	case 8230:
-	case 8615:
-	case 8624:
-		str="yin";
-		break;
-	case 5788:
-	case 5911:
-	case 6067:
-	case 6094:
-	case 6126:
-	case 6151:
-	case 6186:
-	case 6292:
-	case 6451:
-	case 6663:
-	case 6862:
-	case 6875:
-	case 6913:
-	case 7188:
-	case 7212:
-	case 7326:
-	case 7584:
-	case 8048:
-	case 8108:
-	case 8203:
-	case 8331:
-		str="ying";
-		break;
-	case 6401:
-		str="yo";
-		break;
-	case 5724:
-	case 5953:
-	case 6013:
-	case 6415:
-	case 6728:
-	case 7163:
-	case 7962:
-	case 8014:
-	case 8711:
-	case 8751:
-		str="yong";
-		break;
-	case 5653:
-	case 5692:
-	case 5707:
-	case 6112:
-	case 6115:
-	case 6121:
-	case 6347:
-	case 6483:
-	case 6922:
-	case 7254:
-	case 7364:
-	case 7527:
-	case 7880:
-	case 8064:
-	case 8236:
-	case 8242:
-	case 8286:
-	case 8647:
-	case 8778:
-	case 8788:
-		str="you";
-		break;
-	case 5614:
-	case 5625:
-	case 5681:
-	case 5722:
-	case 5836:
-	case 5845:
-	case 6139:
-	case 6187:
-	case 6277:
-	case 6484:
-	case 6486:
-	case 6546:
-	case 6592:
-	case 6632:
-	case 6637:
-	case 6655:
-	case 6748:
-	case 6987:
-	case 6993:
-	case 7005:
-	case 7090:
-	case 7204:
-	case 7437:
-	case 7476:
-	case 7573:
-	case 7603:
-	case 7622:
-	case 7647:
-	case 7659:
-	case 7718:
-	case 7858:
-	case 8033:
-	case 8054:
-	case 8085:
-	case 8086:
-	case 8130:
-	case 8133:
-	case 8266:
-	case 8285:
-	case 8336:
-	case 8407:
-	case 8408:
-	case 8607:
-	case 8625:
-		str="yu";
-		break;
-	case 5989:
-	case 6011:
-	case 6282:
-	case 6768:
-	case 7034:
-	case 7205:
-	case 7358:
-	case 7528:
-	case 7783:
-	case 8016:
-	case 8302:
-	case 8378:
-	case 8629:
-		str="yuan";
-		break;
-	case 5763:
-	case 6914:
-	case 7348:
-	case 7530:
-	case 7865:
-		str="yue";
-		break;
-	case 5909:
-	case 6031:
-	case 6581:
-	case 6702:
-	case 6719:
-	case 7101:
-	case 7225:
-	case 7370:
-	case 7432:
-	case 7521:
-	case 7657:
-		str="yun";
-		break;
-	case 6257:
-	case 6338:
-		str="za";
-		break;
-	case 6544:
-	case 7162:
-		str="zai";
-		break;
-	case 7222:
-	case 7435:
-	case 8402:
-	case 8456:
-	case 8485:
-	case 8641:
-		str="zan";
-		break;
-	case 6242:
-	case 7064:
-	case 7416:
-		str="zang";
-		break;
-	case 6380:
-		str="zao";
-		break;
-	case 5638:
-	case 8369:
-	case 5651:
-	case 6385:
-	case 6493:
-	case 6937:
-	case 7430:
-	case 8348:
-	case 8423:
-		str="ze";
-		break;
-		str="zei";
-		break;
-	case 5858:
-		str="zen";
-		break;
-	case 7153:
-	case 7421:
-	case 7832:
-	case 7913:
-		str="zeng";
-		break;
-	case 6610:
-	case 6274:
-	case 6324:
-	case 6369:
-	case 6378:
-	case 7736:
-	case 8068:
-	case 8238:
-	case 8794:
-		str="zha";
-		break;
-	case 7746:
-	case 8109:
-		str="zhai";
-		break;
-	case 5862:
-	case 6288:
-	case 7625:
-		str="zhan";
-		break;
-	case 5675:
-	case 5921:
-	case 6504:
-	case 6554:
-	case 6615:
-	case 7049:
-	case 7216:
-	case 8315:
-		str="zhang";
-		break;
-	case 5815:
-	case 7294:
-	case 7840:
-	case 8341:
-		str="zhao";
-		break;
-	case 5856:
-	case 6301:
-	case 7247:
-	case 7392:
-	case 7761:
-	case 8049:
-	case 8162:
-	case 8256:
-	case 8487:
-		str="zhe";
-		break;
-	case 5958:
-	case 6172:
-	case 6805:
-	case 7139:
-	case 7269:
-	case 7327:
-	case 7384:
-	case 7466:
-	case 7551:
-	case 7562:
-	case 7685:
-	case 7819:
-	case 8001:
-	case 8018:
-	case 8380:
-		str="zhen";
-		break;
-	case 5826:
-	case 6531:
-	case 6571:
-	case 7859:
-	case 7903:
-	case 8361:
-		str="zheng";
-		break;
-	case 5620:
-	case 5876:
-	case 5904:
-	case 5990:
-	case 6038:
-	case 6293:
-	case 6489:
-	case 6669:
-	case 6973:
-	case 6975:
-	case 7079:
-	case 7246:
-	case 7255:
-	case 7257:
-	case 7268:
-	case 7382:
-	case 7389:
-	case 7462:
-	case 7553:
-	case 7589:
-	case 7677:
-	case 7683:
-	case 7773:
-	case 7984:
-	case 8026:
-	case 8075:
-	case 8246:
-	case 8474:
-	case 8505:
-	case 8537:
-	case 8557:
-	case 8560:
-	case 8584:
-	case 8603:
-		str="zhi";
-		break;
-	case 5803:
-	case 7981:
-	case 8314:
-	case 8417:
-	case 8564:
-		str="zhong";
-		break;
-	case 6107:
-	case 6390:
-	case 7008:
-	case 7091:
-	case 7107:
-	case 7548:
-	case 7756:
-	case 8406:
-	case 8492:
-		str="zhou";
-		break;
-	case 5689:
-	case 5710:
-	case 5905:
-	case 6049:
-	case 6079:
-	case 6808:
-	case 6830:
-	case 6883:
-	case 7244:
-	case 7338:
-	case 7345:
-	case 7636:
-	case 7889:
-	case 8070:
-	case 8081:
-	case 8335:
-	case 8371:
-	case 8422:
-	case 8467:
-	case 8578:
-	case 8770:
-		str="zhu";
-		break;
-		str="zhua";
-		break;
-		str="zhuai";
-		break;
-	case 6389:
-	case 6645:
-	case 8207:
-		str="zhuan";
-		break;
-	case 5755:
-		str="zhuang";
-		break;
-	case 6723:
-	case 7077:
-	case 7136:
-		str="zhui";
-		break;
-	case 7538:
-	case 8124:
-		str="zhun";
-		break;
-	case 5730:
-	case 5834:
-	case 6310:
-	case 6823:
-	case 6835:
-	case 6910:
-	case 7644:
-	case 7690:
-	case 7729:
-	case 7977:
-		str="zhuo";
-		break;
-	case 5849:
-	case 6549:
-	case 7002:
-	case 7060:
-	case 7127:
-	case 7287:
-	case 7402:
-	case 7463:
-	case 7707:
-	case 7786:
-	case 7937:
-	case 7986:
-	case 8172:
-	case 8342:
-	case 8450:
-	case 8484:
-	case 8594:
-	case 8604:
-	case 8623:
-	case 8686:
-	case 8758:
-		str="zi";
-		break;
-	case 5744:
-	case 7574:
-	case 8453:
-		str="zong";
-		break;
-	case 5833:
-	case 5878:
-	case 5924:
-	case 7067:
-	case 8677:
-		str="zou";
-		break;
-	case 5762:
-	case 6147:
-	case 7963:
-		str="zu";
-		break;
-	case 6312:
-	case 7158:
-	case 8582:
-		str="zuan";
-		break;
-	case 6209:
-		str="zui";
-		break;
-	case 6304:
-	case 7355:
-	case 8714:
-		str="zun";
-		break;
-	case 5872:
-	case 6382:
-	case 6460:
-	case 6684:
-	case 7549:
-	case 7681:
-		str="zuo";
-		break;
-	default:
-		if(code>=1601 && code<=1602)
-		{
-			str="a";
-			break;
-		}
-		if(code>=1603 && code<=1615)
-		{
-			str="ai";
-			break;
-		}
-		if(code>=1616 && code<=1624)
-		{
-			str="an";
-			break;
-		}
-		if(code>=1625 && code<=1627)
-		{
-			str="ang";
-			break;
-		}
-		if(code>=1628 && code<=1636)
-		{
-			str="ao";
-			break;
-		}
-		if(code>=1637 && code<=1654)
-		{
-			str="ba";
-			break;
-		}
-		if(code>=1655 && code<=1662)
-		{
-			str="bai";
-			break;
-		}
-		if(code>=1663 && code<=1677)
-		{
-			str="ban";
-			break;
-		}
-		if(code>=1678 && code<=1689)
-		{
-			str="bang";
-			break;
-		}
-		if(code>=1690 && code<=1712)
-		{
-			str="bao";
-			break;
-		}
-		if(code>=1713 && code<=1727)
-		{
-			str="bei";
-			break;
-		}
-		if(code>=1728 && code<=1731)
-		{
-			str="ben";
-			break;
-		}
-		if(code>=1732 && code<=1737)
-		{
-			str="beng";
-			break;
-		}
-		if(code>1738 && code<=1761)
-		{
-			str="bi";
-			break;
-		}
-		if(code>=1762 && code<=1773)
-		{
-			str="bian";
-			break;
-		}
-		if(code>=1774 && code<=1777)
-		{
-			str="biao";
-			break;
-		}
-		if(code>=1778 && code<=1781)
-		{
-			str="bie";
-			break;
-		}
-		if(code>=1782 && code<=1787)
-		{
-			str="bin";
-			break;
-		}
-		if(code>=1788 && code<=1794)
-		{
-			str="bing";
-			break;
-		}
-		if(code>=1801 && code<=1802)
-		{
-			str="bing";
-			break;
-		}
-		if(code>=1803 && code<=1821)
-		{
-			str="bo";
-			break;
-		}
-		if(code>=1822 && code<=1832)
-		{
-			str="bu";
-			break;
-		}
-		if(code==1833)
-		{
-			str="ca";
-			break;
-		}
-		if(code>=1834 && code<=1844)
-		{
-			str="cai";
-			break;
-		}
-		if(code>=1845 && code<=1851)
-		{
-			str="can";
-			break;
-		}
-		if(code>=1852 && code<=1856)
-		{
-			str="cang";
-			break;
-		}
-		if(code>=1857 && code<=1861)
-		{
-			str="cao";
-			break;
-		}
-		if(code>=1862 && code<=1866)
-		{
-			str="ce";
-			break;
-		}
-		if(code>=1867 && code<=1868)
-		{
-			str="ceng";
-			break;
-		}
-		if(code>=1869 && code<=1879)
-		{
-			str="cha";
-			break;
-		}
-		if(code>=1880 && code<=1882)
-		{
-			str="chai";
-			break;
-		}
-		if(code>=1883 && code<=1892)
-		{
-			str="chan";
-			break;
-		}
-		if(code>=1893 && code<=1911)
-		{
-			str="chang";
-			break;
-		}
-		if(code>=1912 && code<=1920)
-		{
-			str="chao";
-			break;
-		}
-		if(code>=1921 && code<=1926)
-		{
-			str="che";
-			break;
-		}
-		if(code>=1927 && code<=1936)
-		{
-			str="chen";
-			break;
-		}
-		if(code>=1937 && code<=1951)
-		{
-			str="cheng";
-			break;
-		}
-		if(code>=1952 && code<=1967)
-		{
-			str="chi";
-			break;
-		}
-		if(code>=1968 && code<=1972)
-		{
-			str="chong";
-			break;
-		}
-		if(code>=1973 && code<=1984)
-		{
-			str="chou";
-			break;
-		}
-		if(code>=1985 && code<=2006)
-		{
-			str="chu";
-			break;
-		}
-		if(code==2007)
-		{
-			str="chuai";
-			break;
-		}
-		if(code>=2008 && code<=2014)
-		{
-			str="chuan";
-			break;
-		}
-		if(code>=2015 && code<=2020)
-		{
-			str="chuang";
-			break;
-		}
-		if(code>=2021 && code<=2025)
-		{
-			str="chui";
-			break;
-		}
-		if(code>=2026 && code<=2032)
-		{
-			str="chun";
-			break;
-		}
-		if(code>=2033 && code<=2034)
-		{
-			str="chuo";
-			break;
-		}
-		if(code>=2035 && code<=2046)
-		{
-			str="ci";
-			break;
-		}
-		if(code>=2047 && code<=2052)
-		{
-			str="cong";
-			break;
-		}
-		if(code>=2054 && code<=2057)
-		{
-			str="cu";
-			break;
-		}
-		if(code>=2058 && code<=2060)
-		{
-			str="cuan";
-			break;
-		}
-		if(code>=2061 && code<=2068)
-		{
-			str="cui";
-			break;
-		}
-		if(code>=2069 && code<=2071)
-		{
-			str="cun";
-			break;
-		}
-		if(code>=2072 && code<=2077)
-		{
-			str="cuo";
-			break;
-		}
-		if(code>=2078 && code<=2083)
-		{
-			str="da";
-			break;
-		}
-		if(code>=2084 && code<=2094)
-		{
-			str="dai";
-			break;
-		}
-		if(code>=2102 && code<=2116)
-		{
-			str="dan";
-			break;
-		}
-		if(code>=2117 && code<=2121)
-		{
-			str="dang";
-			break;
-		}
-		if(code>=2122 && code<=2133)
-		{
-			str="dao";
-			break;
-		}
-		if(code>=2134 && code<=2136)
-		{
-			str="de";
-			break;
-		}
-		if(code>=2137 && code<=2143)
-		{
-			str="deng";
-			break;
-		}
-		if(code>=2144 && code<=2162)
-		{
-			str="di";
-			break;
-		}
-		if(code>=2163 && code<=2178)
-		{
-			str="dian";
-			break;
-		}
-		if(code>=2179 && code<=2187)
-		{
-			str="diao";
-			break;
-		}
-		if(code>=2188 && code<=2194)
-		{
-			str="die";
-			break;
-		}
-		if(code>=2201 && code<=2209)
-		{
-			str="ding";
-			break;
-		}
-		if(code==2210)
-		{
-			str="diu";
-			break;
-		}
-		if(code>=2211 && code<=2220)
-		{
-			str="dong";
-			break;
-		}
-		if(code>=2221 && code<=2227)
-		{
-			str="dou";
-			break;
-		}
-		if(code>=2228 && code<=2242)
-		{
-			str="du";
-			break;
-		}
-		if(code>=2243 && code<=2248)
-		{
-			str="duan";
-			break;
-		}
-		if(code>=2249 && code<=2252)
-		{
-			str="dui";
-			break;
-		}
-		if(code>=2253 && code<=2261)
-		{
-			str="dun";
-			break;
-		}
-		if(code>=2262 && code<=2273)
-		{
-			str="duo";
-			break;
-		}
-		if(code>=2274 && code<=2286)
-		{
-			str="e";
-			break;
-		}
-		if(code==2287)
-		{
-			str="en";
-			break;
-		}
-		if(code>=2288 && code<=2231)
-		{
-			str="er";
-			break;
-		}
-		if(code>=2302 && code<=2309)
-		{
-			str="fa";
-			break;
-		}
-		if(code>=2310 && code<=2326)
-		{
-			str="fan";
-			break;
-		}
-		if(code>=2327 && code<=2337)
-		{
-			str="fang";
-			break;
-		}
-		if(code>=2338 && code<=2349)
-		{
-			str="fei";
-			break;
-		}
-		if(code>=2350 && code<=2364)
-		{
-			str="fen";
-			break;
-		}
-		if(code>=2365 && code<=2379)
-		{
-			str="feng";
-			break;
-		}
-		if(code==2380)
-		{
-			str="fo";
-			break;
-		}
-		if(code==2381)
-		{
-			str="fou";
-			break;
-		}
-		if(code>=2382 && code<=2432)
-		{
-			str="fu";
-			break;
-		}
-		if(code>=2435 && code<=2440)
-		{
-			str="gai";
-			break;
-		}
-		if(code>=2441 && code<=2451)
-		{
-			str="gan";
-			break;
-		}
-		if(code>=2452 && code<=2460)
-		{
-			str="gang";
-			break;
-		}
-		if(code>=2461 && code<=2470)
-		{
-			str="gao";
-			break;
-		}
-		if(code>=2471 && code<=2487)
-		{
-			str="ge";
-			break;
-		}
-		if(code==2488)
-		{
-			str="gei";
-			break;
-		}
-		if(code>=2489 && code<=2490)
-		{
-			str="gen";
-			break;
-		}
-		if(code>=2491 && code<=2503)
-		{
-			str="geng";
-			break;
-		}
-		if(code>=2504 && code<=2518)
-		{
-			str="gong";
-			break;
-		}
-		if(code>=2519 && code<=2527)
-		{
-			str="gou";
-			break;
-		}
-		if(code>=2528 && code<=2545)
-		{
-			str="gu";
-			break;
-		}
-		if(code>=2546 && code<=2551)
-		{
-			str="gua";
-			break;
-		}
-		if(code>=2552 && code<=2554)
-		{
-			str="guai";
-			break;
-		}
-		if(code>=2555 && code<=2565)
-		{
-			str="guan";
-			break;
-		}
-		if(code>=2566 && code<=2568)
-		{
-			str="guang";
-			break;
-		}
-		if(code>=2569 && code<=2584)
-		{
-			str="gui";
-			break;
-		}
-		if(code>=2585 && code<=2587)
-		{
-			str="gun";
-			break;
-		}
-		if(code>=2588 && code<=2593)
-		{
-			str="guo";
-			break;
-		}
-		if(code==2594)
-		{
-			str="ha";
-			break;
-		}
-		if(code>=2601 && code<=2607)
-		{
-			str="hai";
-			break;
-		}
-		if(code>=2608 && code<=2626)
-		{
-			str="han";
-			break;
-		}
-		if(code>=2627 && code<=2629)
-		{
-			str="hang";
-			break;
-		}
-		if(code>=2630 && code<=2638)
-		{
-			str="hao";
-			break;
-		}
-		if(code>=2639 && code<=2656)
-		{
-			str="he";
-			break;
-		}
-		if(code>=2657 && code<=2658)
-		{
-			str="hei";
-			break;
-		}
-		if(code>=2659 && code<=2662)
-		{
-			str="hen";
-			break;
-		}
-		if(code>=2663 && code<=2667)
-		{
-			str="heng";
-			break;
-		}
-		if(code>=2668 && code<=2676)
-		{
-			str="hong";
-			break;
-		}
-		if(code>=2677 && code<=2683)
-		{
-			str="hou";
-			break;
-		}
-		if(code>=2684 && code<=2707)
-		{
-			str="hu";
-			break;
-		}
-		if(code>=2708 && code<=2716)
-		{
-			str="hua";
-			break;
-		}
-		if(code>=2717 && code<=2721)
-		{
-			str="huai";
-			break;
-		}
-		if(code>=2722 && code<=2735)
-		{
-			str="huan";
-			break;
-		}
-		if(code>=2736 && code<=2749)
-		{
-			str="huang";
-			break;
-		}
-		if(code>=2750 && code<=2770)
-		{
-			str="hui";
-			break;
-		}
-		if(code>=2771 && code<=2776)
-		{
-			str="hun";
-			break;
-		}
-		if(code>=2777 && code<=2786)
-		{
-			str="huo";
-			break;
-		}
-		if(code>=2787 && code<=2845)
-		{
-			str="ji";
-			break;
-		}
-		if(code>=2846 && code<=2862)
-		{
-			str="jia";
-			break;
-		}
-		if(code>=2863 && code<=2908)
-		{
-			str="jian";
-			break;
-		}
-		if(code>=2909 && code<=2921)
-		{
-			str="jiang";
-			break;
-		}
-		if(code>=2922 && code<=2949)
-		{
-			str="jiao";
-			break;
-		}
-		if(code>=2950 && code<=2976)
-		{
-			str="jie";
-			break;
-		}
-		if(code>=2977 && code<=3002)
-		{
-			str="jin";
-			break;
-		}
-		if(code>=3003 && code<=3027)
-		{
-			str="jing";
-			break;
-		}
-		if(code>=3028 && code<=3029)
-		{
-			str="jiong";
-			break;
-		}
-		if(code>=3030 && code<=3046)
-		{
-			str="jiu";
-			break;
-		}
-		if(code>=3047 && code<=3071)
-		{
-			str="ju";
-			break;
-		}
-		if(code>=3072 && code<=3078)
-		{
-			str="juan";
-			break;
-		}
-		if(code>=3079 && code<=3088)
-		{
-			str="jue";
-			break;
-		}
-		if(code>=3089 && code<=3105)
-		{
-			str="jun";
-			break;
-		}
-		if(code>=3106 && code<=3109)
-		{
-			str="ka";
-			break;
-		}
-		if(code>=3110 && code<=3114)
-		{
-			str="kai";
-			break;
-		}
-		if(code>=3115 && code<=3120)
-		{
-			str="kan";
-			break;
-		}
-		if(code>=3121 && code<=3127)
-		{
-			str="kang";
-			break;
-		}
-		if(code>=3128 && code<=3131)
-		{
-			str="kao";
-			break;
-		}
-		if(code>=3132 && code<=3146)
-		{
-			str="ke";
-			break;
-		}
-		if(code>=3147 && code<=3150)
-		{
-			str="ken";
-			break;
-		}
-		if(code>=3151 && code<=3152)
-		{
-			str="keng";
-			break;
-		}
-		if(code>=3153 && code<=3156)
-		{
-			str="kong";
-			break;
-		}
-		if(code>=3157 && code<=3160)
-		{
-			str="kou";
-			break;
-		}
-		if(code>=3161 && code<=3167)
-		{
-			str="ku";
-			break;
-		}
-		if(code>=3168 && code<=3172)
-		{
-			str="kua";
-			break;
-		}
-		if(code>=3173 && code<=3176)
-		{
-			str="kuai";
-			break;
-		}
-		if(code>=3177 && code<=3178)
-		{
-			str="kuan";
-			break;
-		}
-		if(code>=3179 && code<=3186)
-		{
-			str="kuang";
-			break;
-		}
-		if(code>=3187 && code<=3203)
-		{
-			str="kui";
-			break;
-		}
-		if(code>=3204 && code<=3207)
-		{
-			str="kun";
-			break;
-		}
-		if(code>=3208 && code<=3211)
-		{
-			str="kuo";
-			break;
-		}
-		if(code>=3212 && code<=3218)
-		{
-			str="la";
-			break;
-		}
-		if(code>=3219 && code<=3221)
-		{
-			str="lai";
-			break;
-		}
-		if(code>=3222 && code<=3236)
-		{
-			str="lan";
-			break;
-		}
-		if(code>=3237 && code<=3243)
-		{
-			str="lang";
-			break;
-		}
-		if(code>=3244 && code<=3252)
-		{
-			str="lao";
-			break;
-		}
-		if(code>=3253 && code<=3254)
-		{
-			str="le";
-			break;
-		}
-		if(code>=3255 && code<=3265)
-		{
-			str="lei";
-			break;
-		}
-		if(code>=3266 && code<=3268)
-		{
-			str="leng";
-			break;
-		}
-		if(code>=3269 && code<=3308)
-		{
-			str="li";
-		}
-		if(code==3309)
-		{
-			str="lia";
-			break;
-		}
-		if(code>=3310 && code<=3323)
-		{
-			str="lian";
-			break;
-		}
-		if(code>=3324 && code<=3334)
-		{
-			str="liang";
-			break;
-		}
-		if(code>=3335 && code<=3347)
-		{
-			str="liao";
-			break;
-		}
-		if(code>=3348 && code<=3352)
-		{
-			str="lie";
-			break;
-		}
-		if(code>=3353 && code<=3363)
-		{
-			str="lin";
-			break;
-		}
-		if(code>=3364 && code<=3378)
-		{
-			str="ling";
-			break;
-		}
-		if(code>=3379 && code<=3389)
-		{
-			str="liu";
-			break;
-		}
-		if(code>=3390 && code<=3404)
-		{
-			str="long";
-			break;
-		}
-		if(code>=3405 && code<=3410)
-		{
-			str="lou";
-			break;
-		}
-		if(code>=3411 && code<=3444)
-		{
-			str="lu";
-			break;
-		}
-		if(code>=3445 && code<=3450)
-		{
-			str="luan";
-			break;
-		}
-		if(code>=3451 && code<=3452)
-		{
-			str="lue";
-			break;
-		}
-		if(code>=3453 && code<=3459)
-		{
-			str="lun";
-			break;
-		}
-		if(code>=3460 && code<=3471)
-		{
-			str="luo";
-			break;
-		}
-		if(code>=3472 && code<=3480)
-		{
-			str="ma";
-			break;
-		}
-		if(code>=3481 && code<=3486)
-		{
-			str="mai";
-			break;
-		}
-		if(code>=3487 && code<=3501)
-		{
-			str="man";
-			break;
-		}
-		if(code>=3502 && code<=3507)
-		{
-			str="mang";
-			break;
-		}
-		if(code>=3508 && code<=3519)
-		{
-			str="mao";
-			break;
-		}
-		if(code==3520)
-		{
-			str="me";
-			break;
-		}
-		if(code>=3521 && code<=3536)
-		{
-			str="mei";
-			break;
-		}
-		if(code>=3537 && code<=3539)
-		{
-			str="men";
-			break;
-		}
-		if(code>=3540 && code<=3547)
-		{
-			str="meng";
-			break;
-		}
-		if(code>=3548 && code<=3561)
-		{
-			str="mi";
-		}
-		if(code>=3562 && code<=3570)
-		{
-			str="mian";
-			break;
-		}
-		if(code>=3571 && code<=3578)
-		{
-			str="miao";
-			break;
-		}
-		if(code>=3579 && code<=3580)
-		{
-			str="mie";
-			break;
-		}
-		if(code>=3581 && code<=3586)
-		{
-			str="min";
-			break;
-		}
-		if(code>=3587 && code<=3592)
-		{
-			str="ming";
-			break;
-		}
-		if(code==3593)
-		{
-			str="miu";
-			break;
-		}
-		if(code>=3594 && code<=3616)
-		{
-			str="mo";
-			break;
-		}
-		if(code>=3617 && code<=3619)
-		{
-			str="mou";
-			break;
-		}
-		if(code>=3620 && code<=3634)
-		{
-			str="mu";
-			break;
-		}
-		if(code>=3635 && code<=3641)
-		{
-			str="na";
-			break;
-		}
-		if(code>=3642 && code<=3646)
-		{
-			str="nai";
-			break;
-		}
-		if(code>=3647 && code<=3649)
-		{
-			str="nan";
-			break;
-		}
-		if(code==3650)
-		{
-			str="nang";
-			break;
-		}
-		if(code>=3651 && code<=3655)
-		{
-			str="nao";
-			break;
-		}
-		if(code==3656)
-		{
-			str="ne";
-			break;
-		}
-		if(code>=3657 && code<=3658)
-		{
-			str="nei";
-			break;
-		}
-		if(code==3659)
-		{
-			str="nen";
-			break;
-		}
-		if(code==3660)
-		{
-			str="neng";
-			break;
-		}
-		if(code>=3661 && code<=3671)
-		{
-			str="ni";
-			break;
-		}
-		if(code>=3672 && code<=3678)
-		{
-			str="nian";
-			break;
-		}
-		if(code>=3679 && code<=3680)
-		{
-			str="niang";
-			break;
-		}
-		if(code>=3681 && code<=3682)
-		{
-			str="niao";
-			break;
-		}
-		if(code>=3683 && code<=3689)
-		{
-			str="nie";
-			break;
-		}
-		if(code==3690)
-		{
-			str="nin";
-			break;
-		}
-		if(code>=3691 && code<=3702)
-		{
-			str="ning";
-			break;
-		}
-		if(code>=3703 && code<=3706)
-		{
-			str="niu";
-			break;
-		}
-		if(code>=3707 && code<=3710)
-		{
-			str="nong";
-			break;
-		}
-		if(code>=3711 && code<=3714)
-		{
-			str="nu";
-			break;
-		}
-		if(code==3715)
-		{
-			str="nuan";
-			break;
-		}
-		if(code>=3716 && code<=3717)
-		{
-			str="nue";
-			break;
-		}
-		if(code>=3718 && code<=3721)
-		{
-			str="nuo";
-			break;
-		}
-		if(code==3722)
-		{
-			str="o";
-			break;
-		}
-		if(code>=3723 && code<=3729)
-		{
-			str="ou";
-			break;
-		}
-		if(code>=3730 && code<=3735)
-		{
-			str="pa";
-			break;
-		}
-		if(code>=3736 && code<=3741)
-		{
-			str="pai";
-			break;
-		}
-		if(code>=3742 && code<=3749)
-		{
-			str="pan";
-			break;
-		}
-		if(code>=3750 && code<=3754)
-		{
-			str="pang";
-			break;
-		}
-		if(code>=3755 && code<=3761)
-		{
-			str="pao";
-			break;
-		}
-		if(code>=3762 && code<=3770)
-		{
-			str="pei";
-			break;
-		}
-		if(code>=3771 && code<=3772)
-		{
-			str="pen";
-			break;
-		}
-		if(code>=3773 && code<=3786)
-		{
-			str="peng";
-			break;
-		}
-		if(code>=3787 && code<=3809)
-		{
-			str="pi";
-			break;
-		}
-		if(code>=3810 && code<=3813)
-		{
-			str="pian";
-			break;
-		}
-		if(code>=3814 && code<=3817)
-		{
-			str="piao";
-			break;
-		}
-		if(code>=3818 && code<=3819)
-		{
-			str="pie";
-			break;
-		}
-		if(code>=3820 && code<=3824)
-		{
-			str="pin";
-			break;
-		}
-		if(code>=3825 && code<=3833)
-		{
-			str="ping";
-			break;
-		}
-		if(code>=3834 && code<=3841)
-		{
-			str="po";
-			break;
-		}
-		if(code==3842)
-		{
-			str="pou";
-			break;
-		}
-		if(code>=3843 && code<=3857)
-		{
-			str="pu";
-			break;
-		}
-		if(code>=3858 && code<=3893)
-		{
-			str="qi";
-			break;
-		}
-		if(code==3894||code>=3901 && code<=3902)
-		{
-			str="qia";
-			break;
-		}
-		if(code>=3903 && code<=3924)
-		{
-			str="qian";
-			break;
-		}
-		if(code>=3925 && code<=3932)
-		{
-			str="qiang";
-			break;
-		}
-		if(code>=3933 && code<=3947)
-		{
-			str="qiao";
-			break;
-		}
-		if(code>=3948 && code<=3952)
-		{
-			str="qie";
-			break;
-		}
-		if(code>=3953 && code<=3963)
-		{
-			str="qin";
-			break;
-		}
-		if(code>=3964 && code<=3976)
-		{
-			str="qing";
-			break;
-		}
-		if(code>=3977 && code<=3978)
-		{
-			str="qiong";
-			break;
-		}
-		if(code>=3979 && code<=3986)
-		{
-			str="qiu";
-			break;
-		}
-		if(code>=3987 && code<=4005)
-		{
-			str="qu";
-			break;
-		}
-		if(code>=4006 && code<=4016)
-		{
-			str="quan";
-			break;
-		}
-		if(code>=4017 && code<=4024)
-		{
-			str="que";
-			break;
-		}
-		if(code>=4025 && code<=4026)
-		{
-			str="qun";
-			break;
-		}
-		if(code>=4027 && code<=4030)
-		{
-			str="ran";
-			break;
-		}
-		if(code>=4031 && code<=4035)
-		{
-			str="rang";
-		}
-		if(code>=4036 && code<=4038)
-		{
-			str="rao";
-			break;
-		}
-		if(code>=4039 && code<=4040)
-		{
-			str="re";
-			break;
-		}
-		if(code>=4041 && code<=4050)
-		{
-			str="ren";
-			break;
-		}
-		if(code>=4051 && code<=4052)
-		{
-			str="reng";
-			break;
-		}
-		if(code==4053)
-		{
-			str="ri";
-			break;
-		}
-		if(code>=4054 && code<=4063)
-		{
-			str="rong";
-			break;
-		}
-		if(code>=4064 && code<=4066)
-		{
-			str="rou";
-			break;
-		}
-		if(code>=4067 && code<=4076)
-		{
-			str="ru";
-			break;
-		}
-		if(code>=4077 && code<=4078)
-		{
-			str="ruan";
-			break;
-		}
-		if(code>=4079 && code<=4081)
-		{
-			str="rui";
-			break;
-		}
-		if(code>=4082 && code<=4083)
-		{
-			str="run";
-			break;
-		}
-		if(code>=4084 && code<=4085)
-		{
-			str="ruo";
-			break;
-		}
-		if(code>=4086 && code<=4088)
-		{
-			str="sa";
-			break;
-		}
-		if(code>=4089 && code<=4092)
-		{
-			str="sai";
-			break;
-		}
-		if(code>=4093 && code<=4094)
-		{
-			str="san";
-			break;
-		}
-		if(code>=4101 && code<=4102)
-		{
-			str="san";
-			break;
-		}
-		if(code>=4103 && code<=4105)
-		{
-			str="sang";
-			break;
-		}
-		if(code>=4106 && code<=4109)
-		{
-			str="sao";
-			break;
-		}
-		if(code>=4110 && code<=4112)
-		{
-			str="se";
-			break;
-		}
-		if(code==4113)
-		{
-			str="sen";
-		}
-		if(code==4114)
-		{
-			str="seng";
-			break;
-		}
-		if(code>=4115 && code<=4123)
-		{
-			str="sha";
-			break;
-		}
-		if(code>=4124 && code<=4125)
-		{
-			str="shai";
-			break;
-		}
-		if(code>=4126 && code<=4141)
-		{
-			str="shan";
-			break;
-		}
-		if(code>=4142 && code<=4149)
-		{
-			str="shang";
-			break;
-		}
-		if(code>=4150 && code<=4160)
-		{
-			str="shao";
-			break;
-		}
-		if(code>=4161 && code<=4172)
-		{
-			str="she";
-			break;
-		}
-		if(code>=4173 && code<=4188)
-		{
-			str="shen";
-			break;
-		}
-		if(code>=4189 && code<=4205)
-		{
-			str="sheng";
-			break;
-		}
-		if(code>=4206 && code<=4252)
-		{
-			str="shi";
-			break;
-		}
-		if(code>=4253 && code<=4262)
-		{
-			str="shou";
-			break;
-		}
-		if(code>=4263 && code<=4301)
-		{
-			str="shu";
-			break;
-		}
-		if(code>=4302 && code<=4303)
-		{
-			str="shua";
-			break;
-		}
-		if(code>=4304 && code<=4307)
-		{
-			str="shuai";
-			break;
-		}
-		if(code>=4308 && code<=4309)
-		{
-			str="shuan";
-			break;
-		}
-		if(code>=4310 && code<=4312)
-		{
-			str="shuang";
-			break;
-		}
-		if(code>=4313 && code<=4316)
-		{
-			str="shui";
-			break;
-		}
-		if(code>=4317 && code<=4320)
-		{
-			str="shun";
-			break;
-		}
-		if(code>=4321 && code<=4324)
-		{
-			str="shuo";
-			break;
-		}
-		if(code>=4325 && code<=4340)
-		{
-			str="si";
-			break;
-		}
-		if(code>=4341 && code<=4348)
-		{
-			str="song";
-			break;
-		}
-		if(code>=4349 && code<=4352)
-		{
-			str="sou";
-			break;
-		}
-		if(code>=4353 && code<=4364)
-		{
-			str="su";
-			break;
-		}
-		if(code>=4365 && code<=4367)
-		{
-			str="suan";
-			break;
-		}
-		if(code>=4368 && code<=4378)
-		{
-			str="sui";
-			break;
-		}
-		if(code>=4379 && code<=4381)
-		{
-			str="sun";
-			break;
-		}
-		if(code>=4382 && code<=4389)
-		{
-			str="suo";
-			break;
-		}
-		if(code>=4390 && code<=4404)
-		{
-			str="ta";
-			break;
-		}
-		if(code>=4405 && code<=4413)
-		{
-			str="tai";
-			break;
-		}
-		if(code>=4414 && code<=4431)
-		{
-			str="tan";
-			break;
-		}
-		if(code>=4432 && code<=4444)
-		{
-			str="tang";
-			break;
-		}
-		if(code>=4445 && code<=4455)
-		{
-			str="tao";
-			break;
-		}
-		if(code==4456)
-		{
-			str="te";
-			break;
-		}
-		if(code>=4457 && code<=4460)
-		{
-			str="teng";
-			break;
-		}
-		if(code>=4461 && code<=4475)
-		{
-			str="ti";
-			break;
-		}
-		if(code>=4476 && code<=4483)
-		{
-			str="tian";
-			break;
-		}
-		if(code>=4484 && code<=4488)
-		{
-			str="tiao";
-			break;
-		}
-		if(code>=4489 && code<=4491)
-		{
-			str="tie";
-			break;
-		}
-		if(code>=4492 && code<=4507)
-		{
-			str="ting";
-			break;
-		}
-		if(code>=4508 && code<=4520)
-		{
-			str="tong";
-			break;
-		}
-		if(code>=4521 && code<=4524)
-		{
-			str="tou";
-			break;
-		}
-		if(code>=4525 && code<=4535)
-		{
-			str="tu";
-			break;
-		}
-		if(code>=4536 && code<=4537)
-		{
-			str="tuan";
-			break;
-		}
-		if(code>=4538 && code<=4543)
-		{
-			str="tui";
-			break;
-		}
-		if(code>=4544 && code<=4546)
-		{
-			str="tun";
-			break;
-		}
-		if(code>=4547 && code<=4557)
-		{
-			str="tuo";
-			break;
-		}
-		if(code>=4558 && code<=4564)
-		{
-			str="wa";
-			break;
-		}
-		if(code>=4565 && code<=4566)
-		{
-			str="wai";
-			break;
-		}
-		if(code>=4567 && code<=4583)
-		{
-			str="wan";
-			break;
-		}
-		if(code>=4584 && code<=4593)
-		{
-			str="wang";
-			break;
-		}
-		if(code>=4594 && code<=4632)
-		{
-			str="wei";
-			break;
-		}
-		if(code>=4633 && code<=4642)
-		{
-			str="wen";
-			break;
-		}
-		if(code>=4643 && code<=4645)
-		{
-			str="weng";
-			break;
-		}
-		if(code>=4646 && code<=4654)
-		{
-			str="wo";
-			break;
-		}
-		if(code>=4655 && code<=4683)
-		{
-			str="wu";
-			break;
-		}
-		if(code>=4684 && code<=4724)
-		{
-			str="xi";
-			break;
-		}
-		if(code>=4725 && code<=4737)
-		{
-			str="xia";
-			break;
-		}
-		if(code>=4738 && code<=4763)
-		{
-			str="xian";
-			break;
-		}
-		if(code>=4764 && code<=4783)
-		{
-			str="xiang";
-			break;
-		}
-		if(code>=4784 && code<=4807)
-		{
-			str="xiao";
-			break;
-		}
-		if(code>=4809 && code<=4828)
-		{
-			str="xie";
-			break;
-		}
-		if(code>=4829 && code<=4838)
-		{
-			str="xin";
-			break;
-		}
-		if(code>=4839 && code<=4853)
-		{
-			str="xing";
-			break;
-		}
-		if(code>=4854 && code<=4860)
-		{
-			str="xiong";
-			break;
-		}
-		if(code>=4861 && code<=4869)
-		{
-			str="xiu";
-			break;
-		}
-		if(code>=4870 && code<=4888)
-		{
-			str="xu";
-			break;
-		}
-		if(code>=4889 && code<=4904)
-		{
-			str="xuan";
-			break;
-		}
-		if(code>=4905 && code<=4910)
-		{
-			str="xue";
-			break;
-		}
-		if(code>=4911 && code<=4924)
-		{
-			str="xun";
-			break;
-		}
-		if(code>=4925 && code<=4940)
-		{
-			str="ya";
-			break;
-		}
-		if(code>=4941 && code<=4973)
-		{
-			str="yan";
-			break;
-		}
-		if(code>=4974 && code<=4990)
-		{
-			str="yang";
-			break;
-		}
-		if(code>=4991 && code<=5011)
-		{
-			str="yao";
-			break;
-		}
-		if(code>=5012 && code<=5026)
-		{
-			str="ye";
-			break;
-		}
-		if(code>=5027 && code<=5079)
-		{
-			str="yi";
-			break;
-		}
-		if(code>=5080 && code<=5101)
-		{
-			str="yin";
-			break;
-		}
-		if(code>=5102 && code<=5119)
-		{
-			str="ying";
-			break;
-		}
-		if(code==5120)
-		{
-			str="yo";
-			break;
-		}
-		if(code>=5121 && code<=5135)
-		{
-			str="yong";
-			break;
-		}
-		if(code>=5136 && code<=5155)
-		{
-			str="you";
-			break;
-		}
-		if(code>=5156 && code<=5206)
-		{
-			str="yu";
-			break;
-		}
-		if(code>=5207 && code<=5226)
-		{
-			str="yuan";
-			break;
-		}
-		if(code>=5227 && code<=5236)
-		{
-			str="yue";
-			break;
-		}
-		if(code>=5237 && code<=5248)
-		{
-			str="yun";
-			break;
-		}
-		if(code>=5249 && code<=5251)
-		{
-			str="za";
-			break;
-		}
-		if(code>=5252 && code<=5258)
-		{
-			str="zai";
-			break;
-		}
-		if(code>=5259 && code<=5262)
-		{
-			str="zan";
-			break;
-		}
-		if(code>=5263 && code<=5265)
-		{
-			str="zang";
-			break;
-		}
-		if(code>=5266 && code<=5279)
-		{
-			str="zao";
-			break;
-		}
-		if(code>=5280 && code<=5283)
-		{
-			str="ze";
-			break;
-		}
-		if(code==5284)
-		{
-			str="zei";
-			break;
-		}
-		if(code==5285)
-		{
-			str="zen";
-			break;
-		}
-		if(code>=5286 && code<=5289)
-		{
-			str="zeng";
-			break;
-		}
-		if(code>=5290 && code<=5309)
-		{
-			str="zha";
-			break;
-		}
-		if(code>=5310 && code<=5315)
-		{
-			str="zhai";
-			break;
-		}
-		if(code>=5316 && code<=5332)
-		{
-			str="zhan";
-			break;
-		}
-		if(code>=5333 && code<=5347)
-		{
-			str="zhang";
-			break;
-		}
-		if(code>=5348 && code<=5357)
-		{
-			str="zhao";
-			break;
-		}
-		if(code>=5358 && code<=5367)
-		{
-			str="zhe";
-			break;
-		}
-		if(code>=5368 && code<=5383)
-		{
-			str="zhen";
-			break;
-		}
-		if(code>=5384 && code<=5404)
-		{
-			str="zheng";
-			break;
-		}
-		if(code>=5405 && code<=5447)
-		{
-			str="zhi";
-			break;
-		}
-		if(code>=5448 && code<=5458)
-		{
-			str="zhong";
-			break;
-		}
-		if(code>=5459 && code<=5472)
-		{
-			str="zhou";
-			break;
-		}
-		if(code>=5473 && code<=5504)
-		{
-			str="zhu";
-			break;
-		}
-		if(code>=5505 && code<=5506)
-		{
-			str="zhua";
-			break;
-		}
-		if(code==5507)
-		{
-			str="zhuai";
-			break;
-		}
-		if(code>=5508 && code<=5513)
-		{
-			str="zhuan";
-			break;
-		}
-		if(code>=5514 && code<=5520)
-		{
-			str="zhuang";
-			break;
-		}
-		if(code>=5521 && code<=5526)
-		{
-			str="zhui";
-			break;
-		}
-		if(code>=5527 && code<=5528)
-		{
-			str="zhun";
-			break;
-		}
-		if(code>=5529 && code<=5539)
-		{
-			str="zhuo";
-			break;
-		}
-		if(code>=5540 && code<=5554)
-		{
-			str="zi";
-			break;
-		}
-		if(code>=5555 && code<=5561)
-		{
-			str="zong";
-			break;
-		}
-		if(code>=5562 && code<=5565)
-		{
-			str="zou";
-			break;
-		}
-		if(code>=5566 && code<=5573)
-		{
-			str="zu";
-			break;
-		}
-		if(code>=5574 && code<=5575)
-		{
-			str="zuan";
-			break;
-		}
-		if(code>=5576 && code<=5579)
-		{
-			str="zui";
-			break;
-		}
-		if(code>=5580 && code<=5581)
-		{
-			str="zun";
-			break;
-		}
-		if(code>=5582 && code<=5589)
-		{
-			str="zuo";
-			break;
-		}
-        if(code>=2288 && code<=2294)
-		{
-			str="er";
+        case 1601:
+        case 1602:
+        case 6325:
+        case 6436:
+        case 7571:
+        case 7925: return "a";
+        case 1603:
+        case 1604:
+        case 1605:
+        case 1606:
+        case 1607:
+        case 1608:
+        case 1609:
+        case 1610:
+        case 1611:
+        case 1612:
+        case 1613:
+        case 1614:
+        case 1615:
+        case 6263:
+        case 6440:
+        case 7040:
+        case 7208:
+        case 7451:
+        case 7733:
+        case 7945:
+        case 8616: return "ai";
+        case 1616:
+        case 1617:
+        case 1618:
+        case 1619:
+        case 1620:
+        case 1621:
+        case 1622:
+        case 1623:
+        case 1624:
+        case 5847:
+        case 5991:
+        case 6278:
+        case 6577:
+        case 6654:
+        case 7281:
+        case 7907:
+        case 8038:
+        case 8786: return "an";
+        case 1625:
+        case 1626:
+        case 1627: return "ang";
+        case 1628:
+        case 1629:
+        case 1630:
+        case 1631:
+        case 1632:
+        case 1633:
+        case 1634:
+        case 1635:
+        case 1636:
+        case 5974:
+        case 6019:
+        case 6254:
+        case 6427:
+        case 6514:
+        case 6658:
+        case 6959:
+        case 7033:
+        case 7081:
+        case 7365:
+        case 8190:
+        case 8292:
+        case 8643:
+        case 8701:
+        case 8773: return "ao";
+        case 1637:
+        case 1638:
+        case 1639:
+        case 1640:
+        case 1641:
+        case 1642:
+        case 1643:
+        case 1644:
+        case 1645:
+        case 1646:
+        case 1647:
+        case 1648:
+        case 1649:
+        case 1650:
+        case 1651:
+        case 1652:
+        case 1653:
+        case 1654:
+        case 6056:
+        case 6135:
+        case 6517:
+        case 6917:
+        case 7857:
+        case 8446:
+        case 8649:
+        case 8741: return "ba";
+        case 1655:
+        case 1656:
+        case 1657:
+        case 1658:
+        case 1659:
+        case 1660:
+        case 1661:
+        case 1662:
+        case 6267:
+        case 6334:
+        case 7494: return "bai";
+        case 1663:
+        case 1664:
+        case 1665:
+        case 1666:
+        case 1667:
+        case 1668:
+        case 1669:
+        case 1670:
+        case 1671:
+        case 1672:
+        case 1673:
+        case 1674:
+        case 1675:
+        case 1676:
+        case 1677:
+        case 5870:
+        case 5964:
+        case 7851:
+        case 8103:
+        case 8113:
+        case 8418: return "ban";
+        case 1678:
+        case 1679:
+        case 1680:
+        case 1681:
+        case 1682:
+        case 1683:
+        case 1684:
+        case 1685:
+        case 1686:
+        case 1687:
+        case 1688:
+        case 1689:
+        case 6182:
+        case 6826: return "bang";
+        case 1690:
+        case 1691:
+        case 1692:
+        case 1693:
+        case 1694:
+        case 1695:
+        case 1696:
+        case 1697:
+        case 1698:
+        case 1699:
+        case 1700:
+        case 1701:
+        case 1702:
+        case 1703:
+        case 1704:
+        case 1705:
+        case 1706:
+        case 1707:
+        case 1708:
+        case 1709:
+        case 1710:
+        case 1711:
+        case 1712:
+        case 5772:
+        case 6165:
+        case 7063:
+        case 7650:
+        case 8017:
+        case 8157:
+        case 8532:
+        case 8621:
+        case 6918: return "bao";
+        case 1713:
+        case 1714:
+        case 1715:
+        case 1716:
+        case 1717:
+        case 1718:
+        case 1719:
+        case 1720:
+        case 1721:
+        case 1722:
+        case 1723:
+        case 1724:
+        case 1725:
+        case 1726:
+        case 1727:
+        case 5635:
+        case 5873:
+        case 5893:
+        case 5993:
+        case 6141:
+        case 6177:
+        case 6703:
+        case 7753:
+        case 8039:
+        case 8156:
+        case 8645:
+        case 8725: return "bei";
+        case 1728:
+        case 1729:
+        case 1730:
+        case 1731:
+        case 5946:
+        case 5948:
+        case 7458:
+        case 7928: return "ben";
+        case 1732:
+        case 1733:
+        case 1734:
+        case 1735:
+        case 1736:
+        case 1737:
+        case 6452:
+        case 7420: return "beng";
+        case 1738:
+        case 1739:
+        case 1740:
+        case 1741:
+        case 1742:
+        case 1743:
+        case 1744:
+        case 1745:
+        case 1746:
+        case 1747:
+        case 1748:
+        case 1749:
+        case 1750:
+        case 1751:
+        case 1752:
+        case 1753:
+        case 1754:
+        case 1755:
+        case 1756:
+        case 1757:
+        case 1758:
+        case 1759:
+        case 1760:
+        case 1761:
+        case 5616:
+        case 5734:
+        case 6074:
+        case 6109:
+        case 6221:
+        case 6333:
+        case 6357:
+        case 6589:
+        case 6656:
+        case 6725:
+        case 6868:
+        case 6908:
+        case 6986:
+        case 6994:
+        case 7030:
+        case 7052:
+        case 7221:
+        case 7815:
+        case 7873:
+        case 7985:
+        case 8152:
+        case 8357:
+        case 8375:
+        case 8387:
+        case 8416:
+        case 8437:
+        case 8547:
+        case 8734: return "bi";
+        case 1762:
+        case 1763:
+        case 1764:
+        case 1765:
+        case 1766:
+        case 1767:
+        case 1768:
+        case 1769:
+        case 1770:
+        case 1771:
+        case 1772:
+        case 1773:
+        case 5650:
+        case 5945:
+        case 6048:
+        case 6677:
+        case 6774:
+        case 7134:
+        case 7614:
+        case 7652:
+        case 7730:
+        case 7760:
+        case 8125:
+        case 8159:
+        case 8289:
+        case 8354:
+        case 8693: return "bian";
+        case 1774:
+        case 1775:
+        case 1776:
+        case 1777:
+        case 7027:
+        case 7084:
+        case 7609:
+        case 7613:
+        case 7958:
+        case 7980:
+        case 8106:
+        case 8149:
+        case 8707:
+        case 8752: return "biao";
+        case 1778:
+        case 1779:
+        case 1780:
+        case 1781:
+        case 8531: return "bie";
+        case 1782:
+        case 1783:
+        case 1784:
+        case 1785:
+        case 1786:
+        case 1787:
+        case 5747:
+        case 6557:
+        case 7145:
+        case 7167:
+        case 7336:
+        case 7375:
+        case 7587:
+        case 7957:
+        case 8738:
+        case 8762: return "bin";
+        case 1788:
+        case 1789:
+        case 1790:
+        case 1791:
+        case 1792:
+        case 1793:
+        case 1794:
+        case 1801:
+        case 1802:
+        case 5787:
+        case 5791:
+        case 8058:
+        case 5891:
+        case 6280: return "bing";
+        case 1803:
+        case 1804:
+        case 1805:
+        case 1806:
+        case 1807:
+        case 1808:
+        case 1809:
+        case 1810:
+        case 1811:
+        case 1812:
+        case 1813:
+        case 1814:
+        case 1815:
+        case 1816:
+        case 1817:
+        case 1818:
+        case 1819:
+        case 1820:
+        case 1821:
+        case 5781:
+        case 6403:
+        case 6636:
+        case 7362:
+        case 7502:
+        case 7771:
+        case 7864:
+        case 8030:
+        case 8404:
+        case 8543:
+        case 8559: return "bo";
+        case 1822:
+        case 1823:
+        case 1824:
+        case 1825:
+        case 1826:
+        case 1827:
+        case 1828:
+        case 1829:
+        case 1830:
+        case 1831:
+        case 1832:
+        case 6318:
+        case 6945:
+        case 7419:
+        case 7446:
+        case 7848:
+        case 7863:
+        case 8519: return "bu";
+        case 1833:
+        case 6474:
+        case 7769: return "ca";
+        case 1834:
+        case 1835:
+        case 1836:
+        case 1837:
+        case 1838:
+        case 1839:
+        case 1840:
+        case 1841:
+        case 1842:
+        case 1843:
+        case 1844: return "cai";
+        case 1845:
+        case 1846:
+        case 1847:
+        case 1848:
+        case 1849:
+        case 1850:
+        case 1851:
+        case 6978:
+        case 7078:
+        case 7218:
+        case 8451:
+        case 8785: return "can";
+        case 1852:
+        case 1853:
+        case 1854:
+        case 1855:
+        case 1856:
+        case 5687: return "cang";
+        case 1857:
+        case 1858:
+        case 1859:
+        case 1860:
+        case 1861:
+        case 6448:
+        case 6878:
+        case 8309:
+        case 8429: return "cao";
+        case 1862:
+        case 1863:
+        case 1864:
+        case 1865:
+        case 1866:
+        case 6692: return "ce";
+        case 6515:
+        case 6825: return "cen";
+        case 1867:
+        case 1868:
+        case 6465: return "ceng";
+        case 1869:
+        case 1870:
+        case 1871:
+        case 1872:
+        case 1873:
+        case 1874:
+        case 1875:
+        case 1876:
+        case 1877:
+        case 1878:
+        case 1879:
+        case 6639:
+        case 6766:
+        case 7017:
+        case 7230:
+        case 7311:
+        case 7322:
+        case 7363:
+        case 7942:
+        case 7979:
+        case 8135: return "cha";
+        case 1880:
+        case 1881:
+        case 1882:
+        case 5713:
+        case 7846:
+        case 8091:
+        case 8218: return "chai";
+        case 1883:
+        case 1884:
+        case 1885:
+        case 1886:
+        case 1887:
+        case 1888:
+        case 1889:
+        case 1890:
+        case 1891:
+        case 1892:
+        case 5770:
+        case 5838:
+        case 6159:
+        case 6667:
+        case 6893:
+        case 6904:
+        case 6981:
+        case 7031:
+        case 7086:
+        case 7472:
+        case 7688:
+        case 7966:
+        case 8324:
+        case 8580: return "chan";
+        case 1893:
+        case 1894:
+        case 1895:
+        case 1896:
+        case 1897:
+        case 1898:
+        case 1899:
+        case 1900:
+        case 1901:
+        case 1902:
+        case 1903:
+        case 1904:
+        case 1905:
+        case 1906:
+        case 1907:
+        case 1908:
+        case 1909:
+        case 1910:
+        case 1911:
+        case 5686:
+        case 5943:
+        case 6041:
+        case 6137:
+        case 6660:
+        case 6568:
+        case 6674:
+        case 6714:
+        case 6749:
+        case 7029:
+        case 7047:
+        case 7438:
+        case 7509:
+        case 8680: return "chang";
+        case 1912:
+        case 1913:
+        case 1914:
+        case 1915:
+        case 1916:
+        case 1917:
+        case 1918:
+        case 1919:
+        case 1920:
+        case 6687:
+        case 7443:
+        case 8173: return "chao";
+        case 1921:
+        case 1922:
+        case 1923:
+        case 1924:
+        case 1925:
+        case 1926:
+        case 5969:
+        case 7726: return "che";
+        case 1927:
+        case 1928:
+        case 1929:
+        case 1930:
+        case 1931:
+        case 1932:
+        case 1933:
+        case 1934:
+        case 1935:
+        case 1936:
+        case 5840:
+        case 5863:
+        case 6251:
+        case 6433:
+        case 6923:
+        case 7201:
+        case 7320:
+        case 7755:
+        case 8619: return "chen";
+        case 1937:
+        case 1938:
+        case 1939:
+        case 1940:
+        case 1941:
+        case 1942:
+        case 1943:
+        case 1944:
+        case 1945:
+        case 1946:
+        case 1947:
+        case 1948:
+        case 1949:
+        case 1950:
+        case 1951:
+        case 5609:
+        case 5984:
+        case 7239:
+        case 7263:
+        case 7583:
+        case 7810:
+        case 7881:
+        case 7905:
+        case 8146:
+        case 8241:
+        case 8508: return "cheng";
+        case 1952:
+        case 1953:
+        case 1954:
+        case 1955:
+        case 1956:
+        case 1957:
+        case 1958:
+        case 1959:
+        case 1960:
+        case 1961:
+        case 1962:
+        case 1963:
+        case 1964:
+        case 1965:
+        case 1966:
+        case 1967:
+        case 5749:
+        case 6015:
+        case 6061:
+        case 6319:
+        case 6374:
+        case 6420:
+        case 6445:
+        case 6560:
+        case 6633:
+        case 7042:
+        case 7523:
+        case 7787:
+        case 8023:
+        case 8101:
+        case 8161:
+        case 8231:
+        case 8304:
+        case 8355:
+        case 8388:
+        case 8489:
+        case 8556:
+        case 8746: return "chi";
+        case 1968:
+        case 1969:
+        case 1970:
+        case 1971:
+        case 1972:
+        case 6091:
+        case 6671:
+        case 6731:
+        case 8409:
+        case 8430: return "chong";
+        case 1973:
+        case 1974:
+        case 1975:
+        case 1976:
+        case 1977:
+        case 1978:
+        case 1979:
+        case 1980:
+        case 1981:
+        case 1982:
+        case 1983:
+        case 1984:
+        case 5717:
+        case 6492:
+        case 6716:
+        case 8112:
+        case 8637: return "chou";
+        case 1985:
+        case 1986:
+        case 1987:
+        case 1988:
+        case 1989:
+        case 1990:
+        case 1991:
+        case 1992:
+        case 1993:
+        case 1994:
+        case 1995:
+        case 1996:
+        case 1997:
+        case 1998:
+        case 1999:
+        case 2000:
+        case 2001:
+        case 2002:
+        case 2003:
+        case 2004:
+        case 2005:
+        case 2006:
+        case 5601:
+        case 5927:
+        case 6680:
+        case 6732:
+        case 6988:
+        case 7109:
+        case 7238:
+        case 7290:
+        case 7343:
+        case 8150:
+        case 8260:
+        case 8573:
+        case 8777: return "chu";
+        case 2007:
+        case 6285:
+        case 6408:
+        case 7590:
+        case 8563: return "chuai";
+        case 2008:
+        case 2009:
+        case 2010:
+        case 2011:
+        case 2012:
+        case 2013:
+        case 2014:
+        case 6622:
+        case 6955:
+        case 7161:
+        case 7516:
+        case 7843:
+        case 8413: return "chuan";
+        case 2015:
+        case 2016:
+        case 2017:
+        case 2018:
+        case 2019:
+        case 2020:
+        case 6675: return "chuang";
+        case 2021:
+        case 2022:
+        case 2023:
+        case 2024:
+        case 2025:
+        case 5879:
+        case 7302:
+        case 7319: return "chui";
+        case 2026:
+        case 2027:
+        case 2028:
+        case 2029:
+        case 2030:
+        case 2031:
+        case 2032:
+        case 6127:
+        case 8040:
+        case 8277: return "chun";
+        case 2033:
+        case 2034:
+        case 7401:
+        case 8554:
+        case 8626: return "chuo";
+        case 2035:
+        case 2036:
+        case 2037:
+        case 2038:
+        case 2039:
+        case 2040:
+        case 2041:
+        case 2042:
+        case 2043:
+        case 2044:
+        case 2045:
+        case 2046:
+        case 6358:
+        case 8043:
+        case 7684:
+        case 8457: return "ci";
+        case 2047:
+        case 2048:
+        case 2049:
+        case 2050:
+        case 2051:
+        case 2052:
+        case 6042:
+        case 6840:
+        case 7085:
+        case 7193:
+        case 7214:
+        case 7240: return "cong";
+        case 2053:
+        case 7308:
+        case 7403:
+        case 7577: return "cou";
+        case 2054:
+        case 2055:
+        case 2056:
+        case 2057:
+        case 6180:
+        case 6562:
+        case 6607:
+        case 7367:
+        case 8501:
+        case 8530:
+        case 8577: return "cu";
+        case 2058:
+        case 2059:
+        case 2060:
+        case 5764:
+        case 6305:
+        case 7664:
+        case 7973: return "cuan";
+        case 2061:
+        case 2062:
+        case 2063:
+        case 2064:
+        case 2065:
+        case 2066:
+        case 2067:
+        case 2068:
+        case 6718:
+        case 6145:
+        case 6393:
+        case 7213:
+        case 7333:
+        case 7505:
+        case 8631: return "cui";
+        case 2069:
+        case 2070:
+        case 2071:
+        case 6666:
+        case 8169: return "cun";
+        case 2072:
+        case 2073:
+        case 2074:
+        case 2075:
+        case 2076:
+        case 2077:
+        case 5640:
+        case 6547:
+        case 7566:
+        case 7917:
+        case 7983:
+        case 8078:
+        case 8526:
+        case 8567: return "cuo";
+        case 2078:
+        case 2079:
+        case 2080:
+        case 2081:
+        case 2082:
+        case 2083:
+        case 6239:
+        case 6353:
+        case 6410:
+        case 6682:
+        case 7007:
+        case 8155:
+        case 8346:
+        case 8716:
+        case 8718: return "da";
+        case 2084:
+        case 2085:
+        case 2086:
+        case 2087:
+        case 2088:
+        case 2089:
+        case 2090:
+        case 2091:
+        case 2092:
+        case 2093:
+        case 2094:
+        case 2101:
+        case 6004:
+        case 6316:
+        case 6523:
+        case 6942:
+        case 7110:
+        case 7173:
+        case 8776: return "dai";
+        case 2102:
+        case 2103:
+        case 2104:
+        case 2105:
+        case 2106:
+        case 2107:
+        case 2108:
+        case 2109:
+        case 2110:
+        case 2111:
+        case 2112:
+        case 2113:
+        case 2114:
+        case 2115:
+        case 2116:
+        case 5757:
+        case 6144:
+        case 6402:
+        case 7373:
+        case 7470:
+        case 7781:
+        case 8067:
+        case 8087:
+        case 8185:
+        case 8376: return "dan";
+        case 2117:
+        case 2118:
+        case 2119:
+        case 2120:
+        case 2121:
+        case 5852:
+        case 5942:
+        case 6148:
+        case 6920:
+        case 7724:
+        case 7885:
+        case 8141: return "dang";
+        case 2122:
+        case 2123:
+        case 2124:
+        case 2125:
+        case 2126:
+        case 2127:
+        case 2128:
+        case 2129:
+        case 2130:
+        case 2131:
+        case 2132:
+        case 2133:
+        case 5654:
+        case 6322:
+        case 6665:
+        case 7514:
+        case 8478: return "dao";
+        case 2134:
+        case 2135:
+        case 2136:
+        case 7929: return "de";
+        case 2137:
+        case 2138:
+        case 2139:
+        case 2140:
+        case 2141:
+        case 2142:
+        case 2143:
+        case 6466:
+        case 6556:
+        case 7413:
+        case 7767:
+        case 7975:
+        case 8403: return "deng";
+        case 2144:
+        case 2145:
+        case 2146:
+        case 2147:
+        case 2148:
+        case 2149:
+        case 2150:
+        case 2151:
+        case 2152:
+        case 2153:
+        case 2154:
+        case 2155:
+        case 2156:
+        case 2157:
+        case 2158:
+        case 2159:
+        case 2160:
+        case 2161:
+        case 2162:
+        case 5621:
+        case 5765:
+        case 5814:
+        case 5848:
+        case 5901:
+        case 5970:
+        case 6122:
+        case 6454:
+        case 7023:
+        case 7116:
+        case 7260:
+        case 7306:
+        case 7475:
+        case 7738:
+        case 7758:
+        case 7791:
+        case 7965:
+        case 8438:
+        case 8730: return "di";
+        case 6439: return "dia";
+        case 2163:
+        case 2164:
+        case 2165:
+        case 2166:
+        case 2167:
+        case 2168:
+        case 2169:
+        case 2170:
+        case 2171:
+        case 2172:
+        case 2173:
+        case 2174:
+        case 2175:
+        case 2176:
+        case 2177:
+        case 2178:
+        case 5871:
+        case 5967:
+        case 6559:
+        case 7172:
+        case 7868:
+        case 8116:
+        case 8118:
+        case 8401:
+        case 8558: return "dian";
+        case 2179:
+        case 2180:
+        case 2181:
+        case 2182:
+        case 2183:
+        case 2184:
+        case 2185:
+        case 2186:
+        case 2187:
+        case 7886:
+        case 8585:
+        case 8684: return "diao";
+        case 2188:
+        case 2189:
+        case 2190:
+        case 2191:
+        case 2192:
+        case 2193:
+        case 2194:
+        case 5976:
+        case 6006:
+        case 6273:
+        case 6409:
+        case 7526:
+        case 8012:
+        case 8183:
+        case 8562:
+        case 8688: return "die";
+        case 2201:
+        case 2202:
+        case 2203:
+        case 2204:
+        case 2205:
+        case 2206:
+        case 2207:
+        case 2208:
+        case 2209:
+        case 5674:
+        case 6404:
+        case 7164:
+        case 7575:
+        case 7754:
+        case 7814:
+        case 8059:
+        case 8184:
+        case 8490: return "ding";
+        case 2210:
+        case 7891: return "diu";
+        case 2211:
+        case 2212:
+        case 2213:
+        case 2214:
+        case 2215:
+        case 2216:
+        case 2217:
+        case 2218:
+        case 2219:
+        case 2220:
+        case 5977:
+        case 6343:
+        case 6520:
+        case 6528:
+        case 7517:
+        case 7543:
+        case 7556:
+        case 7747:
+        case 8020: return "dong";
+        case 2221:
+        case 2222:
+        case 2223:
+        case 2224:
+        case 2225:
+        case 2226:
+        case 2227:
+        case 6190:
+        case 8128:
+        case 8229:
+        case 8391: return "dou";
+        case 2228:
+        case 2229:
+        case 2230:
+        case 2231:
+        case 2232:
+        case 2233:
+        case 2234:
+        case 2235:
+        case 2236:
+        case 2237:
+        case 2238:
+        case 2239:
+        case 2240:
+        case 2241:
+        case 2242:
+        case 6022:
+        case 6429:
+        case 6834:
+        case 7292:
+        case 7525:
+        case 8328:
+        case 8338:
+        case 8739:
+        case 8782: return "du";
+        case 2243:
+        case 2244:
+        case 2245:
+        case 2246:
+        case 2247:
+        case 2248:
+        case 7318:
+        case 7649:
+        case 8393: return "duan";
+        case 2249:
+        case 2250:
+        case 2251:
+        case 2252:
+        case 7701:
+        case 7713:
+        case 7752: return "dui";
+        case 2253:
+        case 2254:
+        case 2255:
+        case 2256:
+        case 2257:
+        case 2258:
+        case 2259:
+        case 2260:
+        case 2261:
+        case 6771:
+        case 7632:
+        case 7727:
+        case 7766:
+        case 7779:
+        case 7970:
+        case 8527: return "dun";
+        case 2262:
+        case 2263:
+        case 2264:
+        case 2265:
+        case 2266:
+        case 2267:
+        case 2268:
+        case 2269:
+        case 2270:
+        case 2271:
+        case 2272:
+        case 2273:
+        case 6345:
+        case 6365:
+        case 6785:
+        case 7122:
+        case 7876:
+        case 8154:
+        case 8566: return "duo";
+        case 2274:
+        case 2275:
+        case 2276:
+        case 2277:
+        case 2278:
+        case 2279:
+        case 2280:
+        case 2281:
+        case 2282:
+        case 2283:
+        case 2284:
+        case 2285:
+        case 2286:
+        case 5612:
+        case 5832:
+        case 5844:
+        case 5949:
+        case 6035:
+        case 6113:
+        case 6164:
+        case 6332:
+        case 6721:
+        case 6977:
+        case 7025:
+        case 7378:
+        case 7581:
+        case 7916:
+        case 7941:
+        case 8042:
+        case 8206:
+        case 8689: return "e";
+        case 2287:
+        case 6176:
+        case 6284:
+        case 6437: return "en";
+        case 2288:
+        case 2289:
+        case 2290:
+        case 2291:
+        case 2292:
+        case 2293:
+        case 2294:
+        case 2295:
+        case 2296:
+        case 2297:
+        case 2298:
+        case 2299:
+        case 2300:
+        case 2301:
+        case 5706:
+        case 6939:
+        case 7177:
+        case 7879:
+        case 8025:
+        case 8660: return "er";
+        case 2302:
+        case 2303:
+        case 2304:
+        case 2305:
+        case 2306:
+        case 2307:
+        case 2308:
+        case 2309:
+        case 5950:
+        case 7732: return "fa";
+        case 2310:
+        case 2311:
+        case 2312:
+        case 2313:
+        case 2314:
+        case 2315:
+        case 2316:
+        case 2317:
+        case 2318:
+        case 2319:
+        case 2320:
+        case 2321:
+        case 2322:
+        case 2323:
+        case 2324:
+        case 2325:
+        case 2326:
+        case 6212:
+        case 6232:
+        case 6506:
+        case 7283:
+        case 7522:
+        case 7660:
+        case 7818:
+        case 8576: return "fan";
+        case 2327:
+        case 2328:
+        case 2329:
+        case 2330:
+        case 2331:
+        case 2332:
+        case 2333:
+        case 2334:
+        case 2335:
+        case 2336:
+        case 2337:
+        case 5646:
+        case 5890:
+        case 7242:
+        case 7853:
+        case 8419:
+        case 8648: return "fang";
+        case 2338:
+        case 2339:
+        case 2340:
+        case 2341:
+        case 2342:
+        case 2343:
+        case 2344:
+        case 2345:
+        case 2346:
+        case 2347:
+        case 2348:
+        case 2349:
+        case 6032:
+        case 6584:
+        case 6713:
+        case 6839:
+        case 6990:
+        case 7119:
+        case 7328:
+        case 7572:
+        case 7619:
+        case 7673:
+        case 7948:
+        case 8082:
+        case 8267:
+        case 8385:
+        case 8468:
+        case 8613:
+        case 8678: return "fei";
+        case 2350:
+        case 2351:
+        case 2352:
+        case 2353:
+        case 2354:
+        case 2355:
+        case 2356:
+        case 2357:
+        case 2358:
+        case 2359:
+        case 2360:
+        case 2361:
+        case 2362:
+        case 2363:
+        case 2364:
+        case 5739:
+        case 6915:
+        case 7291:
+        case 8687:
+        case 8787: return "fen";
+        case 2365:
+        case 2366:
+        case 2367:
+        case 2368:
+        case 2369:
+        case 2370:
+        case 2371:
+        case 2372:
+        case 2373:
+        case 2374:
+        case 2375:
+        case 2376:
+        case 2377:
+        case 2378:
+        case 2379:
+        case 5726:
+        case 5926:
+        case 6155:
+        case 6384:
+        case 6767:
+        case 7731: return "feng";
+        case 2380: return "fo";
+        case 2381:
+        case 8330: return "fou";
+        case 2382:
+        case 2383:
+        case 2384:
+        case 2385:
+        case 2386:
+        case 2387:
+        case 2388:
+        case 2389:
+        case 2390:
+        case 2391:
+        case 2392:
+        case 2393:
+        case 2394:
+        case 2395:
+        case 2396:
+        case 2397:
+        case 2398:
+        case 2399:
+        case 2400:
+        case 2401:
+        case 2402:
+        case 2403:
+        case 2404:
+        case 2405:
+        case 2406:
+        case 2407:
+        case 2408:
+        case 2409:
+        case 2410:
+        case 2411:
+        case 2412:
+        case 2413:
+        case 2414:
+        case 2415:
+        case 2416:
+        case 2417:
+        case 2418:
+        case 2419:
+        case 2420:
+        case 2421:
+        case 2422:
+        case 2423:
+        case 2424:
+        case 2425:
+        case 2426:
+        case 2427:
+        case 2428:
+        case 2429:
+        case 2430:
+        case 2431:
+        case 2432:
+        case 5775:
+        case 5776:
+        case 5866:
+        case 5914:
+        case 6029:
+        case 6062:
+        case 6082:
+        case 6119:
+        case 6142:
+        case 6252:
+        case 6327:
+        case 6505:
+        case 6686:
+        case 6870:
+        case 6985:
+        case 7058:
+        case 7066:
+        case 7106:
+        case 7108:
+        case 7285:
+        case 7471:
+        case 7680:
+        case 7741:
+        case 7774:
+        case 7775:
+        case 7823:
+        case 7991:
+        case 8005:
+        case 8222:
+        case 8261:
+        case 8280:
+        case 8283:
+        case 8479:
+        case 8535:
+        case 8538:
+        case 8654:
+        case 8691: return "fu";
+        case 2433:
+        case 2434:
+        case 6246:
+        case 7056:
+        case 7057:
+        case 7424:
+        case 7837: return "ga";
+        case 2435:
+        case 2436:
+        case 2437:
+        case 2438:
+        case 2439:
+        case 2440:
+        case 5604:
+        case 5875:
+        case 5982:
+        case 7414:
+        case 7464: return "gai";
+        case 2441:
+        case 2442:
+        case 2443:
+        case 2444:
+        case 2445:
+        case 2446:
+        case 2447:
+        case 2448:
+        case 2449:
+        case 2450:
+        case 2451:
+        case 5965:
+        case 6053:
+        case 6247:
+        case 6306:
+        case 6779:
+        case 6838:
+        case 6887:
+        case 7104:
+        case 7347:
+        case 7426:
+        case 7723:
+        case 8065:
+        case 8491: return "gan";
+        case 2452:
+        case 2453:
+        case 2454:
+        case 2455:
+        case 2456:
+        case 2457:
+        case 2458:
+        case 2459:
+        case 2460:
+        case 7716:
+        case 7824:
+        case 8364: return "gang";
+        case 2461:
+        case 2462:
+        case 2463:
+        case 2464:
+        case 2465:
+        case 2466:
+        case 2467:
+        case 2468:
+        case 2469:
+        case 2470:
+        case 5626:
+        case 5830:
+        case 5912:
+        case 6227:
+        case 7141:
+        case 7332:
+        case 7334:
+        case 7429:
+        case 7915: return "gao";
+        case 2471:
+        case 2472:
+        case 2473:
+        case 2474:
+        case 2475:
+        case 2476:
+        case 2477:
+        case 2478:
+        case 2479:
+        case 2480:
+        case 2481:
+        case 2482:
+        case 2483:
+        case 2484:
+        case 2485:
+        case 2486:
+        case 2487:
+        case 5610:
+        case 5678:
+        case 5933:
+        case 5957:
+        case 6010:
+        case 6435:
+        case 7092:
+        case 7501:
+        case 7585:
+        case 7749:
+        case 7951:
+        case 8143:
+        case 8220:
+        case 8420:
+        case 8732: return "ge";
+        case 2488: return "gei";
+        case 2489:
+        case 2490:
+        case 5608:
+        case 6102:
+        case 6371:
+        case 8462: return "gen";
+        case 2491:
+        case 2492:
+        case 2493:
+        case 2494:
+        case 2495:
+        case 2496:
+        case 2497:
+        case 2498:
+        case 2499:
+        case 2500:
+        case 2501:
+        case 2502:
+        case 2503:
+        case 6376:
+        case 6657:
+        case 7114:
+        case 8665: return "geng";
+        case 2504:
+        case 2505:
+        case 2506:
+        case 2507:
+        case 2508:
+        case 2509:
+        case 2510:
+        case 2511:
+        case 2512:
+        case 2513:
+        case 2514:
+        case 2515:
+        case 2516:
+        case 2517:
+        case 2518:
+        case 6235:
+        case 7178:
+        case 7537:
+        case 8228:
+        case 8601: return "gong";
+        case 2519:
+        case 2520:
+        case 2521:
+        case 2522:
+        case 2523:
+        case 2524:
+        case 2525:
+        case 2526:
+        case 2527:
+        case 5694:
+        case 5824:
+        case 6524:
+        case 6960:
+        case 7037:
+        case 7135:
+        case 7259:
+        case 7477:
+        case 7616:
+        case 8349:
+        case 8384:
+        case 8724: return "gou";
+        case 2528:
+        case 2529:
+        case 2530:
+        case 2531:
+        case 2532:
+        case 2533:
+        case 2534:
+        case 2535:
+        case 2536:
+        case 2537:
+        case 2538:
+        case 2539:
+        case 2540:
+        case 2541:
+        case 2542:
+        case 2543:
+        case 2544:
+        case 2545:
+        case 5637:
+        case 5812:
+        case 6152:
+        case 6536:
+        case 6773:
+        case 7284:
+        case 7379:
+        case 7484:
+        case 7486:
+        case 7591:
+        case 7617:
+        case 7813:
+        case 7825:
+        case 7860:
+        case 7932:
+        case 8019:
+        case 8083:
+        case 8233:
+        case 8494:
+        case 8593:
+        case 8681:
+        case 8729: return "gu";
+        case 2546:
+        case 2547:
+        case 2548:
+        case 2549:
+        case 2550:
+        case 2551:
+        case 5652:
+        case 5820:
+        case 6341:
+        case 7273:
+        case 7550:
+        case 8027: return "gua";
+        case 2552:
+        case 2553:
+        case 2554: return "guai";
+        case 2555:
+        case 2556:
+        case 2557:
+        case 2558:
+        case 2559:
+        case 2560:
+        case 2561:
+        case 2562:
+        case 2563:
+        case 2564:
+        case 2565:
+        case 5736:
+        case 6124:
+        case 6272:
+        case 6842:
+        case 7834:
+        case 8057:
+        case 8170:
+        case 8704: return "guan";
+        case 2566:
+        case 2567:
+        case 2568:
+        case 6359:
+        case 6578:
+        case 7270:
+        case 7555: return "guang";
+        case 2569:
+        case 2570:
+        case 2571:
+        case 2572:
+        case 2573:
+        case 2574:
+        case 2575:
+        case 2576:
+        case 2577:
+        case 2578:
+        case 2579:
+        case 2580:
+        case 2581:
+        case 2582:
+        case 2583:
+        case 2584:
+        case 5648:
+        case 5659:
+        case 6649:
+        case 6919:
+        case 7003:
+        case 7277:
+        case 7433:
+        case 7448:
+        case 8007:
+        case 8394:
+        case 8657:
+        case 8712: return "gui";
+        case 2585:
+        case 2586:
+        case 2587:
+        case 5613:
+        case 5782:
+        case 7121:
+        case 7762:
+        case 8671: return "gun";
+        case 2588:
+        case 2589:
+        case 2590:
+        case 2591:
+        case 2592:
+        case 2593:
+        case 5769:
+        case 5986:
+        case 6266:
+        case 6335:
+        case 6494:
+        case 6538:
+        case 6603:
+        case 7304:
+        case 7529:
+        case 8188:
+        case 8268:
+        case 8269: return "guo";
+        case 2594:
+        case 7894: return "ha";
+        case 2601:
+        case 2602:
+        case 2603:
+        case 2604:
+        case 2605:
+        case 2606:
+        case 2607:
+        case 6443:
+        case 7560:
+        case 8516: return "hai";
+        case 2608:
+        case 2609:
+        case 2610:
+        case 2611:
+        case 2612:
+        case 2613:
+        case 2614:
+        case 2615:
+        case 2616:
+        case 2617:
+        case 2618:
+        case 2619:
+        case 2620:
+        case 2621:
+        case 2622:
+        case 2623:
+        case 2624:
+        case 2625:
+        case 2626:
+        case 5885:
+        case 6153:
+        case 6294:
+        case 6759:
+        case 6911:
+        case 7447:
+        case 7642:
+        case 8192:
+        case 8205:
+        case 8232:
+        case 8793: return "han";
+        case 2627:
+        case 2628:
+        case 2629:
+        case 6776:
+        case 7112:
+        case 8194: return "hang";
+        case 2630:
+        case 2631:
+        case 2632:
+        case 2633:
+        case 2634:
+        case 2635:
+        case 2636:
+        case 2637:
+        case 2638:
+        case 6179:
+        case 6222:
+        case 6438:
+        case 6467:
+        case 6909:
+        case 6916:
+        case 7427:
+        case 8009:
+        case 8211:
+        case 8226: return "hao";
+        case 2639:
+        case 2640:
+        case 2641:
+        case 2642:
+        case 2643:
+        case 2644:
+        case 2645:
+        case 2646:
+        case 2647:
+        case 2648:
+        case 2649:
+        case 2650:
+        case 2651:
+        case 2652:
+        case 2653:
+        case 2654:
+        case 2655:
+        case 2656:
+        case 5813:
+        case 5932:
+        case 5954:
+        case 6432:
+        case 6756:
+        case 7434:
+        case 7833:
+        case 8202:
+        case 8234:
+        case 8471: return "he";
+        case 2657:
+        case 2658: return "hei";
+        case 2659:
+        case 2660:
+        case 2661:
+        case 2662: return "hen";
+        case 2663:
+        case 2664:
+        case 2665:
+        case 2666:
+        case 2667:
+        case 6231:
+        case 7181:
+        case 7276: return "heng";
+        case 2668:
+        case 2669:
+        case 2670:
+        case 2671:
+        case 2672:
+        case 2673:
+        case 2674:
+        case 2675:
+        case 2676:
+        case 5768:
+        case 5774:
+        case 5807:
+        case 6106:
+        case 6214:
+        case 6216:
+        case 6740:
+        case 6792: return "hong";
+        case 2677:
+        case 2678:
+        case 2679:
+        case 2680:
+        case 2681:
+        case 2682:
+        case 2683:
+        case 6009:
+        case 6565:
+        case 6943:
+        case 8090:
+        case 8383:
+        case 8455:
+        case 8655:
+        case 8731: return "hou";
+        case 2684:
+        case 2685:
+        case 2686:
+        case 2687:
+        case 2688:
+        case 2689:
+        case 2690:
+        case 2691:
+        case 2692:
+        case 2693:
+        case 2694:
+        case 2695:
+        case 2696:
+        case 2697:
+        case 2698:
+        case 2699:
+        case 2700:
+        case 2701:
+        case 2702:
+        case 2703:
+        case 2704:
+        case 2705:
+        case 2706:
+        case 2707:
+        case 5792:
+        case 6392:
+        case 6481:
+        case 6518:
+        case 6609:
+        case 6679:
+        case 6717:
+        case 6816:
+        case 6879:
+        case 7190:
+        case 7346:
+        case 7385:
+        case 7618:
+        case 7635:
+        case 7646:
+        case 7670:
+        case 7672:
+        case 7679:
+        case 8013:
+        case 8032:
+        case 8041:
+        case 8055:
+        case 8214:
+        case 8343:
+        case 8513:
+        case 8590: return "hu";
+        case 2708:
+        case 2709:
+        case 2710:
+        case 2711:
+        case 2712:
+        case 2713:
+        case 2714:
+        case 2715:
+        case 2716:
+        case 7072:
+        case 7275:
+        case 7725:
+        case 7892: return "hua";
+        case 2717:
+        case 2718:
+        case 2719:
+        case 2720:
+        case 2721:
+        case 8555: return "huai";
+        case 2722:
+        case 2723:
+        case 2724:
+        case 2725:
+        case 2726:
+        case 2727:
+        case 2728:
+        case 2729:
+        case 2730:
+        case 2731:
+        case 2732:
+        case 2733:
+        case 2734:
+        case 2735:
+        case 5928:
+        case 6140:
+        case 6307:
+        case 6487:
+        case 6621:
+        case 6801:
+        case 6829:
+        case 6881:
+        case 6930:
+        case 6953:
+        case 7157:
+        case 7944:
+        case 8673:
+        case 8763: return "huan";
+        case 2736:
+        case 2737:
+        case 2738:
+        case 2739:
+        case 2740:
+        case 2741:
+        case 2742:
+        case 2743:
+        case 2744:
+        case 2745:
+        case 2746:
+        case 2747:
+        case 2748:
+        case 2749:
+        case 5882:
+        case 6569:
+        case 6850:
+        case 6874:
+        case 6956:
+        case 7211:
+        case 7533:
+        case 8105:
+        case 8308:
+        case 8382:
+        case 8692: return "huang";
+        case 2750:
+        case 2751:
+        case 2752:
+        case 2753:
+        case 2754:
+        case 2755:
+        case 2756:
+        case 2757:
+        case 2758:
+        case 2759:
+        case 2760:
+        case 2761:
+        case 2762:
+        case 2763:
+        case 2764:
+        case 2765:
+        case 2766:
+        case 2767:
+        case 2768:
+        case 2769:
+        case 2770:
+        case 5822:
+        case 6078:
+        case 6086:
+        case 6205:
+        case 6352:
+        case 6360:
+        case 6425:
+        case 6736:
+        case 6807:
+        case 6811:
+        case 6971:
+        case 7132:
+        case 7185:
+        case 7445:
+        case 7703:
+        case 8219:
+        case 8319:
+        case 8766: return "hui";
+        case 2771:
+        case 2772:
+        case 2773:
+        case 2774:
+        case 2775:
+        case 2776:
+        case 5827:
+        case 6638:
+        case 6752:
+        case 6867: return "hun";
+        case 2777:
+        case 2778:
+        case 2779:
+        case 2780:
+        case 2781:
+        case 2782:
+        case 2783:
+        case 2784:
+        case 2785:
+        case 2786:
+        case 5669:
+        case 6229:
+        case 6311:
+        case 6475:
+        case 6623:
+        case 7856:
+        case 7933:
+        case 7976:
+        case 8175:
+        case 8322: return "huo";
+        case 2787:
+        case 2788:
+        case 2789:
+        case 2790:
+        case 2791:
+        case 2792:
+        case 2793:
+        case 2794:
+        case 2795:
+        case 2796:
+        case 2797:
+        case 2798:
+        case 2799:
+        case 2800:
+        case 2801:
+        case 2802:
+        case 2803:
+        case 2804:
+        case 2805:
+        case 2806:
+        case 2807:
+        case 2808:
+        case 2809:
+        case 2810:
+        case 2811:
+        case 2812:
+        case 2813:
+        case 2814:
+        case 2815:
+        case 2816:
+        case 2817:
+        case 2818:
+        case 2819:
+        case 2820:
+        case 2821:
+        case 2822:
+        case 2823:
+        case 2824:
+        case 2825:
+        case 2826:
+        case 2827:
+        case 2828:
+        case 2829:
+        case 2830:
+        case 2831:
+        case 2832:
+        case 2833:
+        case 2834:
+        case 2835:
+        case 2836:
+        case 2837:
+        case 2838:
+        case 2839:
+        case 2840:
+        case 2841:
+        case 2842:
+        case 2843:
+        case 2844:
+        case 2845:
+        case 5602:
+        case 5629:
+        case 5632:
+        case 5662:
+        case 5705:
+        case 5742:
+        case 5952:
+        case 6024:
+        case 6033:
+        case 6193:
+        case 6210:
+        case 6265:
+        case 6320:
+        case 6350:
+        case 6383:
+        case 6507:
+        case 6553:
+        case 6809:
+        case 6976:
+        case 7087:
+        case 7160:
+        case 7165:
+        case 7314:
+        case 7374:
+        case 7410:
+        case 7411:
+        case 7469:
+        case 7473:
+        case 7487:
+        case 7620:
+        case 7722:
+        case 7831:
+        case 7990:
+        case 8002:
+        case 8104:
+        case 8217:
+        case 8337:
+        case 8339:
+        case 8463:
+        case 8550:
+        case 8553:
+        case 8611:
+        case 8661:
+        case 8674:
+        case 8757:
+        case 8768: return "ji";
+        case 2846:
+        case 2847:
+        case 2848:
+        case 2849:
+        case 2850:
+        case 2851:
+        case 2852:
+        case 2853:
+        case 2854:
+        case 2855:
+        case 2856:
+        case 2857:
+        case 2858:
+        case 2859:
+        case 2860:
+        case 2861:
+        case 2862:
+        case 5704:
+        case 5903:
+        case 6171:
+        case 6521:
+        case 6804:
+        case 6940:
+        case 7176:
+        case 7409:
+        case 7546:
+        case 7702:
+        case 7882:
+        case 7956:
+        case 8072:
+        case 8142:
+        case 8244:
+        case 8353:
+        case 8434:
+        case 8542: return "jia";
+        case 2863:
+        case 2864:
+        case 2865:
+        case 2866:
+        case 2867:
+        case 2868:
+        case 2869:
+        case 2870:
+        case 2871:
+        case 2872:
+        case 2873:
+        case 2874:
+        case 2875:
+        case 2876:
+        case 2877:
+        case 2878:
+        case 2879:
+        case 2880:
+        case 2881:
+        case 2882:
+        case 2883:
+        case 2884:
+        case 2885:
+        case 2886:
+        case 2887:
+        case 2888:
+        case 2889:
+        case 2890:
+        case 2891:
+        case 2892:
+        case 2893:
+        case 2894:
+        case 2895:
+        case 2896:
+        case 2897:
+        case 2898:
+        case 2899:
+        case 2900:
+        case 2901:
+        case 2902:
+        case 2903:
+        case 2904:
+        case 2905:
+        case 2906:
+        case 2907:
+        case 2908:
+        case 5752:
+        case 5841:
+        case 5857:
+        case 6149:
+        case 6183:
+        case 6286:
+        case 6853:
+        case 6931:
+        case 6932:
+        case 7144:
+        case 7237:
+        case 7305:
+        case 7407:
+        case 7415:
+        case 7480:
+        case 7489:
+        case 7506:
+        case 7576:
+        case 7790:
+        case 7921:
+        case 8047:
+        case 8148:
+        case 8340:
+        case 8469:
+        case 8534:
+        case 8561:
+        case 8668:
+        case 8721: return "jian";
+        case 2909:
+        case 2910:
+        case 2911:
+        case 2912:
+        case 2913:
+        case 2914:
+        case 2915:
+        case 2916:
+        case 2917:
+        case 2918:
+        case 2919:
+        case 2920:
+        case 2921:
+        case 6092:
+        case 6814:
+        case 7113:
+        case 7154:
+        case 7481:
+        case 7768:
+        case 8180:
+        case 8461:
+        case 8488: return "jiang";
+        case 2922:
+        case 2923:
+        case 2924:
+        case 2925:
+        case 2926:
+        case 2927:
+        case 2928:
+        case 2929:
+        case 2930:
+        case 2931:
+        case 2932:
+        case 2933:
+        case 2934:
+        case 2935:
+        case 2936:
+        case 2937:
+        case 2938:
+        case 2939:
+        case 2940:
+        case 2941:
+        case 2942:
+        case 2943:
+        case 2944:
+        case 2945:
+        case 2946:
+        case 2947:
+        case 2948:
+        case 2949:
+        case 5714:
+        case 5753:
+        case 6020:
+        case 6090:
+        case 6256:
+        case 6461:
+        case 6572:
+        case 7015:
+        case 7089:
+        case 7524:
+        case 8008:
+        case 8052:
+        case 8252:
+        case 8473:
+        case 8520:
+        case 8551:
+        case 8662: return "jiao";
+        case 2950:
+        case 2951:
+        case 2952:
+        case 2953:
+        case 2954:
+        case 2955:
+        case 2956:
+        case 2957:
+        case 2958:
+        case 2959:
+        case 2960:
+        case 2961:
+        case 2962:
+        case 2963:
+        case 2964:
+        case 2965:
+        case 2966:
+        case 2967:
+        case 2968:
+        case 2969:
+        case 2970:
+        case 2971:
+        case 2972:
+        case 2973:
+        case 2974:
+        case 2975:
+        case 2976:
+        case 5806:
+        case 5864:
+        case 5821:
+        case 6255:
+        case 6414:
+        case 7028:
+        case 7061:
+        case 7278:
+        case 7757:
+        case 8060:
+        case 8201:
+        case 8227:
+        case 8441:
+        case 8658:
+        case 8726: return "jie";
+        case 2977:
+        case 2978:
+        case 2979:
+        case 2980:
+        case 2981:
+        case 2982:
+        case 2983:
+        case 2984:
+        case 2985:
+        case 2986:
+        case 2987:
+        case 2988:
+        case 2989:
+        case 2990:
+        case 2991:
+        case 2992:
+        case 2993:
+        case 2994:
+        case 2995:
+        case 2996:
+        case 2997:
+        case 2998:
+        case 2999:
+        case 3000:
+        case 3001:
+        case 3002:
+        case 5865:
+        case 6103:
+        case 6132:
+        case 6468:
+        case 6643:
+        case 6659:
+        case 7001:
+        case 7138:
+        case 7210:
+        case 7340:
+        case 7465:
+        case 7478:
+        case 7836:
+        case 8138: return "jin";
+        case 3003:
+        case 3004:
+        case 3005:
+        case 3006:
+        case 3007:
+        case 3008:
+        case 3009:
+        case 3010:
+        case 3011:
+        case 3012:
+        case 3013:
+        case 3014:
+        case 3015:
+        case 3016:
+        case 3017:
+        case 3018:
+        case 3019:
+        case 3020:
+        case 3021:
+        case 3022:
+        case 3023:
+        case 3024:
+        case 3025:
+        case 3026:
+        case 3027: return "jing";
+        case 5751:
+        case 5869:
+        case 6128:
+        case 6616:
+        case 6729:
+        case 6794:
+        case 6941:
+        case 6982:
+        case 7026:
+        case 7534:
+        case 7554:
+        case 7570:
+        case 7626: return "jiang";
+        case 3028:
+        case 3029:
+        case 6936:
+        case 7671: return "jiong";
+        case 3030:
+        case 3031:
+        case 3032:
+        case 3033:
+        case 3034:
+        case 3035:
+        case 3036:
+        case 3037:
+        case 3038:
+        case 3039:
+        case 3040:
+        case 3041:
+        case 3042:
+        case 3043:
+        case 3044:
+        case 3045:
+        case 5754:
+        case 6417:
+        case 6746:
+        case 7249:
+        case 7274:
+        case 8015:
+        case 8053:
+        case 8481:
+        case 8761: return "jiu";
+        case 3046:
+        case 3047:
+        case 3048:
+        case 3049:
+        case 3050:
+        case 3051:
+        case 3052:
+        case 3053:
+        case 3054:
+        case 3055:
+        case 3056:
+        case 3057:
+        case 3058:
+        case 3059:
+        case 3060:
+        case 3061:
+        case 3062:
+        case 3063:
+        case 3064:
+        case 3065:
+        case 3066:
+        case 3067:
+        case 3068:
+        case 3069:
+        case 3070:
+        case 3071:
+        case 5738:
+        case 5810:
+        case 6036:
+        case 6058:
+        case 6076:
+        case 6268:
+        case 6965:
+        case 6980:
+        case 7202:
+        case 7307:
+        case 7316:
+        case 7323:
+        case 7357:
+        case 7381:
+        case 7488:
+        case 7611:
+        case 7850:
+        case 7924:
+        case 8022:
+        case 8132:
+        case 8153:
+        case 8482:
+        case 8522:
+        case 8565:
+        case 8620:
+        case 8634:
+        case 8722: return "ju";
+        case 3072:
+        case 3073:
+        case 3074:
+        case 3075:
+        case 3076:
+        case 3077:
+        case 3078:
+        case 5918:
+        case 6590:
+        case 6824:
+        case 7280:
+        case 7835:
+        case 7935:
+        case 7952:
+        case 8633: return "juan";
+        case 3079:
+        case 3080:
+        case 3081:
+        case 3082:
+        case 3083:
+        case 3084:
+        case 3085:
+        case 3086:
+        case 3087:
+        case 3088:
+        case 5642:
+        case 5667:
+        case 5860:
+        case 5939:
+        case 6207:
+        case 6421:
+        case 6457:
+        case 6469:
+        case 6540:
+        case 6617:
+        case 7062:
+        case 7169:
+        case 7286:
+        case 7351:
+        case 7663:
+        case 7967:
+        case 8574:
+        case 8591: return "jue";
+        case 3089:
+        case 3090:
+        case 3091:
+        case 3092:
+        case 3093:
+        case 3094:
+        case 3095:
+        case 3096:
+        case 3097:
+        case 3098:
+        case 3099:
+        case 3100:
+        case 3101:
+        case 3102:
+        case 3103:
+        case 3104:
+        case 3105:
+        case 6260:
+        case 8168:
+        case 8362:
+        case 8769: return "jun";
+        case 3106:
+        case 3107:
+        case 3108:
+        case 3109:
+        case 5671:
+        case 5691:
+        case 6339:
+        case 7544: return "ka";
+        case 3110:
+        case 3111:
+        case 3112:
+        case 3113:
+        case 3114:
+        case 5660:
+        case 5978:
+        case 6160:
+        case 6673:
+        case 6693:
+        case 7888:
+        case 7920:
+        case 7939: return "kai";
+        case 3115:
+        case 3116:
+        case 3117:
+        case 3118:
+        case 3119:
+        case 3120:
+        case 5709:
+        case 5941:
+        case 6108:
+        case 7412:
+        case 7772:
+        case 7811: return "kan";
+        case 3121:
+        case 3122:
+        case 3123:
+        case 3124:
+        case 3125:
+        case 3126:
+        case 3127:
+        case 5688:
+        case 6742:
+        case 7854: return "kang";
+        case 3128:
+        case 3129:
+        case 3130:
+        case 3131:
+        case 6974:
+        case 7264:
+        case 7491:
+        case 7877: return "kao";
+        case 3132:
+        case 3133:
+        case 3134:
+        case 3135:
+        case 3136:
+        case 3137:
+        case 3138:
+        case 3139:
+        case 3140:
+        case 3141:
+        case 3142:
+        case 3143:
+        case 3144:
+        case 3145:
+        case 3146:
+        case 6430:
+        case 6519:
+        case 6701:
+        case 6859:
+        case 7076:
+        case 7128:
+        case 7170:
+        case 7380:
+        case 7520:
+        case 7807:
+        case 7861:
+        case 7930:
+        case 7993:
+        case 8066:
+        case 8129:
+        case 8204:
+        case 8282:
+        case 8733: return "ke";
+        case 3147:
+        case 3148:
+        case 3149:
+        case 3150:
+        case 8144: return "ken";
+        case 3151:
+        case 3152:
+        case 7912: return "keng";
+        case 3153:
+        case 3154:
+        case 3155:
+        case 3156:
+        case 5737:
+        case 6539:
+        case 8377: return "kong";
+        case 3157:
+        case 3158:
+        case 3159:
+        case 3160:
+        case 6050:
+        case 6202:
+        case 6321:
+        case 7778:
+        case 8356: return "kou";
+        case 3161:
+        case 3162:
+        case 3163:
+        case 3164:
+        case 3165:
+        case 3166:
+        case 3167:
+        case 5658:
+        case 6005:
+        case 6423:
+        case 7111:
+        case 8728: return "ku";
+        case 3168:
+        case 3169:
+        case 3170:
+        case 3171:
+        case 3172:
+        case 5708: return "kua";
+        case 3173:
+        case 3174:
+        case 3175:
+        case 3176:
+        case 5665:
+        case 5906:
+        case 6364:
+        case 6586:
+        case 7558: return "kuai";
+        case 3177:
+        case 3178:
+        case 8737: return "kuan";
+        case 3179:
+        case 3180:
+        case 3181:
+        case 3182:
+        case 3183:
+        case 3184:
+        case 3185:
+        case 3186:
+        case 5818:
+        case 5831:
+        case 5887:
+        case 5959:
+        case 6237:
+        case 6349:
+        case 7094:
+        case 7460: return "kuang";
+        case 3187:
+        case 3188:
+        case 3189:
+        case 3190:
+        case 3191:
+        case 3192:
+        case 3193:
+        case 3194:
+        case 3195:
+        case 3196:
+        case 3197:
+        case 3198:
+        case 3199:
+        case 3200:
+        case 3201:
+        case 3202:
+        case 3203:
+        case 5624:
+        case 5649:
+        case 5771:
+        case 6162:
+        case 6281:
+        case 6413:
+        case 6416:
+        case 6720:
+        case 6951:
+        case 7450:
+        case 7805:
+        case 8189:
+        case 8281:
+        case 8381:
+        case 8545:
+        case 8606:
+        case 8743: return "kui";
+        case 3204:
+        case 3205:
+        case 3206:
+        case 3207:
+        case 6707:
+        case 6745:
+        case 7191:
+        case 7931:
+        case 8511:
+        case 8679:
+        case 8753: return "kun";
+        case 3208:
+        case 3209:
+        case 3210:
+        case 3211:
+        case 8250: return "kuo";
+        case 3212:
+        case 3213:
+        case 3214:
+        case 3215:
+        case 3216:
+        case 3217:
+        case 3218:
+        case 5661:
+        case 6969:
+        case 7425:
+        case 7739:
+        case 8088: return "la";
+        case 3219:
+        case 3220:
+        case 3221:
+        case 6533:
+        case 6566:
+        case 6821:
+        case 6894:
+        case 7467:
+        case 7789:
+        case 7910:
+        case 8114:
+        case 8405:return "lai";
+        case 3222:
+        case 3223:
+        case 3224:
+        case 3225:
+        case 3226:
+        case 3227:
+        case 3228:
+        case 3229:
+        case 3230:
+        case 3231:
+        case 3232:
+        case 3233:
+        case 3234:
+        case 3235:
+        case 3236:
+        case 6516:
+        case 6877:
+        case 7313:
+        case 7621:
+        case 7829:
+        case 7971:
+        case 8160: return "lan";
+        case 3237:
+        case 3238:
+        case 3239:
+        case 3240:
+        case 3241:
+        case 3242:
+        case 3243:
+        case 6125:
+        case 6185:
+        case 6405:
+        case 6747:
+        case 7922:
+        case 7992:
+        case 8275: return "lang";
+        case 3244:
+        case 3245:
+        case 3246:
+        case 3247:
+        case 3248:
+        case 3249:
+        case 3250:
+        case 3251:
+        case 3252:
+        case 6375:
+        case 6532:
+        case 7265:
+        case 7878:
+        case 7909:
+        case 8076:
+        case 8176:
+        case 8518: return "lao";
+        case 3253:
+        case 3254:
+        case 5676:
+        case 6323:
+        case 6447:
+        case 6778:
+        case 8706: return "le";
+        case 3255:
+        case 3256:
+        case 3257:
+        case 3258:
+        case 3259:
+        case 3260:
+        case 3261:
+        case 3262:
+        case 3263:
+        case 3264:
+        case 3265:
+        case 5790:
+        case 5819:
+        case 7048:
+        case 7148:
+        case 7359:
+        case 8171:
+        case 8510: return "lei";
+        case 3266:
+        case 3267:
+        case 3268:
+        case 6008:
+        case 6722: return "leng";
+        case 3269:
+        case 3270:
+        case 3271:
+        case 3272:
+        case 3273:
+        case 3274:
+        case 3275:
+        case 3276:
+        case 3277:
+        case 3278:
+        case 3279:
+        case 3280:
+        case 3281:
+        case 3282:
+        case 3283:
+        case 3284:
+        case 3285:
+        case 3286:
+        case 3287:
+        case 3288:
+        case 3289:
+        case 3290:
+        case 3291:
+        case 3292:
+        case 3293:
+        case 3294:
+        case 3295:
+        case 3296:
+        case 3297:
+        case 3298:
+        case 3299:
+        case 3300:
+        case 3301:
+        case 3302:
+        case 3303:
+        case 3304:
+        case 3305:
+        case 3306:
+        case 3307:
+        case 3308:
+        case 5719:
+        case 5721:
+        case 5910:
+        case 5962:
+        case 6034:
+        case 6116:
+        case 6181:
+        case 6228:
+        case 6331:
+        case 6406:
+        case 6412:
+        case 6591:
+        case 6706:
+        case 6864:
+        case 6902:
+        case 6946:
+        case 7018:
+        case 7043:
+        case 7074:
+        case 7142:
+        case 7232:
+        case 7261:
+        case 7386:
+        case 7669:
+        case 7734:
+        case 7826:
+        case 7830:
+        case 7914:
+        case 8031:
+        case 8061:
+        case 8063:
+        case 8235:
+        case 8259:
+        case 8327:
+        case 8350:
+        case 8386:
+        case 8447:
+        case 8523:
+        case 8608:
+        case 8666:
+        case 8715:
+        case 8783: return "li";
+        case 3309: return "lia";
+        case 3310:
+        case 3311:
+        case 3312:
+        case 3313:
+        case 3314:
+        case 3315:
+        case 3316:
+        case 3317:
+        case 3318:
+        case 3319:
+        case 3320:
+        case 3321:
+        case 3322:
+        case 3323:
+        case 6192:
+        case 6238:
+        case 6882:
+        case 6905:
+        case 7186:
+        case 7312:
+        case 7371:
+        case 7601:
+        case 8145:
+        case 8147:
+        case 8325:
+        case 8667: return "lian";
+        case 3324:
+        case 3325:
+        case 3326:
+        case 3327:
+        case 3328:
+        case 3329:
+        case 3330:
+        case 3331:
+        case 3332:
+        case 3333:
+        case 3334:
+        case 6014:
+        case 7303:
+        case 8552: return "liang";
+        case 3335:
+        case 3336:
+        case 3337:
+        case 3338:
+        case 3339:
+        case 3340:
+        case 3341:
+        case 3342:
+        case 3343:
+        case 3344:
+        case 3345:
+        case 3346:
+        case 3347:
+        case 6204:
+        case 6245:
+        case 6458:
+        case 6618:
+        case 6928:
+        case 7152:
+        case 7841:
+        case 8051: return "liao";
+        case 3348:
+        case 3349:
+        case 3350:
+        case 3351:
+        case 3352:
+        case 5793:
+        case 5988:
+        case 6270:
+        case 6354:
+        case 6803:
+        case 8483:
+        case 8581:
+        case 8764: return "lie";
+        case 3353:
+        case 3354:
+        case 3355:
+        case 3356:
+        case 3357:
+        case 3358:
+        case 3359:
+        case 3360:
+        case 3361:
+        case 3362:
+        case 3363:
+        case 6194:
+        case 6388:
+        case 6555:
+        case 6662:
+        case 6733:
+        case 6964:
+        case 7361:
+        case 7405:
+        case 7602:
+        case 7812:
+        case 8452:
+        case 8579:
+        case 8775: return "lin";
+        case 3364:
+        case 3365:
+        case 3366:
+        case 3367:
+        case 3368:
+        case 3369:
+        case 3370:
+        case 3371:
+        case 3372:
+        case 3373:
+        case 3374:
+        case 3375:
+        case 3376:
+        case 3377:
+        case 3378:
+        case 5925:
+        case 6063:
+        case 6342:
+        case 6482:
+        case 6786:
+        case 7117:
+        case 7258:
+        case 7289:
+        case 7418:
+        case 8186:
+        case 8240:
+        case 8465:
+        case 8676: return "ling";
+        case 3379:
+        case 3380:
+        case 3381:
+        case 3382:
+        case 3383:
+        case 3384:
+        case 3385:
+        case 3386:
+        case 3387:
+        case 3388:
+        case 3389:
+        case 6815:
+        case 6962:
+        case 7082:
+        case 7124:
+        case 7628:
+        case 7654:
+        case 7919:
+        case 7954:
+        case 8050:
+        case 8644: return "liu";
+        case 3390:
+        case 3391:
+        case 3392:
+        case 3393:
+        case 3394:
+        case 3395:
+        case 3396:
+        case 3397:
+        case 3398:
+        case 3399:
+        case 3400:
+        case 3401:
+        case 3402:
+        case 3403:
+        case 3404:
+        case 5966:
+        case 6055:
+        case 6781:
+        case 7171:
+        case 7248:
+        case 7542:
+        case 7735:
+        case 8110: return "long";
+        case 3405:
+        case 3406:
+        case 3407:
+        case 3408:
+        case 3409:
+        case 3410:
+        case 5745:
+        case 6168:
+        case 6422:
+        case 6548:
+        case 7946:
+        case 8092:
+        case 8179:
+        case 8287:
+        case 8735: return "lou";
+        case 3411:
+        case 3412:
+        case 3413:
+        case 3414:
+        case 3415:
+        case 3416:
+        case 3417:
+        case 3418:
+        case 3419:
+        case 3420:
+        case 3421:
+        case 3422:
+        case 3423:
+        case 3424:
+        case 3425:
+        case 3426:
+        case 3427:
+        case 3428:
+        case 3429:
+        case 3430:
+        case 3431:
+        case 3432:
+        case 3433:
+        case 3434:
+        case 3435:
+        case 3436:
+        case 3437:
+        case 3438:
+        case 3439:
+        case 3440:
+        case 3441:
+        case 3442:
+        case 3443:
+        case 3444:
+        case 6744:
+        case 7321:
+        case 7586:
+        case 7918:
+        case 7989:
+        case 8158: return "lu";
+        case 5968:
+        case 6303:
+        case 6464:
+        case 6782:
+        case 6843:
+        case 6885:
+        case 6954:
+        case 7220:
+        case 7251:
+        case 7354:
+        case 7391:
+        case 7404:
+        case 7510:
+        case 7545:
+        case 7969:
+        case 8021:
+        case 8056:
+        case 8392:
+        case 8421:
+        case 8652: return "lu";
+        case 3445:
+        case 3446:
+        case 3447:
+        case 3448:
+        case 3449:
+        case 3450:
+        case 5785:
+        case 7014:
+        case 7279:
+        case 8029:
+        case 8639: return "luan";
+        case 3451:
+        case 3452: return "lue";
+        case 3453:
+        case 3454:
+        case 3455:
+        case 3456:
+        case 3457:
+        case 3458:
+        case 3459:
+        case 6480: return "lun";
+        case 3460:
+        case 3461:
+        case 3462:
+        case 3463:
+        case 3464:
+        case 3465:
+        case 3466:
+        case 3467:
+        case 3468:
+        case 3469:
+        case 3470:
+        case 3471:
+        case 5732:
+        case 5789:
+        case 6093:
+        case 6259:
+        case 6291:
+        case 6604:
+        case 6788:
+        case 6880:
+        case 7183:
+        case 7301:
+        case 7565:
+        case 7961:
+        case 8107:
+        case 8540:
+        case 8635: return "luo";
+        case 3472:
+        case 3473:
+        case 3474:
+        case 3475:
+        case 3476:
+        case 3477:
+        case 3478:
+        case 3479:
+        case 3480:
+        case 6373:
+        case 6579:
+        case 7054:
+        case 7231:
+        case 8301: return "ma";
+        case 3481:
+        case 3482:
+        case 3483:
+        case 3484:
+        case 3485:
+        case 3486:
+        case 5929:
+        case 6104:
+        case 8618: return "mai";
+        case 3487:
+        case 3488:
+        case 3489:
+        case 3490:
+        case 3491:
+        case 3492:
+        case 3493:
+        case 3494:
+        case 3495:
+        case 3496:
+        case 3497:
+        case 3498:
+        case 3499:
+        case 3500:
+        case 3501:
+        case 6012:
+        case 6503:
+        case 7147:
+        case 7655:
+        case 7960:
+        case 8209:
+        case 8293:
+        case 8709:
+        case 8720: return "man";
+        case 3502:
+        case 3503:
+        case 3504:
+        case 3505:
+        case 3506:
+        case 3507:
+        case 5888:
+        case 6861:
+        case 7743:
+        case 8294: return "mang";
+        case 3508:
+        case 3509:
+        case 3510:
+        case 3511:
+        case 3512:
+        case 3513:
+        case 3514:
+        case 3515:
+        case 3516:
+        case 3517:
+        case 3518:
+        case 3519:
+        case 5783:
+        case 6066:
+        case 6525:
+        case 6787:
+        case 7203:
+        case 7436:
+        case 7483:
+        case 7503:
+        case 7624:
+        case 7714:
+        case 7806:
+        case 8317:
+        case 8754: return "mao";
+        case 3520: return "me";
+        case 3521:
+        case 3522:
+        case 3523:
+        case 3524:
+        case 3525:
+        case 3526:
+        case 3527:
+        case 3528:
+        case 3529:
+        case 3530:
+        case 3531:
+        case 3532:
+        case 3533:
+        case 3534:
+        case 3535:
+        case 3536:
+        case 6114:
+        case 6550:
+        case 6613:
+        case 6828:
+        case 6856:
+        case 7325:
+        case 7949:
+        case 8044:
+        case 8139:
+        case 8740: return "mei";
+        case 3537:
+        case 3538:
+        case 3539:
+        case 6249:
+        case 7643:
+        case 7715:
+        case 7845: return "men";
+        case 3540:
+        case 3541:
+        case 3542:
+        case 3543:
+        case 3544:
+        case 3545:
+        case 3546:
+        case 3547:
+        case 5934:
+        case 6189:
+        case 6211:
+        case 6734:
+        case 7592:
+        case 7770:
+        case 8221:
+        case 8276:
+        case 8323:
+        case 8427:
+        case 8431: return "meng";
+        case 3548:
+        case 3549:
+        case 3550:
+        case 3551:
+        case 3552:
+        case 3553:
+        case 3554:
+        case 3555:
+        case 3556:
+        case 3557:
+        case 3558:
+        case 3559:
+        case 3560:
+        case 3561:
+        case 5634:
+        case 5802:
+        case 5855:
+        case 6234:
+        case 6368:
+        case 6455:
+        case 6608:
+        case 6772:
+        case 6921:
+        case 6984:
+        case 7563:
+        case 7682:
+        case 8445:
+        case 8767:
+        case 8771: return "mi";
+        case 3562:
+        case 3563:
+        case 3564:
+        case 3565:
+        case 3566:
+        case 3567:
+        case 3568:
+        case 3569:
+        case 3570:
+        case 6770:
+        case 6837:
+        case 6847:
+        case 7579:
+        case 7777: return "mian";
+        case 3571:
+        case 3572:
+        case 3573:
+        case 3574:
+        case 3575:
+        case 3576:
+        case 3577:
+        case 3578:
+        case 6387:
+        case 6967:
+        case 7131:
+        case 7149:
+        case 7234:
+        case 7721:
+        case 7780:
+        case 8037: return "miao";
+        case 3579:
+        case 3580:
+        case 5631:
+        case 6367:
+        case 8326:
+        case 8390: return "mie";
+        case 3581:
+        case 3582:
+        case 3583:
+        case 3584:
+        case 3585:
+        case 3586:
+        case 6069:
+        case 6526:
+        case 6741:
+        case 6793:
+        case 7137:
+        case 7168:
+        case 7175:
+        case 7710:
+        case 8710:
+        case 8628: return "min";
+        case 3587:
+        case 3588:
+        case 3589:
+        case 3590:
+        case 3591:
+        case 3592:
+        case 5804:
+        case 6088:
+        case 6873:
+        case 7452:
+        case 7808:
+        case 8504: return "ming";
+        case 3593: return "miu";
+        case 3594:
+        case 3595:
+        case 3596:
+        case 3597:
+        case 3598:
+        case 3599:
+        case 3600:
+        case 3601:
+        case 3602:
+        case 3603:
+        case 3604:
+        case 3605:
+        case 3606:
+        case 3607:
+        case 3608:
+        case 3609:
+        case 3610:
+        case 3611:
+        case 3612:
+        case 3613:
+        case 3614:
+        case 3615:
+        case 3616:
+        case 5851:
+        case 6052:
+        case 6175:
+        case 6641:
+        case 7038:
+        case 7366:
+        case 7950:
+        case 7987:
+        case 8102:
+        case 8182:
+        case 8586:
+        case 8588:
+        case 8765: return "mo";
+        case 3617:
+        case 3618:
+        case 3619:
+        case 5716:
+        case 6372:
+        case 7788:
+        case 8254:
+        case 8290:
+        case 8642: return "mou";
+        case 3620:
+        case 3621:
+        case 3622:
+        case 3623:
+        case 3624:
+        case 3625:
+        case 3626:
+        case 3627:
+        case 3628:
+        case 3629:
+        case 3630:
+        case 3631:
+        case 3632:
+        case 3633:
+        case 3634:
+        case 5679:
+        case 5973:
+        case 6057:
+        case 6769:
+        case 7504:
+        case 6328:
+        case 7866: return "mu";
+        case 3635:
+        case 3636:
+        case 3637:
+        case 3638:
+        case 3639:
+        case 3640:
+        case 3641:
+        case 6264:
+        case 7539:
+        case 7953:
+        case 8136: return "na";
+        case 3642:
+        case 3643:
+        case 3644:
+        case 3645:
+        case 3646:
+        case 5630:
+        case 6021:
+        case 6133:
+        case 7245: return "nai";
+        case 3647:
+        case 3648:
+        case 3649:
+        case 6411:
+        case 6478:
+        case 6479:
+        case 7310:
+        case 7578:
+        case 8279:
+        case 8486: return "nan";
+        case 3650:
+        case 6313:
+        case 6476:
+        case 6646:
+        case 7457: return "nang";
+        case 3651:
+        case 3652:
+        case 3653:
+        case 3654:
+        case 3655:
+        case 5611:
+        case 5981:
+        case 6346:
+        case 6614:
+        case 7207:
+        case 7748:
+        case 7883:
+        case 8245: return "nao";
+        case 3656:
+        case 5811: return "ne";
+        case 3657:
+        case 3658: return "nei";
+        case 3659:
+        case 7705: return "nen";
+        case 3660: return "neng";
+        case 3661:
+        case 3662:
+        case 3663:
+        case 3664:
+        case 3665:
+        case 3666:
+        case 3667:
+        case 3668:
+        case 3669:
+        case 3670:
+        case 3671:
+        case 5703:
+        case 5972:
+        case 6605:
+        case 6685:
+        case 7439:
+        case 7627:
+        case 7711:
+        case 7794:
+        case 7874:
+        case 8682: return "ni";
+        case 3672:
+        case 3673:
+        case 3674:
+        case 3675:
+        case 3676:
+        case 3677:
+        case 3678:
+        case 5605:
+        case 5994:
+        case 7393:
+        case 8004:
+        case 8651:
+        case 8683: return "nian";
+        case 3679:
+        case 3680: return "niang";
+        case 3681:
+        case 3682:
+        case 6064:
+        case 7053:
+        case 7569:
+        case 8433: return "niao";
+        case 3683:
+        case 3684:
+        case 3685:
+        case 3686:
+        case 3687:
+        case 3688:
+        case 3689:
+        case 5877:
+        case 6233:
+        case 6431:
+        case 8208:
+        case 8411:
+        case 8570: return "nie";
+        case 3690: return "nin";
+        case 3691:
+        case 3692:
+        case 3693:
+        case 3694:
+        case 3695:
+        case 3696:
+        case 3697:
+        case 3698:
+        case 3699:
+        case 3700:
+        case 3701:
+        case 3702:
+        case 5690:
+        case 6344:
+        case 6924:
+        case 8187: return "ning";
+        case 3703:
+        case 3704:
+        case 3705:
+        case 3706:
+        case 6580:
+        case 6678:
+        case 7004: return "niu";
+        case 3707:
+        case 3708:
+        case 3709:
+        case 3710:
+        case 5715:
+        case 6370: return "nong";
+        case 3711:
+        case 3712:
+        case 3713:
+        case 3714:
+        case 8181: return "nou";
+        case 6983:
+        case 7032:
+        case 7059:
+        case 7069: return "nu";
+        case 7704:
+        case 7847:
+        case 8412: return "nu";
+        case 3715: return "nuan";
+        case 3716:
+        case 3717: return "nue";
+        case 3718:
+        case 3719:
+        case 3720:
+        case 3721:
+        case 5748:
+        case 6289:
+        case 6386:
+        case 7927: return "nuo";
+        case 3722:
+        case 6424:
+        case 6462: return "o";
+        case 3723:
+        case 3724:
+        case 3725:
+        case 3726:
+        case 3727:
+        case 3728:
+        case 3729:
+        case 5809:
+        case 6670:
+        case 7417:
+        case 8178: return "ou";
+        case 3730:
+        case 3731:
+        case 3732:
+        case 3733:
+        case 3734:
+        case 3735:
+        case 6166:
+        case 7243:
+        case 8365: return "pa";
+        case 3736:
+        case 3737:
+        case 3738:
+        case 3739:
+        case 3740:
+        case 3741:
+        case 5729:
+        case 6169:
+        case 6363: return "pai";
+        case 3742:
+        case 3743:
+        case 3744:
+        case 3745:
+        case 3746:
+        case 3747:
+        case 3748:
+        case 3749:
+        case 6761:
+        case 6790:
+        case 8140:
+        case 8165:
+        case 8320:
+        case 8571: return "pan";
+        case 3750:
+        case 3751:
+        case 3752:
+        case 3753:
+        case 3754:
+        case 6561:
+        case 6872:
+        case 6944:
+        case 8306: return "pang";
+        case 3755:
+        case 3756:
+        case 3757:
+        case 3758:
+        case 3759:
+        case 3760:
+        case 3761:
+        case 6243:
+        case 6583:
+        case 6650:
+        case 7567:
+        case 8069: return "pao";
+        case 3762:
+        case 3763:
+        case 3764:
+        case 3765:
+        case 3766:
+        case 3767:
+        case 3768:
+        case 3769:
+        case 3770:
+        case 6446:
+        case 6490:
+        case 7623:
+        case 7934:
+        case 8512:
+        case 8612: return "pei";
+        case 3771:
+        case 3772:
+        case 6852: return "pen";
+        case 3773:
+        case 3774:
+        case 3775:
+        case 3776:
+        case 3777:
+        case 3778:
+        case 3779:
+        case 3780:
+        case 3781:
+        case 3782:
+        case 3783:
+        case 3784:
+        case 3785:
+        case 3786:
+        case 6001:
+        case 6456:
+        case 6681:
+        case 8318: return "peng";
+        case 3787:
+        case 3788:
+        case 3789:
+        case 3790:
+        case 3791:
+        case 3792:
+        case 3793:
+        case 3794:
+        case 3795:
+        case 3796:
+        case 3797:
+        case 3798:
+        case 3799:
+        case 3800:
+        case 3801:
+        case 3802:
+        case 3803:
+        case 3804:
+        case 3805:
+        case 3806:
+        case 3807:
+        case 3808:
+        case 3809:
+        case 5607:
+        case 5682:
+        case 5880:
+        case 5892:
+        case 5915:
+        case 5960:
+        case 6017:
+        case 6037:
+        case 6308:
+        case 6472:
+        case 6647:
+        case 6836:
+        case 7039:
+        case 7102:
+        case 7233:
+        case 7422:
+        case 7802:
+        case 7828:
+        case 7875:
+        case 8117:
+        case 8166:
+        case 8223:
+        case 8271:
+        case 8589: return "pi";
+        case 3810:
+        case 3811:
+        case 3812:
+        case 3813:
+        case 5850:
+        case 7073:
+        case 7490:
+        case 7561:
+        case 8470:
+        case 8568: return "pian";
+        case 3814:
+        case 3815:
+        case 3816:
+        case 3817:
+        case 5666:
+        case 6449:
+        case 7046:
+        case 7146:
+        case 7372:
+        case 7809:
+        case 8310: return "piao";
+        case 3818:
+        case 3819:
+        case 6054:
+        case 7513: return "pie";
+        case 3820:
+        case 3821:
+        case 3822:
+        case 3823:
+        case 3824:
+        case 7041:
+        case 6253:
+        case 7016:
+        case 7315:
+        case 7482:
+        case 8213: return "pin";
+        case 3825:
+        case 3826:
+        case 3827:
+        case 3828:
+        case 3829:
+        case 3830:
+        case 3831:
+        case 3832:
+        case 3833:
+        case 5723:
+        case 7019:
+        case 7250:
+        case 8650: return "ping";
+        case 3834:
+        case 3835:
+        case 3836:
+        case 3837:
+        case 3838:
+        case 3839:
+        case 3840:
+        case 3841:
+        case 5647:
+        case 5922:
+        case 7174:
+        case 7423:
+        case 7839:
+        case 7862:
+        case 8011:
+        case 8345: return "po";
+        case 3842:
+        case 5786:
+        case 6269: return "pou";
+        case 3843:
+        case 3844:
+        case 3845:
+        case 3846:
+        case 3847:
+        case 3848:
+        case 3849:
+        case 3850:
+        case 3851:
+        case 3852:
+        case 3853:
+        case 3854:
+        case 3855:
+        case 3856:
+        case 3857:
+        case 5773:
+        case 6459:
+        case 6863:
+        case 6907:
+        case 7217:
+        case 7511:
+        case 7968:
+        case 7972:
+        case 8575: return "pu";
+        case 3858:
+        case 3859:
+        case 3860:
+        case 3861:
+        case 3862:
+        case 3863:
+        case 3864:
+        case 3865:
+        case 3866:
+        case 3867:
+        case 3868:
+        case 3869:
+        case 3870:
+        case 3871:
+        case 3872:
+        case 3873:
+        case 3874:
+        case 3875:
+        case 3876:
+        case 3877:
+        case 3878:
+        case 3879:
+        case 3880:
+        case 3881:
+        case 3882:
+        case 3883:
+        case 3884:
+        case 3885:
+        case 3886:
+        case 3887:
+        case 3888:
+        case 3889:
+        case 3890:
+        case 3891:
+        case 3892:
+        case 3893:
+        case 5633:
+        case 5725:
+        case 5963:
+        case 6027:
+        case 6046:
+        case 6089:
+        case 6129:
+        case 6134:
+        case 6161:
+        case 6213:
+        case 6366:
+        case 6450:
+        case 6508:
+        case 6510:
+        case 6764:
+        case 6831:
+        case 7075:
+        case 7118:
+        case 7187:
+        case 7189:
+        case 7229:
+        case 7271:
+        case 7342:
+        case 7440:
+        case 7605:
+        case 7687:
+        case 7712:
+        case 7751:
+        case 8193:
+        case 8251:
+        case 8264:
+        case 8475:
+        case 8476:
+        case 8572:
+        case 8702:
+        case 8772: return "qi";
+        case 3894:
+        case 3901:
+        case 3902:
+        case 6154:
+        case 8736: return "qia";
+        case 3903:
+        case 3904:
+        case 3905:
+        case 3906:
+        case 3907:
+        case 3908:
+        case 3909:
+        case 3910:
+        case 3911:
+        case 3912:
+        case 3913:
+        case 3914:
+        case 3915:
+        case 3916:
+        case 3917:
+        case 3918:
+        case 3919:
+        case 3920:
+        case 3921:
+        case 3922:
+        case 3923:
+        case 3924:
+        case 5727:
+        case 5761:
+        case 5868:
+        case 6023:
+        case 6045:
+        case 6071:
+        case 6271:
+        case 6509:
+        case 6705:
+        case 6727:
+        case 6925:
+        case 6926:
+        case 6929:
+        case 7155:
+        case 7293:
+        case 7541:
+        case 7709:
+        case 7852:
+        case 8215:
+        case 8373: return "qian";
+        case 3925:
+        case 3926:
+        case 3927:
+        case 3928:
+        case 3929:
+        case 3930:
+        case 3931:
+        case 3932:
+        case 6762:
+        case 7045:
+        case 7341:
+        case 7408:
+        case 7633:
+        case 7926:
+        case 7947:
+        case 7974:
+        case 8163:
+        case 8262:
+        case 8439:
+        case 8536: return "qiang";
+        case 3933:
+        case 3934:
+        case 3935:
+        case 3936:
+        case 3937:
+        case 3938:
+        case 3939:
+        case 3940:
+        case 3941:
+        case 3942:
+        case 3943:
+        case 3944:
+        case 3945:
+        case 3946:
+        case 3947:
+        case 5668:
+        case 5829:
+        case 5859:
+        case 6081:
+        case 6529:
+        case 6724:
+        case 6730:
+        case 7352:
+        case 7745:
+        case 8546:
+        case 8719: return "qiao";
+        case 3948:
+        case 3949:
+        case 3950:
+        case 3951:
+        case 3952:
+        case 5907:
+        case 6711:
+        case 7010:
+        case 7492:
+        case 7938:
+        case 8370: return "qie";
+        case 3953:
+        case 3954:
+        case 3955:
+        case 3956:
+        case 3957:
+        case 3958:
+        case 3959:
+        case 3960:
+        case 3961:
+        case 3962:
+        case 3963:
+        case 6043:
+        case 6276:
+        case 6336:
+        case 6426:
+        case 6463:
+        case 6858:
+        case 7353:
+        case 7923:
+        case 8291:
+        case 8432: return "qin";
+        case 3964:
+        case 3965:
+        case 3966:
+        case 3967:
+        case 3968:
+        case 3969:
+        case 3970:
+        case 3971:
+        case 3972:
+        case 3973:
+        case 3974:
+        case 3975:
+        case 3976:
+        case 6060:
+        case 6485:
+        case 7349:
+        case 7764:
+        case 8263:
+        case 8332:
+        case 8368:
+        case 8605:
+        case 8675:
+        case 8784: return "qing";
+        case 3977:
+        case 3978:
+        case 5886:
+        case 6068:
+        case 8123:
+        case 8243:
+        case 8344:
+        case 8528:
+        case 8638: return "qiong";
+        case 3979:
+        case 3980:
+        case 3981:
+        case 3982:
+        case 3983:
+        case 3984:
+        case 3985:
+        case 3986:
+        case 5720:
+        case 5947:
+        case 6576:
+        case 6848:
+        case 6947:
+        case 6957:
+        case 7317:
+        case 7468:
+        case 8216:
+        case 8239:
+        case 8288:
+        case 8435:
+        case 8460:
+        case 8690:
+        case 8792: return "qiu";
+        case 3987:
+        case 3988:
+        case 3989:
+        case 3990:
+        case 3991:
+        case 3992:
+        case 3993:
+        case 3994:
+        case 3995:
+        case 3996:
+        case 3997:
+        case 3998:
+        case 3999:
+        case 4000:
+        case 4001:
+        case 4002:
+        case 4003:
+        case 4004:
+        case 4005:
+        case 5816:
+        case 5930:
+        case 6201:
+        case 6230:
+        case 6511:
+        case 6573:
+        case 6754:
+        case 7219:
+        case 7479:
+        case 7512:
+        case 7552:
+        case 7678:
+        case 7765:
+        case 8119:
+        case 8248:
+        case 8329:
+        case 8480:
+        case 8636:
+        case 8781: return "qu";
+        case 4006:
+        case 4007:
+        case 4008:
+        case 4009:
+        case 4010:
+        case 4011:
+        case 4012:
+        case 4013:
+        case 4014:
+        case 4015:
+        case 4016:
+        case 5825:
+        case 6085:
+        case 6575:
+        case 6710:
+        case 7125:
+        case 7390:
+        case 7816:
+        case 7893:
+        case 8273:
+        case 8360:
+        case 8760: return "quan";
+        case 4017:
+        case 4018:
+        case 4019:
+        case 4020:
+        case 4021:
+        case 4022:
+        case 4023:
+        case 4024:
+        case 6755:
+        case 6758:
+        case 7708: return "que";
+        case 4025:
+        case 4026:
+        case 6950: return "qun";
+        case 4027:
+        case 4028:
+        case 4029:
+        case 4030:
+        case 6059:
+        case 8237:
+        case 8755: return "ran";
+        case 4031:
+        case 4032:
+        case 4033:
+        case 4034:
+        case 4035:
+        case 7692:
+        case 8006: return "rang";
+        case 4036:
+        case 4037:
+        case 4038:
+        case 6073:
+        case 7012:
+        case 7267: return "rao";
+        case 4039:
+        case 4040: return "re";
+        case 4041:
+        case 4042:
+        case 4043:
+        case 4044:
+        case 4045:
+        case 4046:
+        case 4047:
+        case 4048:
+        case 4049:
+        case 4050:
+        case 5673:
+        case 5680:
+        case 6083:
+        case 6156:
+        case 6631:
+        case 7377:
+        case 7994:
+        case 8137: return "ren";
+        case 4051:
+        case 4052: return "reng";
+        case 4053: return "ri";
+        case 4054:
+        case 4055:
+        case 4056:
+        case 4057:
+        case 4058:
+        case 4059:
+        case 4060:
+        case 4061:
+        case 4062:
+        case 4063:
+        case 6541:
+        case 6585:
+        case 7337:
+        case 7532:
+        case 8278: return "rong";
+        case 4064:
+        case 4065:
+        case 4066:
+        case 8459:
+        case 8569:
+        case 8723: return "rou";
+        case 4067:
+        case 4068:
+        case 4069:
+        case 4070:
+        case 4071:
+        case 4072:
+        case 4073:
+        case 4074:
+        case 4075:
+        case 4076:
+        case 6174:
+        case 6224:
+        case 6473:
+        case 6818:
+        case 6865:
+        case 6906:
+        case 7140:
+        case 7908:
+        case 8164:
+        case 8212: return "ru";
+        case 4077:
+        case 4078:
+        case 7535: return "ruan";
+        case 4079:
+        case 4080:
+        case 4081:
+        case 6039:
+        case 6208:
+        case 7236:
+        case 7803:
+        case 8224: return "rui";
+        case 4082:
+        case 4083: return "run";
+        case 4084:
+        case 4085:
+        case 5728:
+        case 8372: return "ruo";
+        case 4086:
+        case 4087:
+        case 4088:
+        case 5606:
+        case 5677:
+        case 7493:
+        case 7559:
+        case 7610: return "sa";
+        case 4089:
+        case 4090:
+        case 4091:
+        case 4092:
+        case 6471: return "sai";
+        case 4093:
+        case 4094:
+        case 4101:
+        case 4102:
+        case 6644:
+        case 6763:
+        case 7507:
+        case 8454: return "san";
+        case 4103:
+        case 4104:
+        case 4105:
+        case 6290:
+        case 7763:
+        case 8210: return "sang";
+        case 4106:
+        case 4107:
+        case 4108:
+        case 4109:
+        case 6003:
+        case 7150:
+        case 7156:
+        case 7593:
+        case 8094:
+        case 8694: return "sao";
+        case 4110:
+        case 4111:
+        case 4112:
+        case 5636:
+        case 7904:
+        case 8003: return "se";
+        case 4113: return "sen";
+        case 4114: return "seng";
+        case 4115:
+        case 4116:
+        case 4117:
+        case 4118:
+        case 4119:
+        case 4120:
+        case 4121:
+        case 4122:
+        case 4123:
+        case 6394:
+        case 7606:
+        case 7901:
+        case 8080:
+        case 8436:
+        case 8614:
+        case 8672: return "sha";
+        case 4124:
+        case 4125:
+        case 8507: return "shai";
+        case 4126:
+        case 4127:
+        case 4128:
+        case 4129:
+        case 4130:
+        case 4131:
+        case 4132:
+        case 4133:
+        case 4134:
+        case 4135:
+        case 4136:
+        case 4137:
+        case 4138:
+        case 4139:
+        case 4140:
+        case 4141:
+        case 5663:
+        case 5808:
+        case 5923:
+        case 5979:
+        case 6047:
+        case 6574:
+        case 6890:
+        case 7009:
+        case 7051:
+        case 7083:
+        case 7594:
+        case 7844:
+        case 8062:
+        case 8321:
+        case 8414:
+        case 8539:
+        case 8713: return "shan";
+        case 4142:
+        case 4143:
+        case 4144:
+        case 4145:
+        case 4146:
+        case 4147:
+        case 4148:
+        case 4149:
+        case 5980:
+        case 7120:
+        case 7368:
+        case 7656:
+        case 8592: return "shang";
+        case 4150:
+        case 4151:
+        case 4152:
+        case 4153:
+        case 4154:
+        case 4155:
+        case 4156:
+        case 4157:
+        case 4158:
+        case 4159:
+        case 4160:
+        case 5931:
+        case 6070:
+        case 6891:
+        case 7228:
+        case 8366:
+        case 8425: return "shao";
+        case 4161:
+        case 4162:
+        case 4163:
+        case 4164:
+        case 4165:
+        case 4166:
+        case 4167:
+        case 4168:
+        case 4169:
+        case 4170:
+        case 4171:
+        case 4172:
+        case 5639:
+        case 5760:
+        case 6606:
+        case 6860:
+        case 7608:
+        case 7820:
+        case 8774: return "she";
+        case 4173:
+        case 4174:
+        case 4175:
+        case 4176:
+        case 4177:
+        case 4178:
+        case 4179:
+        case 4180:
+        case 4181:
+        case 4182:
+        case 4183:
+        case 4184:
+        case 4185:
+        case 4186:
+        case 4187:
+        case 4188:
+        case 5837:
+        case 6123:
+        case 6351:
+        case 6841:
+        case 7309:
+        case 7547:
+        case 7982:
+        case 8255: return "shen";
+        case 4189:
+        case 4190:
+        case 4191:
+        case 4192:
+        case 4193:
+        case 4194:
+        case 4195:
+        case 4196:
+        case 4197:
+        case 4198:
+        case 4199:
+        case 4200:
+        case 4201:
+        case 4202:
+        case 4203:
+        case 4204:
+        case 4205:
+        case 6551:
+        case 7441:
+        case 7782:
+        case 8347: return "sheng";
+        case 4206:
+        case 4207:
+        case 4208:
+        case 4209:
+        case 4210:
+        case 4211:
+        case 4212:
+        case 4213:
+        case 4214:
+        case 4215:
+        case 4216:
+        case 4217:
+        case 4218:
+        case 4219:
+        case 4220:
+        case 4221:
+        case 4222:
+        case 4223:
+        case 4224:
+        case 4225:
+        case 4226:
+        case 4227:
+        case 4228:
+        case 4229:
+        case 4230:
+        case 4231:
+        case 4232:
+        case 4233:
+        case 4234:
+        case 4235:
+        case 4236:
+        case 4237:
+        case 4238:
+        case 4239:
+        case 4240:
+        case 4241:
+        case 4242:
+        case 4243:
+        case 4244:
+        case 4245:
+        case 4246:
+        case 4247:
+        case 4248:
+        case 4249:
+        case 4250:
+        case 4251:
+        case 4252:
+        case 5854:
+        case 5985:
+        case 6110:
+        case 6173:
+        case 6317:
+        case 6627:
+        case 7388:
+        case 7459:
+        case 7634:
+        case 7674:
+        case 7870:
+        case 8307:
+        case 8334:
+        case 8363:
+        case 8525:
+        case 8669:
+        case 8685: return "shi";
+        case 4253:
+        case 4254:
+        case 4255:
+        case 4256:
+        case 4257:
+        case 4258:
+        case 4259:
+        case 4260:
+        case 4261:
+        case 4262:
+        case 6248:
+        case 6587:
+        case 7123:
+        case 8428: return "shou";
+        case 4263:
+        case 4264:
+        case 4265:
+        case 4266:
+        case 4267:
+        case 4268:
+        case 4269:
+        case 4270:
+        case 4271:
+        case 4272:
+        case 4273:
+        case 4274:
+        case 4275:
+        case 4276:
+        case 4277:
+        case 4278:
+        case 4279:
+        case 4280:
+        case 4281:
+        case 4282:
+        case 4283:
+        case 4284:
+        case 4285:
+        case 4286:
+        case 4287:
+        case 4288:
+        case 4289:
+        case 4290:
+        case 4291:
+        case 4292:
+        case 4293:
+        case 4294:
+        case 4295:
+        case 4296:
+        case 4297:
+        case 4298:
+        case 4299:
+        case 4300:
+        case 4301:
+        case 5731:
+        case 5951:
+        case 6136:
+        case 6283:
+        case 6780:
+        case 6888:
+        case 7013:
+        case 7103:
+        case 7508:
+        case 7582:
+        case 7615:
+        case 7988: return "shu";
+        case 4302:
+        case 4303:
+        case 6407: return "shua";
+        case 4304:
+        case 4305:
+        case 4306:
+        case 4307:
+        case 8316: return "shuai";
+        case 4308:
+        case 4309:
+        case 6737:
+        case 6844: return "shuan";
+        case 4310:
+        case 4311:
+        case 4312:
+        case 7055: return "shuang";
+        case 4313:
+        case 4314:
+        case 4315:
+        case 4316: return "shui";
+        case 4317:
+        case 4318:
+        case 4319:
+        case 4320: return "shun";
+        case 4321:
+        case 4322:
+        case 4323:
+        case 4324:
+        case 6184:
+        case 6287:
+        case 6989:
+        case 7335:
+        case 7869: return "shuo";
+        case 4325:
+        case 4326:
+        case 4327:
+        case 4328:
+        case 4329:
+        case 4330:
+        case 4331:
+        case 4332:
+        case 4333:
+        case 4334:
+        case 4335:
+        case 4336:
+        case 4337:
+        case 4338:
+        case 4339:
+        case 4340:
+        case 5643:
+        case 5778:
+        case 5944:
+        case 6348:
+        case 6765:
+        case 6784:
+        case 6889:
+        case 7006:
+        case 7065:
+        case 7133:
+        case 7665:
+        case 7675:
+        case 7940:
+        case 8024:
+        case 8174:
+        case 8247:
+        case 8351: return "si";
+        case 4341:
+        case 4342:
+        case 4343:
+        case 4344:
+        case 4345:
+        case 4346:
+        case 4347:
+        case 4348:
+        case 5801:
+        case 6131:
+        case 6534:
+        case 6552:
+        case 6676:
+        case 6704:
+        case 6833:
+        case 8121: return "song";
+        case 4349:
+        case 4350:
+        case 4351:
+        case 4352:
+        case 5937:
+        case 6220:
+        case 6418:
+        case 6453:
+        case 6640:
+        case 6849:
+        case 7612:
+        case 7804:
+        case 7943:
+        case 8284: return "sou";
+        case 4353:
+        case 4354:
+        case 4355:
+        case 4356:
+        case 4357:
+        case 4358:
+        case 4359:
+        case 4360:
+        case 4361:
+        case 4362:
+        case 4363:
+        case 4364:
+        case 5777:
+        case 5853:
+        case 6188:
+        case 6428:
+        case 6726:
+        case 6819:
+        case 8389:
+        case 8602:
+        case 8653: return "su";
+        case 4365:
+        case 4366:
+        case 4367:
+        case 6601: return "suan";
+        case 4368:
+        case 4369:
+        case 4370:
+        case 4371:
+        case 4372:
+        case 4373:
+        case 4374:
+        case 4375:
+        case 4376:
+        case 4377:
+        case 4378:
+        case 5839:
+        case 6120:
+        case 6901:
+        case 6968:
+        case 7661:
+        case 7785:
+        case 7801: return "sui";
+        case 4379:
+        case 4380:
+        case 4381:
+        case 6105:
+        case 6588:
+        case 6624:
+        case 7330:
+        case 8632: return "sun";
+        case 4382:
+        case 4383:
+        case 4384:
+        case 4385:
+        case 4386:
+        case 4387:
+        case 4388:
+        case 4389:
+        case 6379:
+        case 6434:
+        case 6442:
+        case 7022:
+        case 7288:
+        case 7792:
+        case 8440: return "suo";
+        case 4390:
+        case 4391:
+        case 4392:
+        case 4393:
+        case 4394:
+        case 4395:
+        case 4396:
+        case 4397:
+        case 4398:
+        case 4399:
+        case 4400:
+        case 4401:
+        case 4402:
+        case 4403:
+        case 4404:
+        case 6743:
+        case 6866:
+        case 6961:
+        case 7329:
+        case 7719:
+        case 7872:
+        case 8533:
+        case 8703: return "ta";
+        case 4405:
+        case 4406:
+        case 4407:
+        case 4408:
+        case 4409:
+        case 4410:
+        case 4411:
+        case 4412:
+        case 4413:
+        case 5902:
+        case 6223:
+        case 6330:
+        case 7070:
+        case 7536:
+        case 7638:
+        case 7849:
+        case 8544:
+        case 8656: return "tai";
+        case 4414:
+        case 4415:
+        case 4416:
+        case 4417:
+        case 4418:
+        case 4419:
+        case 4420:
+        case 4421:
+        case 4422:
+        case 4423:
+        case 4424:
+        case 4425:
+        case 4426:
+        case 4427:
+        case 4428:
+        case 4429:
+        case 4430:
+        case 4431:
+        case 5916:
+        case 6903:
+        case 7428:
+        case 7694:
+        case 7867:
+        case 7936:
+        case 8191: return "tan";
+        case 4432:
+        case 4433:
+        case 4434:
+        case 4435:
+        case 4436:
+        case 4437:
+        case 4438:
+        case 4439:
+        case 4440:
+        case 4441:
+        case 4442:
+        case 4443:
+        case 4444:
+        case 5746:
+        case 6491:
+        case 6628:
+        case 6871:
+        case 7209:
+        case 7344:
+        case 7906:
+        case 7959:
+        case 8177:
+        case 8305:
+        case 8311:
+        case 8442:
+        case 8517: return "tang";
+        case 4445:
+        case 4446:
+        case 4447:
+        case 4448:
+        case 4449:
+        case 4450:
+        case 4451:
+        case 4452:
+        case 4453:
+        case 4454:
+        case 4455:
+        case 5627:
+        case 6391:
+        case 6812:
+        case 7226:
+        case 7666:
+        case 8750: return "tao";
+        case 4456:
+        case 6315:
+        case 7693:
+        case 7911: return "te";
+        case 4457:
+        case 4458:
+        case 4459:
+        case 4460:
+        case 7588: return "teng";
+        case 4461:
+        case 4462:
+        case 4463:
+        case 4464:
+        case 4465:
+        case 4466:
+        case 4467:
+        case 4468:
+        case 4469:
+        case 4470:
+        case 4471:
+        case 4472:
+        case 4473:
+        case 4474:
+        case 4475:
+        case 5735:
+        case 6709:
+        case 6949:
+        case 7130:
+        case 8035:
+        case 8151:
+        case 8514: return "ti";
+        case 4476:
+        case 4477:
+        case 4478:
+        case 4479:
+        case 4480:
+        case 4481:
+        case 4482:
+        case 4483:
+        case 6261:
+        case 6735:
+        case 6757:
+        case 7369:
+        case 7817: return "tian";
+        case 4484:
+        case 4485:
+        case 4486:
+        case 4487:
+        case 4488:
+        case 5712:
+        case 7686:
+        case 8127:
+        case 8272:
+        case 8352:
+        case 8448:
+        case 8622:
+        case 8670:
+        case 8756: return "tiao";
+        case 4489:
+        case 4490:
+        case 4491:
+        case 6138:
+        case 8749: return "tie";
+        case 4492:
+        case 4493:
+        case 4494:
+        case 4495:
+        case 4496:
+        case 4497:
+        case 4498:
+        case 4499:
+        case 4500:
+        case 4501:
+        case 4502:
+        case 4503:
+        case 4504:
+        case 4505:
+        case 4506:
+        case 4507:
+        case 6080:
+        case 6167:
+        case 7035:
+        case 7272:
+        case 7890:
+        case 8249:
+        case 8610: return "ting";
+        case 4508:
+        case 4509:
+        case 4510:
+        case 4511:
+        case 4512:
+        case 4513:
+        case 4514:
+        case 4515:
+        case 4516:
+        case 4517:
+        case 4518:
+        case 4519:
+        case 4520:
+        case 5701:
+        case 5758:
+        case 6077:
+        case 6444:
+        case 6690:
+        case 6892:
+        case 7737: return "tong";
+        case 4521:
+        case 4522:
+        case 4523:
+        case 4524:
+        case 5779:
+        case 7855:
+        case 7822:
+        case 8727: return "tou";
+        case 4525:
+        case 4526:
+        case 4527:
+        case 4528:
+        case 4529:
+        case 4530:
+        case 4531:
+        case 4532:
+        case 4533:
+        case 4534:
+        case 4535:
+        case 6002:
+        case 6117:
+        case 6143:
+        case 7842:
+        case 8509: return "tu";
+        case 4536:
+        case 4537:
+        case 6250:
+        case 6972: return "tuan";
+        case 4538:
+        case 4539:
+        case 4540:
+        case 4541:
+        case 4542:
+        case 4543:
+        case 7653: return "tui";
+        case 4544:
+        case 4545:
+        case 4546:
+        case 5759:
+        case 6629:
+        case 7453:
+        case 7564: return "tun";
+        case 4547:
+        case 4548:
+        case 4549:
+        case 4550:
+        case 4551:
+        case 4552:
+        case 4553:
+        case 4554:
+        case 4555:
+        case 4556:
+        case 4557:
+        case 5617:
+        case 5702:
+        case 5971:
+        case 6653:
+        case 6791:
+        case 7256:
+        case 7262:
+        case 7350:
+        case 7740:
+        case 8374:
+        case 8502:
+        case 8541:
+        case 8630: return "tuo";
+        case 4558:
+        case 4559:
+        case 4560:
+        case 4561:
+        case 4562:
+        case 4563:
+        case 4564:
+        case 5684:
+        case 7020:
+        case 7580: return "wa";
+        case 4565:
+        case 4566: return "wai";
+        case 4567:
+        case 4568:
+        case 4569:
+        case 4570:
+        case 4571:
+        case 4572:
+        case 4573:
+        case 4574:
+        case 4575:
+        case 4576:
+        case 4577:
+        case 4578:
+        case 4579:
+        case 4580:
+        case 4581:
+        case 4582:
+        case 4583:
+        case 5664:
+        case 6025:
+        case 6150:
+        case 7093:
+        case 7126:
+        case 7194:
+        case 7568:
+        case 7821:
+        case 8274: return "wan";
+        case 4584:
+        case 4585:
+        case 4586:
+        case 4587:
+        case 4588:
+        case 4589:
+        case 4590:
+        case 4591:
+        case 4592:
+        case 4593:
+        case 5672:
+        case 6244:
+        case 6715:
+        case 7394:
+        case 8745: return "wang";
+        case 4594:
+        case 4595:
+        case 4596:
+        case 4597:
+        case 4598:
+        case 4599:
+        case 4600:
+        case 4601:
+        case 4602:
+        case 4603:
+        case 4604:
+        case 4605:
+        case 4606:
+        case 4607:
+        case 4608:
+        case 4609:
+        case 4610:
+        case 4611:
+        case 4612:
+        case 4613:
+        case 4614:
+        case 4615:
+        case 4616:
+        case 4617:
+        case 4618:
+        case 4619:
+        case 4620:
+        case 4621:
+        case 4622:
+        case 4623:
+        case 4624:
+        case 4625:
+        case 4626:
+        case 4627:
+        case 4628:
+        case 4629:
+        case 4630:
+        case 4631:
+        case 4632:
+        case 5743:
+        case 5835:
+        case 5881:
+        case 5883:
+        case 6158:
+        case 6217:
+        case 6477:
+        case 6488:
+        case 6501:
+        case 6543:
+        case 6545:
+        case 6611:
+        case 6612:
+        case 6739:
+        case 6777:
+        case 6802:
+        case 6822:
+        case 6952:
+        case 7024:
+        case 7166:
+        case 7224:
+        case 7406:
+        case 7631:
+        case 7648:
+        case 8084:
+        case 8426:
+        case 8659: return "wei";
+        case 4633:
+        case 4634:
+        case 4635:
+        case 4636:
+        case 4637:
+        case 4638:
+        case 4639:
+        case 4640:
+        case 4641:
+        case 4642:
+        case 5656:
+        case 6751:
+        case 6775:
+        case 7223:
+        case 8609: return "wen";
+        case 4643:
+        case 4644:
+        case 4645:
+        case 6178:
+        case 6219: return "weng";
+        case 4646:
+        case 4647:
+        case 4648:
+        case 4649:
+        case 4650:
+        case 4651:
+        case 4652:
+        case 4653:
+        case 4654:
+        case 5733:
+        case 6111:
+        case 6502:
+        case 6855:
+        case 7531:
+        case 7750:
+        case 8627: return "wo";
+        case 4655:
+        case 4656:
+        case 4657:
+        case 4658:
+        case 4659:
+        case 4660:
+        case 4661:
+        case 4662:
+        case 4663:
+        case 4664:
+        case 4665:
+        case 4666:
+        case 4667:
+        case 4668:
+        case 4669:
+        case 4670:
+        case 4671:
+        case 4672:
+        case 4673:
+        case 4674:
+        case 4675:
+        case 4676:
+        case 4677:
+        case 4678:
+        case 4679:
+        case 4680:
+        case 4681:
+        case 4682:
+        case 4683:
+        case 5603:
+        case 5685:
+        case 5867:
+        case 5889:
+        case 5956:
+        case 6044:
+        case 6377:
+        case 6648:
+        case 6668:
+        case 6672:
+        case 6820:
+        case 6927:
+        case 6935:
+        case 6992:
+        case 7036:
+        case 7080:
+        case 7227:
+        case 7485:
+        case 7641:
+        case 8036:
+        case 8045:
+        case 8077:
+        case 8258:
+        case 8640:
+        case 8789: return "wu";
+        case 4684:
+        case 4685:
+        case 4686:
+        case 4687:
+        case 4688:
+        case 4689:
+        case 4690:
+        case 4691:
+        case 4692:
+        case 4693:
+        case 4694:
+        case 4695:
+        case 4696:
+        case 4697:
+        case 4698:
+        case 4699:
+        case 4700:
+        case 4701:
+        case 4702:
+        case 4703:
+        case 4704:
+        case 4705:
+        case 4706:
+        case 4707:
+        case 4708:
+        case 4709:
+        case 4710:
+        case 4711:
+        case 4712:
+        case 4713:
+        case 4714:
+        case 4715:
+        case 4716:
+        case 4717:
+        case 4718:
+        case 4719:
+        case 4720:
+        case 4721:
+        case 4722:
+        case 4723:
+        case 4724:
+        case 5750:
+        case 5766:
+        case 5884:
+        case 5913:
+        case 6130:
+        case 6163:
+        case 6191:
+        case 6241:
+        case 6381:
+        case 6567:
+        case 6630:
+        case 6750:
+        case 6827:
+        case 6832:
+        case 6979:
+        case 7050:
+        case 7184:
+        case 7356:
+        case 7456:
+        case 7474:
+        case 7604:
+        case 7668:
+        case 7689:
+        case 7691:
+        case 8010:
+        case 8122:
+        case 8265:
+        case 8303:
+        case 8312:
+        case 8410:
+        case 8424:
+        case 8443:
+        case 8449:
+        case 8466:
+        case 8521:
+        case 8791: return "xi";
+        case 4725:
+        case 4726:
+        case 4727:
+        case 4728:
+        case 4729:
+        case 4730:
+        case 4731:
+        case 4732:
+        case 4733:
+        case 4734:
+        case 4735:
+        case 4736:
+        case 4737:
+        case 6340:
+        case 6582:
+        case 6958:
+        case 7206:
+        case 7252:
+        case 7744:
+        case 8093:
+        case 8333:
+        case 8779: return "xia";
+        case 4738:
+        case 4739:
+        case 4740:
+        case 4741:
+        case 4742:
+        case 4743:
+        case 4744:
+        case 4745:
+        case 4746:
+        case 4747:
+        case 4748:
+        case 4749:
+        case 4750:
+        case 4751:
+        case 4752:
+        case 4753:
+        case 4754:
+        case 4755:
+        case 4756:
+        case 4757:
+        case 4758:
+        case 4759:
+        case 4760:
+        case 4761:
+        case 4762:
+        case 4763:
+        case 5794:
+        case 5823:
+        case 6040:
+        case 6118:
+        case 6226:
+        case 6513:
+        case 6593:
+        case 6963:
+        case 7021:
+        case 7515:
+        case 7662:
+        case 7676:
+        case 8034:
+        case 8079:
+        case 8225:
+        case 8358:
+        case 8444:
+        case 8503:
+        case 8548:
+        case 8549:
+        case 8617: return "xian";
+        case 4764:
+        case 4765:
+        case 4766:
+        case 4767:
+        case 4768:
+        case 4769:
+        case 4770:
+        case 4771:
+        case 4772:
+        case 4773:
+        case 4774:
+        case 4775:
+        case 4776:
+        case 4777:
+        case 4778:
+        case 4779:
+        case 4780:
+        case 4781:
+        case 4782:
+        case 4783:
+        case 6028:
+        case 6157:
+        case 6635:
+        case 6652:
+        case 7088:
+        case 7129:
+        case 8313:
+        case 8663:
+        case 8747: return "xiang";
+        case 4784:
+        case 4785:
+        case 4786:
+        case 4787:
+        case 4788:
+        case 4789:
+        case 4790:
+        case 4791:
+        case 4792:
+        case 4793:
+        case 4794:
+        case 4795:
+        case 4796:
+        case 4797:
+        case 4798:
+        case 4799:
+        case 4800:
+        case 4801:
+        case 4802:
+        case 4803:
+        case 4804:
+        case 4805:
+        case 4806:
+        case 4807:
+        case 6356:
+        case 6537:
+        case 6876:
+        case 6948:
+        case 7071:
+        case 7115:
+        case 7241:
+        case 7253:
+        case 8257:
+        case 8367:
+        case 8379:
+        case 8744: return "xiao";
+        case 4808:
+        case 4809:
+        case 4810:
+        case 4811:
+        case 4812:
+        case 4813:
+        case 4814:
+        case 4815:
+        case 4816:
+        case 4817:
+        case 4818:
+        case 4819:
+        case 4820:
+        case 4821:
+        case 4822:
+        case 4823:
+        case 4824:
+        case 4825:
+        case 4826:
+        case 4827:
+        case 4828:
+        case 5615:
+        case 5741:
+        case 5784:
+        case 5936:
+        case 5938:
+        case 6215:
+        case 6302:
+        case 6619:
+        case 6661:
+        case 6845:
+        case 6912:
+        case 6966:
+        case 7105:
+        case 7151:
+        case 7331:
+        case 7339:
+        case 8583: return "xie";
+        case 4829:
+        case 4830:
+        case 4831:
+        case 4832:
+        case 4833:
+        case 4834:
+        case 4835:
+        case 4836:
+        case 4837:
+        case 4838:
+        case 5622:
+        case 6016:
+        case 6664:
+        case 7431:
+        case 7607:
+        case 8646: return "xin";
+        case 4839:
+        case 4840:
+        case 4841:
+        case 4842:
+        case 4843:
+        case 4844:
+        case 4845:
+        case 4846:
+        case 4847:
+        case 4848:
+        case 4849:
+        case 4850:
+        case 4851:
+        case 4852:
+        case 4853:
+        case 5874:
+        case 6084:
+        case 6309:
+        case 6712:
+        case 7742: return "xing";
+        case 4854:
+        case 4855:
+        case 4856:
+        case 4857:
+        case 4858:
+        case 4859:
+        case 4860:
+        case 6026: return "xiong";
+        case 4861:
+        case 4862:
+        case 4863:
+        case 4864:
+        case 4865:
+        case 4866:
+        case 4867:
+        case 4868:
+        case 4869:
+        case 6361:
+        case 6522:
+        case 6642:
+        case 6651:
+        case 6869:
+        case 8028:
+        case 8587:
+        case 8759: return "xiu";
+        case 4870:
+        case 4871:
+        case 4872:
+        case 4873:
+        case 4874:
+        case 4875:
+        case 4876:
+        case 4877:
+        case 4878:
+        case 4879:
+        case 4880:
+        case 4881:
+        case 4882:
+        case 4883:
+        case 4884:
+        case 4885:
+        case 4886:
+        case 4887:
+        case 4888:
+        case 5828:
+        case 5935:
+        case 5955:
+        case 6203:
+        case 6810:
+        case 6851:
+        case 7179:
+        case 7282:
+        case 7667:
+        case 7776:
+        case 8167:
+        case 8458:
+        case 8515: return "xu";
+        case 4889:
+        case 4890:
+        case 4891:
+        case 4892:
+        case 4893:
+        case 4894:
+        case 4895:
+        case 4896:
+        case 4897:
+        case 4898:
+        case 4899:
+        case 4900:
+        case 4901:
+        case 4902:
+        case 4903:
+        case 4904:
+        case 5756:
+        case 5846:
+        case 6170:
+        case 6279:
+        case 6789:
+        case 6854:
+        case 6886:
+        case 7215:
+        case 7324:
+        case 7449:
+        case 7637:
+        case 7651:
+        case 7759:
+        case 7871:
+        case 7964:
+        case 8071: return "xuan";
+        case 4905:
+        case 4906:
+        case 4907:
+        case 4908:
+        case 4909:
+        case 4910:
+        case 5842:
+        case 7720:
+        case 8529:
+        case 8708: return "xue";
+        case 4911:
+        case 4912:
+        case 4913:
+        case 4914:
+        case 4915:
+        case 4916:
+        case 4917:
+        case 4918:
+        case 4919:
+        case 4920:
+        case 4921:
+        case 4922:
+        case 4923:
+        case 4924:
+        case 5767:
+        case 5908:
+        case 5987:
+        case 6087:
+        case 6101:
+        case 6206:
+        case 6225:
+        case 6530:
+        case 6563:
+        case 6620:
+        case 6694:
+        case 6813:
+        case 6817:
+        case 6970:
+        case 7454:
+        case 8131:
+        case 8524:
+        case 8664: return "xun";
+        case 4925:
+        case 4926:
+        case 4927:
+        case 4928:
+        case 4929:
+        case 4930:
+        case 4931:
+        case 4932:
+        case 4933:
+        case 4934:
+        case 4935:
+        case 4936:
+        case 4937:
+        case 4938:
+        case 4939:
+        case 4940:
+        case 5683:
+        case 5975:
+        case 6275:
+        case 6512:
+        case 6934:
+        case 7011:
+        case 7180:
+        case 7266:
+        case 7518:
+        case 7728:
+        case 7793:
+        case 8073: return "ya";
+        case 4941:
+        case 4942:
+        case 4943:
+        case 4944:
+        case 4945:
+        case 4946:
+        case 4947:
+        case 4948:
+        case 4949:
+        case 4950:
+        case 4951:
+        case 4952:
+        case 4953:
+        case 4954:
+        case 4955:
+        case 4956:
+        case 4957:
+        case 4958:
+        case 4959:
+        case 4960:
+        case 4961:
+        case 4962:
+        case 4963:
+        case 4964:
+        case 4965:
+        case 4966:
+        case 4967:
+        case 4968:
+        case 4969:
+        case 4970:
+        case 4971:
+        case 4972:
+        case 4973:
+        case 5641:
+        case 5645:
+        case 5718:
+        case 5740:
+        case 5780:
+        case 5805:
+        case 5861:
+        case 5917:
+        case 5919:
+        case 6030:
+        case 6146:
+        case 6535:
+        case 6691:
+        case 6738:
+        case 6753:
+        case 6846:
+        case 6857:
+        case 6991:
+        case 7044:
+        case 7192:
+        case 7360:
+        case 7444:
+        case 7557:
+        case 7645:
+        case 7827:
+        case 8359:
+        case 8506:
+        case 8742:
+        case 8748:
+        case 8790: return "yan";
+        case 4974:
+        case 4975:
+        case 4976:
+        case 4977:
+        case 4978:
+        case 4979:
+        case 4980:
+        case 4981:
+        case 4982:
+        case 4983:
+        case 4984:
+        case 4985:
+        case 4986:
+        case 4987:
+        case 4988:
+        case 4989:
+        case 4990:
+        case 6564:
+        case 6683:
+        case 6783:
+        case 7630:
+        case 7640:
+        case 7706:
+        case 8253:
+        case 8717: return "yang";
+        case 4991:
+        case 4992:
+        case 4993:
+        case 4994:
+        case 4995:
+        case 4996:
+        case 4997:
+        case 4998:
+        case 4999:
+        case 5000:
+        case 5001:
+        case 5002:
+        case 5003:
+        case 5004:
+        case 5005:
+        case 5006:
+        case 5007:
+        case 5008:
+        case 5009:
+        case 5010:
+        case 5011:
+        case 5618:
+        case 5619:
+        case 6326:
+        case 6542:
+        case 6570:
+        case 7159:
+        case 7182:
+        case 7235:
+        case 7387:
+        case 7455:
+        case 7540:
+        case 7902:
+        case 8046:
+        case 8126:
+        case 8477:
+        case 8705: return "yao";
+        case 5012:
+        case 5013:
+        case 5014:
+        case 5015:
+        case 5016:
+        case 5017:
+        case 5018:
+        case 5019:
+        case 5020:
+        case 5021:
+        case 5022:
+        case 5023:
+        case 5024:
+        case 5025:
+        case 5026:
+        case 5644:
+        case 5843:
+        case 5894:
+        case 6262:
+        case 7442:
+        case 7639:
+        case 7884: return "ye";
+        case 5027:
+        case 5028:
+        case 5029:
+        case 5030:
+        case 5031:
+        case 5032:
+        case 5033:
+        case 5034:
+        case 5035:
+        case 5036:
+        case 5037:
+        case 5038:
+        case 5039:
+        case 5040:
+        case 5041:
+        case 5042:
+        case 5043:
+        case 5044:
+        case 5045:
+        case 5046:
+        case 5047:
+        case 5048:
+        case 5049:
+        case 5050:
+        case 5051:
+        case 5052:
+        case 5053:
+        case 5054:
+        case 5055:
+        case 5056:
+        case 5057:
+        case 5058:
+        case 5059:
+        case 5060:
+        case 5061:
+        case 5062:
+        case 5063:
+        case 5064:
+        case 5065:
+        case 5066:
+        case 5067:
+        case 5068:
+        case 5069:
+        case 5070:
+        case 5071:
+        case 5072:
+        case 5073:
+        case 5074:
+        case 5075:
+        case 5076:
+        case 5077:
+        case 5078:
+        case 5079:
+        case 5655:
+        case 5657:
+        case 5670:
+        case 5693:
+        case 5711:
+        case 5817:
+        case 5961:
+        case 5992:
+        case 6018:
+        case 6051:
+        case 6072:
+        case 6218:
+        case 6236:
+        case 6240:
+        case 6258:
+        case 6314:
+        case 6329:
+        case 6355:
+        case 6362:
+        case 6441:
+        case 6470:
+        case 6527:
+        case 6558:
+        case 6602:
+        case 6634:
+        case 6688:
+        case 6689:
+        case 6708:
+        case 6884:
+        case 6938:
+        case 7068:
+        case 7143:
+        case 7376:
+        case 7383:
+        case 7461:
+        case 7629:
+        case 7658:
+        case 7784:
+        case 7838:
+        case 7955:
+        case 7978:
+        case 8074:
+        case 8089:
+        case 8115:
+        case 8120:
+        case 8134:
+        case 8270:
+        case 8415:
+        case 8464:
+        case 8472:
+        case 8493:
+        case 8780: return "yi";
+        case 5080:
+        case 5081:
+        case 5082:
+        case 5083:
+        case 5084:
+        case 5085:
+        case 5086:
+        case 5087:
+        case 5088:
+        case 5089:
+        case 5090:
+        case 5091:
+        case 5092:
+        case 5093:
+        case 5094:
+        case 5095:
+        case 5096:
+        case 5097:
+        case 5098:
+        case 5099:
+        case 5100:
+        case 5101:
+        case 5623:
+        case 5920:
+        case 5940:
+        case 5983:
+        case 6007:
+        case 6065:
+        case 6337:
+        case 6419:
+        case 6594:
+        case 6625:
+        case 6806:
+        case 7519:
+        case 7887:
+        case 8111:
+        case 8230:
+        case 8615:
+        case 8624: return "yin";
+        case 5102:
+        case 5103:
+        case 5104:
+        case 5105:
+        case 5106:
+        case 5107:
+        case 5108:
+        case 5109:
+        case 5110:
+        case 5111:
+        case 5112:
+        case 5113:
+        case 5114:
+        case 5115:
+        case 5116:
+        case 5117:
+        case 5118:
+        case 5119:
+        case 5788:
+        case 5911:
+        case 6067:
+        case 6094:
+        case 6126:
+        case 6151:
+        case 6186:
+        case 6292:
+        case 6451:
+        case 6663:
+        case 6862:
+        case 6875:
+        case 6913:
+        case 7188:
+        case 7212:
+        case 7326:
+        case 7584:
+        case 8048:
+        case 8108:
+        case 8203:
+        case 8331: return "ying";
+        case 5120:
+        case 6401: return "yo";
+        case 5121:
+        case 5122:
+        case 5123:
+        case 5124:
+        case 5125:
+        case 5126:
+        case 5127:
+        case 5128:
+        case 5129:
+        case 5130:
+        case 5131:
+        case 5132:
+        case 5133:
+        case 5134:
+        case 5135:
+        case 5724:
+        case 5953:
+        case 6013:
+        case 6415:
+        case 6728:
+        case 7163:
+        case 7962:
+        case 8014:
+        case 8711:
+        case 8751: return "yong";
+        case 5136:
+        case 5137:
+        case 5138:
+        case 5139:
+        case 5140:
+        case 5141:
+        case 5142:
+        case 5143:
+        case 5144:
+        case 5145:
+        case 5146:
+        case 5147:
+        case 5148:
+        case 5149:
+        case 5150:
+        case 5151:
+        case 5152:
+        case 5153:
+        case 5154:
+        case 5155:
+        case 5653:
+        case 5692:
+        case 5707:
+        case 6112:
+        case 6115:
+        case 6121:
+        case 6347:
+        case 6483:
+        case 6922:
+        case 7254:
+        case 7364:
+        case 7527:
+        case 7880:
+        case 8064:
+        case 8236:
+        case 8242:
+        case 8286:
+        case 8647:
+        case 8778:
+        case 8788: return "you";
+        case 5156:
+        case 5157:
+        case 5158:
+        case 5159:
+        case 5160:
+        case 5161:
+        case 5162:
+        case 5163:
+        case 5164:
+        case 5165:
+        case 5166:
+        case 5167:
+        case 5168:
+        case 5169:
+        case 5170:
+        case 5171:
+        case 5172:
+        case 5173:
+        case 5174:
+        case 5175:
+        case 5176:
+        case 5177:
+        case 5178:
+        case 5179:
+        case 5180:
+        case 5181:
+        case 5182:
+        case 5183:
+        case 5184:
+        case 5185:
+        case 5186:
+        case 5187:
+        case 5188:
+        case 5189:
+        case 5190:
+        case 5191:
+        case 5192:
+        case 5193:
+        case 5194:
+        case 5195:
+        case 5196:
+        case 5197:
+        case 5198:
+        case 5199:
+        case 5200:
+        case 5201:
+        case 5202:
+        case 5203:
+        case 5204:
+        case 5205:
+        case 5206:
+        case 5614:
+        case 5625:
+        case 5681:
+        case 5722:
+        case 5836:
+        case 5845:
+        case 6139:
+        case 6187:
+        case 6277:
+        case 6484:
+        case 6486:
+        case 6546:
+        case 6592:
+        case 6632:
+        case 6637:
+        case 6655:
+        case 6748:
+        case 6987:
+        case 6993:
+        case 7005:
+        case 7090:
+        case 7204:
+        case 7437:
+        case 7476:
+        case 7573:
+        case 7603:
+        case 7622:
+        case 7647:
+        case 7659:
+        case 7717:
+        case 7718:
+        case 7858:
+        case 8033:
+        case 8054:
+        case 8085:
+        case 8086:
+        case 8130:
+        case 8133:
+        case 8266:
+        case 8285:
+        case 8336:
+        case 8407:
+        case 8408:
+        case 8607:
+        case 8625: return "yu";
+        case 5207:
+        case 5208:
+        case 5209:
+        case 5210:
+        case 5211:
+        case 5212:
+        case 5213:
+        case 5214:
+        case 5215:
+        case 5216:
+        case 5217:
+        case 5218:
+        case 5219:
+        case 5220:
+        case 5221:
+        case 5222:
+        case 5223:
+        case 5224:
+        case 5225:
+        case 5226:
+        case 5989:
+        case 6011:
+        case 6282:
+        case 6768:
+        case 7034:
+        case 7205:
+        case 7358:
+        case 7528:
+        case 7783:
+        case 8016:
+        case 8302:
+        case 8378:
+        case 8629: return "yuan";
+        case 5227:
+        case 5228:
+        case 5229:
+        case 5230:
+        case 5231:
+        case 5232:
+        case 5233:
+        case 5234:
+        case 5235:
+        case 5236:
+        case 5763:
+        case 6914:
+        case 7348:
+        case 7530:
+        case 7865: return "yue";
+        case 5237:
+        case 5238:
+        case 5239:
+        case 5240:
+        case 5241:
+        case 5242:
+        case 5243:
+        case 5244:
+        case 5245:
+        case 5246:
+        case 5247:
+        case 5248:
+        case 5909:
+        case 6031:
+        case 6581:
+        case 6702:
+        case 6719:
+        case 7101:
+        case 7225:
+        case 7370:
+        case 7432:
+        case 7521:
+        case 7657: return "yun";
+        case 5249:
+        case 5250:
+        case 5251:
+        case 6257:
+        case 6338: return "za";
+        case 5252:
+        case 5253:
+        case 5254:
+        case 5255:
+        case 5256:
+        case 5257:
+        case 5258:
+        case 6544:
+        case 7162: return "zai";
+        case 5259:
+        case 5260:
+        case 5261:
+        case 5262:
+        case 7222:
+        case 7435:
+        case 8402:
+        case 8456:
+        case 8485:
+        case 8641: return "zan";
+        case 5263:
+        case 5264:
+        case 5265:
+        case 6242:
+        case 7064:
+        case 7416: return "zang";
+        case 5266:
+        case 5267:
+        case 5268:
+        case 5269:
+        case 5270:
+        case 5271:
+        case 5272:
+        case 5273:
+        case 5274:
+        case 5275:
+        case 5276:
+        case 5277:
+        case 5278:
+        case 5279:
+        case 6380: return "zao";
+        case 5280:
+        case 5281:
+        case 5282:
+        case 5283:
+        case 5638:
+        case 8369:
+        case 5651:
+        case 6385:
+        case 6493:
+        case 6937:
+        case 7430:
+        case 8348:
+        case 8423: return "ze";
+        case 5284: return "zei";
+        case 5285:
+        case 5858: return "zen";
+        case 5286:
+        case 5287:
+        case 5288:
+        case 5289:
+        case 7153:
+        case 7421:
+        case 7832:
+        case 7913: return "zeng";
+        case 5290:
+        case 5291:
+        case 5292:
+        case 5293:
+        case 5294:
+        case 5295:
+        case 5296:
+        case 5297:
+        case 5298:
+        case 5299:
+        case 5300:
+        case 5301:
+        case 5302:
+        case 5303:
+        case 5304:
+        case 5305:
+        case 5306:
+        case 5307:
+        case 5308:
+        case 5309:
+        case 6610:
+        case 6274:
+        case 6324:
+        case 6369:
+        case 6378:
+        case 7736:
+        case 8068:
+        case 8238:
+        case 8794: return "zha";
+        case 5310:
+        case 5311:
+        case 5312:
+        case 5313:
+        case 5314:
+        case 5315:
+        case 7746:
+        case 8109: return "zhai";
+        case 5316:
+        case 5317:
+        case 5318:
+        case 5319:
+        case 5320:
+        case 5321:
+        case 5322:
+        case 5323:
+        case 5324:
+        case 5325:
+        case 5326:
+        case 5327:
+        case 5328:
+        case 5329:
+        case 5330:
+        case 5331:
+        case 5332:
+        case 5862:
+        case 6288:
+        case 7625: return "zhan";
+        case 5333:
+        case 5334:
+        case 5335:
+        case 5336:
+        case 5337:
+        case 5338:
+        case 5339:
+        case 5340:
+        case 5341:
+        case 5342:
+        case 5343:
+        case 5344:
+        case 5345:
+        case 5346:
+        case 5347:
+        case 5675:
+        case 5921:
+        case 6504:
+        case 6554:
+        case 6615:
+        case 7049:
+        case 7216:
+        case 8315: return "zhang";
+        case 5348:
+        case 5349:
+        case 5350:
+        case 5351:
+        case 5352:
+        case 5353:
+        case 5354:
+        case 5355:
+        case 5356:
+        case 5357:
+        case 5815:
+        case 7294:
+        case 7840:
+        case 8341: return "zhao";
+        case 5358:
+        case 5359:
+        case 5360:
+        case 5361:
+        case 5362:
+        case 5363:
+        case 5364:
+        case 5365:
+        case 5366:
+        case 5367:
+        case 5856:
+        case 6301:
+        case 7247:
+        case 7392:
+        case 7761:
+        case 8049:
+        case 8162:
+        case 8256:
+        case 8487: return "zhe";
+        case 5368:
+        case 5369:
+        case 5370:
+        case 5371:
+        case 5372:
+        case 5373:
+        case 5374:
+        case 5375:
+        case 5376:
+        case 5377:
+        case 5378:
+        case 5379:
+        case 5380:
+        case 5381:
+        case 5382:
+        case 5383:
+        case 5958:
+        case 6172:
+        case 6805:
+        case 7139:
+        case 7269:
+        case 7327:
+        case 7384:
+        case 7466:
+        case 7551:
+        case 7562:
+        case 7685:
+        case 7819:
+        case 8001:
+        case 8018:
+        case 8380: return "zhen";
+        case 5384:
+        case 5385:
+        case 5386:
+        case 5387:
+        case 5388:
+        case 5389:
+        case 5390:
+        case 5391:
+        case 5392:
+        case 5393:
+        case 5394:
+        case 5395:
+        case 5396:
+        case 5397:
+        case 5398:
+        case 5399:
+        case 5400:
+        case 5401:
+        case 5402:
+        case 5403:
+        case 5404:
+        case 5826:
+        case 6531:
+        case 6571:
+        case 7859:
+        case 7903:
+        case 8361: return "zheng";
+        case 5405:
+        case 5406:
+        case 5407:
+        case 5408:
+        case 5409:
+        case 5410:
+        case 5411:
+        case 5412:
+        case 5413:
+        case 5414:
+        case 5415:
+        case 5416:
+        case 5417:
+        case 5418:
+        case 5419:
+        case 5420:
+        case 5421:
+        case 5422:
+        case 5423:
+        case 5424:
+        case 5425:
+        case 5426:
+        case 5427:
+        case 5428:
+        case 5429:
+        case 5430:
+        case 5431:
+        case 5432:
+        case 5433:
+        case 5434:
+        case 5435:
+        case 5436:
+        case 5437:
+        case 5438:
+        case 5439:
+        case 5440:
+        case 5441:
+        case 5442:
+        case 5443:
+        case 5444:
+        case 5445:
+        case 5446:
+        case 5447:
+        case 5620:
+        case 5876:
+        case 5904:
+        case 5990:
+        case 6038:
+        case 6293:
+        case 6489:
+        case 6669:
+        case 6973:
+        case 6975:
+        case 7079:
+        case 7246:
+        case 7255:
+        case 7257:
+        case 7268:
+        case 7382:
+        case 7389:
+        case 7462:
+        case 7553:
+        case 7589:
+        case 7677:
+        case 7683:
+        case 7773:
+        case 7984:
+        case 8026:
+        case 8075:
+        case 8246:
+        case 8474:
+        case 8505:
+        case 8537:
+        case 8557:
+        case 8560:
+        case 8584:
+        case 8603: return "zhi";
+        case 5448:
+        case 5449:
+        case 5450:
+        case 5451:
+        case 5452:
+        case 5453:
+        case 5454:
+        case 5455:
+        case 5456:
+        case 5457:
+        case 5458:
+        case 5803:
+        case 6626:
+        case 7981:
+        case 8314:
+        case 8417:
+        case 8564: return "zhong";
+        case 5459:
+        case 5460:
+        case 5461:
+        case 5462:
+        case 5463:
+        case 5464:
+        case 5465:
+        case 5466:
+        case 5467:
+        case 5468:
+        case 5469:
+        case 5470:
+        case 5471:
+        case 5472:
+        case 6107:
+        case 6390:
+        case 7008:
+        case 7091:
+        case 7107:
+        case 7548:
+        case 7756:
+        case 8406:
+        case 8492: return "zhou";
+        case 5473:
+        case 5474:
+        case 5475:
+        case 5476:
+        case 5477:
+        case 5478:
+        case 5479:
+        case 5480:
+        case 5481:
+        case 5482:
+        case 5483:
+        case 5484:
+        case 5485:
+        case 5486:
+        case 5487:
+        case 5488:
+        case 5489:
+        case 5490:
+        case 5491:
+        case 5492:
+        case 5493:
+        case 5494:
+        case 5495:
+        case 5496:
+        case 5497:
+        case 5498:
+        case 5499:
+        case 5500:
+        case 5501:
+        case 5502:
+        case 5503:
+        case 5504:
+        case 5628:
+        case 5689:
+        case 5710:
+        case 5905:
+        case 6049:
+        case 6079:
+        case 6808:
+        case 6830:
+        case 6883:
+        case 7244:
+        case 7338:
+        case 7345:
+        case 7636:
+        case 7889:
+        case 8070:
+        case 8081:
+        case 8335:
+        case 8371:
+        case 8422:
+        case 8467:
+        case 8578:
+        case 8770: return "zhu";
+        case 5505:
+        case 5506: return "zhua";
+        case 5507: return "zhuai";
+        case 5508:
+        case 5509:
+        case 5510:
+        case 5511:
+        case 5512:
+        case 5513:
+        case 6389:
+        case 6645:
+        case 8207: return "zhuan";
+        case 5514:
+        case 5515:
+        case 5516:
+        case 5517:
+        case 5518:
+        case 5519:
+        case 5520:
+        case 5755:
+        case 6760: return "zhuang";
+        case 5521:
+        case 5522:
+        case 5523:
+        case 5524:
+        case 5525:
+        case 5526:
+        case 6723:
+        case 7077:
+        case 7136: return "zhui";
+        case 5527:
+        case 5528:
+        case 7538:
+        case 8124: return "zhun";
+        case 5529:
+        case 5530:
+        case 5531:
+        case 5532:
+        case 5533:
+        case 5534:
+        case 5535:
+        case 5536:
+        case 5537:
+        case 5538:
+        case 5539:
+        case 5730:
+        case 5834:
+        case 6310:
+        case 6823:
+        case 6835:
+        case 6910:
+        case 7644:
+        case 7690:
+        case 7729:
+        case 7977: return "zhuo";
+        case 5540:
+        case 5541:
+        case 5542:
+        case 5543:
+        case 5544:
+        case 5545:
+        case 5546:
+        case 5547:
+        case 5548:
+        case 5549:
+        case 5550:
+        case 5551:
+        case 5552:
+        case 5553:
+        case 5554:
+        case 5849:
+        case 6075:
+        case 6549:
+        case 7002:
+        case 7060:
+        case 7127:
+        case 7287:
+        case 7402:
+        case 7463:
+        case 7707:
+        case 7786:
+        case 7937:
+        case 7986:
+        case 8172:
+        case 8342:
+        case 8450:
+        case 8484:
+        case 8594:
+        case 8604:
+        case 8623:
+        case 8686:
+        case 8758: return "zi";
+        case 5555:
+        case 5556:
+        case 5557:
+        case 5558:
+        case 5559:
+        case 5560:
+        case 5561:
+        case 5744:
+        case 7574:
+        case 8453: return "zong";
+        case 5562:
+        case 5563:
+        case 5564:
+        case 5565:
+        case 5833:
+        case 5878:
+        case 5924:
+        case 6933:
+        case 7067:
+        case 8677: return "zou";
+        case 5566:
+        case 5567:
+        case 5568:
+        case 5569:
+        case 5570:
+        case 5571:
+        case 5572:
+        case 5573:
+        case 5762:
+        case 6147:
+        case 7963: return "zu";
+        case 5574:
+        case 5575:
+        case 6312:
+        case 7158:
+        case 8582: return "zuan";
+        case 5576:
+        case 5577:
+        case 5578:
+        case 5579:
+        case 6209: return "zui";
+        case 5580:
+        case 5581:
+        case 6304:
+        case 7355:
+        case 8714: return "zun";
+        case 5582:
+        case 5583:
+        case 5584:
+        case 5585:
+        case 5586:
+        case 5587:
+        case 5588:
+        case 5589:
+        case 5872:
+        case 6382:
+        case 6460:
+        case 6684:
+        case 7549:
+        case 7681: return "zuo";
+        default:
+		{
+			printf("%d\n", code);
 			break;
 		}
 	}
 
-	return str;
+	return NULL;
 }
 
 char* get_pinyin_gbk3(unsigned int code)
@@ -5816,18 +7019,18 @@ char* get_pinyin_gbk3(unsigned int code)
         case 50: return "yi";       // Y
         case 52: return "yin";      // Z
         case 54: return "hu";       // [
-        case 56: return "cheng"; // \
-        case 58: return "yin"; // ]
-        case 60: return "wan"; // ^
-        case 62: return "gai"; // _
-        case 64: return "jiu"; // `
-        case 66: return "hal"; // a
-        case 68: return "hol"; // b
-        case 70: return "dou"; // c
-        case 72: return "shi"; // d
-        case 74: return "nang"; // e
-        case 76: return "kal"; // f
-        case 78: return "keol"; // g
+        case 56: return "cheng";    // \
+        case 58: return "yin";      // ]
+        case 60: return "wan";      // ^
+        case 62: return "gai";      // _
+        case 64: return "jiu";      // `
+        case 66: return "hal";      // a
+        case 68: return "hol";      // b
+        case 70: return "dou";      // c
+        case 72: return "shi";      // d
+        case 74: return "nang";     // e
+        case 76: return "kal";      // f
+        case 78: return "keol";     // g
         case 80: return "tol"; // h
         case 82: return "mol"; // i
         case 84: return "ol"; // j
@@ -20163,8 +21366,10 @@ typedef struct _peyin_unit
 {
     char *m;
     int len;
-}peyin_unit, *p_peyin_unit;
 
+} peyin_unit, *p_peyin_unit;
+
+/// ÉùÄ¸´úÂë
 enum
 {
     SM_CH = 1,
@@ -20192,6 +21397,7 @@ enum
     SM_Z,
 };
 
+/// ÔÏÄ¸´úÂë
 enum
 {
     YM_IANG = 1,
@@ -20229,6 +21435,7 @@ enum
     YM_U,
 };
 
+/// ÉùÄ¸
 peyin_unit g_pinyin_sm[] = {
     { "",   1},
     { "ch", 2},
@@ -20256,6 +21463,7 @@ peyin_unit g_pinyin_sm[] = {
     { "z",  1}
 };
 
+/// ÔÏÄ¸
 peyin_unit g_pinyin_ym[] = {
     { "",     1},
     { "iang", 4},
@@ -20293,6 +21501,13 @@ peyin_unit g_pinyin_ym[] = {
     { "u",    1},
 };
 
+/**
+ *\brief                    µÃµ½ÉùÔÏÄ¸
+ *\param[in]    pinyin      Æ´Òô
+ *\param[out]   sm          ÉùÄ¸
+ *\param[out]   ym          ÔÏÄ¸
+ *\return       0           ³É¹¦
+ */
 int get_sm_ym(const char *pinyin, unsigned char *sm, unsigned char *ym)
 {
     if (NULL == pinyin || NULL == sm || NULL == ym)
@@ -20301,8 +21516,8 @@ int get_sm_ym(const char *pinyin, unsigned char *sm, unsigned char *ym)
     }
 
     int i        = 0;
-    int count_sm = sizeof(g_pinyin_sm) / sizeof(peyin_unit); // ÉùÄ¸ÊýÁ¿
-    int count_ym = sizeof(g_pinyin_ym) / sizeof(peyin_unit); // ÔÏÄ¸ÊýÁ¿
+    int count_sm = sizeof(g_pinyin_sm) / sizeof(g_pinyin_sm[0]); // ÉùÄ¸ÊýÁ¿
+    int count_ym = sizeof(g_pinyin_ym) / sizeof(g_pinyin_ym[0]); // ÔÏÄ¸ÊýÁ¿
 
     for (; i < count_sm; i++)
     {
@@ -20348,8 +21563,7 @@ int get_sm_ym(const char *pinyin, unsigned char *sm, unsigned char *ym)
     return 0;
 }
 
-
-int main(int argc,char **argv)
+int main(void)
 {
     // GB2312±àÂë,A1A1-FEFE
     // 01-09ÇøÊÕÂ¼³ýºº×ÖÍâµÄ682¸ö×Ö·û¡£                 A1-A9
@@ -20361,11 +21575,11 @@ int main(int argc,char **argv)
     // GBK±àÂë,8140-FEFE
     //1. ºº×ÖÇø¡£°üº¬
     //  a. GB2312ºº×ÖÇø¡£         ¼´GBK/2: B0A1-F7FE¡£ÊÕÂ¼GB2312 ºº×Ö6763¸ö£¬°´Ô­Ë³ÐòÅÅÁÐ¡£
-    //  b. GB13000.1 À©³äºº×ÖÇø¡£°üÀa?
+    //  b. GB13000.1 À©³äºº×ÖÇø¡£°üÀ¨:
     //    (1)GBK/3: 8140-A0FE¡£   ÊÕÂ¼GB13000.1 ÖÐµÄCJKºº×Ö6080¸ö¡£
     //    (2)GBK/4: AA40-FEA0¡£   ÊÕÂ¼CJKºº×ÖºÍÔö²¹µÄºº×Ö8160¸ö¡£
     //                            CJKºº×ÖÔÚÇ°£¬°´UCS´úÂë´óÐ¡ÅÅÁÐ£»
-    //                            Ôö²¹µÄºº×Ö£oüÀu¿Ê×ºÍ¹¹¼þ£©ÔÚºó£¬°´¡¶¿µÎõ×Öµä¡·µÄÒ³Â?×ÖÎ»ÅÅÁÐ¡£
+    //                            Ôö²¹µÄºº×Ö(°üÀ¨²¿Ê×ºÍ¹¹¼þ)ÔÚºó,°´<<¿µÎõ×Öµä>>µÄÒ³Âë/×ÖÎ»ÅÅÁÐ¡£
     //    (3)ºº×Ö¡°©–¡±°²ÅÅÔÚÍ¼ÐÎ·ûºÅÇøGBK/5£ºA996¡£
     //
     //2. Í¼ÐÎ·ûºÅÇø¡£°üº¬
@@ -20379,7 +21593,6 @@ int main(int argc,char **argv)
     //  (1) AAA1-AFFE£¬ÂëÎ» 564 ¸ö¡£
     //  (2) F8A1-FEFE£¬ÂëÎ» 658 ¸ö¡£
     //  (3) A140-A7A0£¬ÂëÎ» 672 ¸ö¡£
-
 
     unsigned int   buff_pos;
     unsigned int   buff_size;
@@ -20408,6 +21621,7 @@ int main(int argc,char **argv)
 
             if (NULL == pinyin)
             {
+                // 0xD7FA~0xD7FEÎª¿Õ
                 printf("GBK/2 code:%u 0x%02x%02x=%c%c pinyin=NULL\n", code, i, j, i, j);
                 continue;
             }
